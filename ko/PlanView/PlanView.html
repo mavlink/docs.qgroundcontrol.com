@@ -1,0 +1,1026 @@
+
+<!DOCTYPE HTML>
+<html lang="ko" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Plan · QGroundControl User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-dronecode/theme_styles.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../SetupView/SetupView.html" />
+    
+    
+    <link rel="prev" href="../FlyView/VideoOverlay.html" />
+    
+
+    </head>
+    <body>
+        
+    
+    <!-- ##HW Add dronecode menu -->
+    <div id="common_dronecode_menu">
+
+      <div class="common_menu_logo large_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png" alt="Dronecode logo (large)" />
+        </a>
+      </div>
+      <div class="common_menu_logo small_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png" alt="Dronecode logo (small)" />
+        </a>
+      </div>
+      
+      <div class="common_menu_options">
+        
+            <div class="common_dronecode_menu_item"><a href="http://px4.io/">PX4</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://qgroundcontrol.com/">QGroundControl</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://qgroundcontrol.com/">QGC</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://www.dronecode.org/sdk/">SDK</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://mavlink.io/en/">MAVLink</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="https://www.dronecode.org/documentation/">Documentation</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="https://www.dronecode.org/documentation/">Docs</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://discuss.px4.io/">Support</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://discuss.px4.io/">Help</a></div>
+        
+      </div>
+    </div>
+    
+<!-- ##HW END Add dronecode menu -->
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="검색어 입력" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting_started/quick_start.html">
+            
+                <a href="../getting_started/quick_start.html">
+            
+                    
+                    바로 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../getting_started/download_and_install.html">
+            
+                <a href="../getting_started/download_and_install.html">
+            
+                    
+                    다운로드 및 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../toolbar/toolbar.html">
+            
+                <a href="../toolbar/toolbar.html">
+            
+                    
+                    도구바/메뉴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../FlyView/FlyView.html">
+            
+                <a href="../FlyView/FlyView.html">
+            
+                    
+                    Fly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../FlyView/replay_flight_data.html">
+            
+                <a href="../FlyView/replay_flight_data.html">
+            
+                    
+                    Replay Flight Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../FlyView/VideoOverlay.html">
+            
+                <a href="../FlyView/VideoOverlay.html">
+            
+                    
+                    Video Overlay
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="PlanView.html">
+            
+                <a href="PlanView.html">
+            
+                    
+                    Plan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SetupView/SetupView.html">
+            
+                <a href="../SetupView/SetupView.html">
+            
+                    
+                    Vehicle Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SetupView/Firmware.html">
+            
+                <a href="../SetupView/Firmware.html">
+            
+                    
+                    펌웨어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SetupView/Airframe.html">
+            
+                <a href="../SetupView/Airframe.html">
+            
+                    
+                    비행체
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../SetupView/airframe_ardupilot.html">
+            
+                <a href="../SetupView/airframe_ardupilot.html">
+            
+                    
+                    Airframe (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../SetupView/airframe_px4.html">
+            
+                <a href="../SetupView/airframe_px4.html">
+            
+                    
+                    Airframe (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SetupView/Radio.html">
+            
+                <a href="../SetupView/Radio.html">
+            
+                    
+                    라디오
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SetupView/Sensors.html">
+            
+                <a href="../SetupView/Sensors.html">
+            
+                    
+                    센서
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../SetupView/sensors_ardupilot.html">
+            
+                <a href="../SetupView/sensors_ardupilot.html">
+            
+                    
+                    Sensors (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../SetupView/sensors_px4.html">
+            
+                <a href="../SetupView/sensors_px4.html">
+            
+                    
+                    Sensors (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SetupView/FlightModes.html">
+            
+                <a href="../SetupView/FlightModes.html">
+            
+                    
+                    비행모드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SetupView/Power.html">
+            
+                <a href="../SetupView/Power.html">
+            
+                    
+                    전원
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../SetupView/Motors.html">
+            
+                <a href="../SetupView/Motors.html">
+            
+                    
+                    Motors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" data-path="../SetupView/Motors_ardusub.html">
+            
+                <a href="../SetupView/Motors_ardusub.html">
+            
+                    
+                    Motors (ArduSub)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../SetupView/Safety.html">
+            
+                <a href="../SetupView/Safety.html">
+            
+                    
+                    안전
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="../SetupView/safety_ardupilot.html">
+            
+                <a href="../SetupView/safety_ardupilot.html">
+            
+                    
+                    Safety (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../SetupView/Tuning.html">
+            
+                <a href="../SetupView/Tuning.html">
+            
+                    
+                    튜닝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../SetupView/tuning_ardupilot.html">
+            
+                <a href="../SetupView/tuning_ardupilot.html">
+            
+                    
+                    Tuning (ArduPilot)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1.1" data-path="../SetupView/tuning_arducopter.html">
+            
+                <a href="../SetupView/tuning_arducopter.html">
+            
+                    
+                    ArduCopter Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.1.2" data-path="../SetupView/tuning_ardusub.html">
+            
+                <a href="../SetupView/tuning_ardusub.html">
+            
+                    
+                    ArduSub Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="../SetupView/tuning_px4.html">
+            
+                <a href="../SetupView/tuning_px4.html">
+            
+                    
+                    Tuning (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../SetupView/Camera.html">
+            
+                <a href="../SetupView/Camera.html">
+            
+                    
+                    카메라
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../SetupView/Joystick.html">
+            
+                <a href="../SetupView/Joystick.html">
+            
+                    
+                    Joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../SetupView/Parameters.html">
+            
+                <a href="../SetupView/Parameters.html">
+            
+                    
+                    파라미터
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SettingsView/SettingsView.html">
+            
+                <a href="../SettingsView/SettingsView.html">
+            
+                    
+                    Application Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../analyze_view/">
+            
+                <a href="../analyze_view/">
+            
+                    
+                    Analyze
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../releases/">
+            
+                <a href="../releases/">
+            
+                    
+                    Releases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Support/Support.html">
+            
+                <a href="../Support/Support.html">
+            
+                    
+                    Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Flight Stacks</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 Pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="http://ardupilot.org/">
+            
+                    
+                    ArduPilot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dronecode Shortcuts</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://dev.qgroundcontrol.com/en/">
+            
+                    
+                    QGroundControl Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://dev.px4.io/en/">
+            
+                    
+                    PX4 Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <a target="_blank" href="https://mavlink.io/en/">
+            
+                    
+                    MAVLink Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <a target="_blank" href="https://mavsdk.mavlink.io/">
+            
+                    
+                    MAVSDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" >
+            
+                <a target="_blank" href="https://camera-manager.dronecode.org/en/">
+            
+                    
+                    Dronecode Camera Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook에 게시
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Plan</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="plan-view">Plan View</h1>
+<p>The <em>Plan View</em> is used to plan <em>autonomous missions</em> for your vehicle, and upload them to the vehicle. Once the mission is <a href="#plan_mission">planned</a> and sent to the vehicle, you switch to the <a href="../FlyView/FlyView.html">Fly View</a> to fly the mission.</p>
+<p>It is also use to configure the <a href="PlanGeoFence.md">GeoFence</a> and <a href="PlanRallyPoints.md">Rally Points</a> if these are supported by the firmware.</p>
+<p><span id="plan_screenshot"></span>
+<img src="../../assets/plan/plan_view_overview.jpg" alt="Plan View"></p>
+<h2 id="ui_overview">UI Overview </h2>
+<p>The <a href="#plan_screenshot">screenshot above</a> shows a simple mission plan that starts with a takeoff at the <a href="#planned_home">Planned Home</a> position (H), flies through three waypoints, and then lands on the last waypoint (i.e. waypoint 3).</p>
+<p>The main elements of the UI are:</p>
+<ul>
+<li><strong>Map:</strong> Displays the numbered indicators for the current mission, including the <a href="#planned_home">Planned Home</a>. Click on the indicators to select them (for editing) or drag them around to reposition them. </li>
+<li><strong>Plan Toolbar:</strong> Status information for the currently selected waypoint relative to the previous waypoint, as well as statistics for the entire mission (e.g. horizontal distance and time for mission). <ul>
+<li><code>Max telem dist</code> is the distance between the <a href="#planned_home">Planned Home</a> and the furthest waypoint. </li>
+<li>When connected to a vehicle it also shows an <strong>Upload</strong> button, can be used to upload the plan to the vehicle.</li>
+</ul>
+</li>
+<li><strong><a href="#plan_tools">Plan Tools</a>:</strong> Used to create and manage missions.</li>
+<li><strong><a href="#mission_command_list">Mission Command List/Overlay</a>:</strong> Displays the current list of mission items (select items to <a href="#mission_command_editors">edit</a>).</li>
+<li><strong>Terrain Altitude Overlay:</strong> Shows the relative altitude of each mission command.</li>
+</ul>
+<p>It shows you information related to the currently selected waypoint as well as statistics for the entire mission.</p>
+<h2 id="plan_mission">Planning a Mission </h2>
+<p>At very high level, the steps to create a mission are:</p>
+<ol>
+<li>Change to <em>Plan View</em>.</li>
+<li>Add waypoints or commands to the mission and edit as needed.</li>
+<li>Upload the mission to the vehicle.</li>
+<li>Change to <em>Fly View</em> and fly the mission.</li>
+</ol>
+<p>The following sections explain some of the details in the view.</p>
+<h2 id="planned_home">Planned Home Position </h2>
+<p>The <em>Planned Home</em> shown in <em>Plan View</em> is used to set the approximate start point when planning a mission (i.e. when a vehicle may not even be connected to a vehicle). It is used by QGC to estimate mission times and to draw waypoint lines.</p>
+<p><img src="../../assets/plan/mission/mission_settings_planned_home.jpg" alt="Planned Home Position"></p>
+<p>You should move/drag the planned home position to roughly the location where you plan to takeoff. The altitude for the planned home position is set in the <a href="#mission_settings">Mission Settings</a> panel.</p>
+<p><img src="../../assets/plan/mission/mission_settings_planned_home_position_section.jpg" style="width: 200px;"></p>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> The Fly View displays the <em>actual</em> home position set by the vehicle firmware when it arms (this where the vehicle will return in Return/RTL mode).</p>
+</blockquote>
+<h2 id="plan_tools">Plan Tools </h2>
+<p>The plan tools are used for adding individual waypoints, easing mission creation for complicated geometries, uploading/downloading/saving/restoring missions, and for navigating the map. The main tools are described below.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> <strong>Center map</strong>, <strong>Zoom In</strong>, <strong>Zoom Out</strong> tools help users better view and navigate the <em>Plan view</em> map (they don&apos;t affect the mission commands sent to the vehicle).</p>
+</blockquote>
+<h3 id="add-waypoints">Add Waypoints</h3>
+<p>Click on the <strong>Add Waypoint</strong> tool to activate it. While active, clicking on the map will add new mission waypoint at the clicked location. The tool will stay active until you select it again. Once you have added a waypoint, you can select it and drag it around to change its position.</p>
+<h3 id="file">File (Sync) </h3>
+<p>The <em>File tools</em> are used to move missions between the ground station and vehicle, and to save/restore them from files. The tool displays an <code>!</code> to indicate that there are mission changes that you have not sent to the vehicle.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Before you fly a mission you must upload it to the vehicle.</p>
+</blockquote>
+<p>The <em>File tools</em> provide the following functionality:</p>
+<ul>
+<li>Upload (Send to vehicle)</li>
+<li>Download (Load from vehicle)</li>
+<li>Save/Save as to File, including as KML file.</li>
+<li>Load from File</li>
+<li>Remove All (removes all mission waypoints from <em>Plan view</em> and from vehicle)</li>
+</ul>
+<h3 id="pattern">Pattern</h3>
+<p>The <a href="Pattern.md">Pattern</a> tool simplifies the creation of missions for flying complex geometries, including <a href="pattern_survey.md">surveys</a> and <a href="pattern_structure_scan_v2.md">structure scans</a>.</p>
+<h2 id="mission_command_list">Mission Command List </h2>
+<p>Mission commands for the current mission are listed on the right side of the view. At the top are a set of options to switch between editing the mission, GeoFence and rally points. Within the list you can select individual mission items to edit their values.</p>
+<p><img src="../../assets/plan/mission/mission_command_list.jpg" alt="Mission Command List"></p>
+<h3 id="mission_command_editors">Mission Command Editors </h3>
+<p>Click on a mission command in the list to display its editor (in which you can set/change the command attributes).</p>
+<p>You can change the <strong>type</strong> of the command by clicking on the command name (for example: <em>Waypoint</em>). This will display the <em>Select Mission Command</em> dialog shown below. By default this just displays the &quot;Basic Commands&quot;, but you can use the <strong>Category</strong> drop down menu to display more (e.g. choose <strong>All commands</strong> to see all the options).</p>
+<p><img src="../../assets/plan/mission/mission_commands.jpg" style="width: 200px;"></p>
+<p>To the right of each command name is a menu that you can click to access to additional options such as <em>Insert</em> and <em>Delete</em>.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The list of available commands will depend on firmware and vehicle type. Examples may include: Waypoint, Start image capture, Jump to item (to repeat mission) and other commands.</p>
+</blockquote>
+<h3 id="mission_settings">Mission Settings </h3>
+<p>The <em>Mission Start</em> panel is the first item that appears in the <a href="#mission_command_list">mission command list</a>. It may be used to specify a number default settings that may affect the start or end of the mission.</p>
+<p><img src="../../assets/plan/mission_start.png" alt="Mission Command List - showing mission settings"></p>
+<p><img src="../../assets/plan/mission/mission_settings.png" alt="Mission settings"></p>
+<h4 id="mission-defaults">Mission Defaults</h4>
+<h5 id="waypoint-alt">Waypoint alt</h5>
+<p>Set the default altitude for the first mission item added to a plan (subsequent items take an initial altitude from the previous item). This can also be used to change the altitude of all items in a plan to the same value; you will be prompted if you change the value when there are items in a plan.</p>
+<h5 id="flight-speed">Flight speed</h5>
+<p>Set a flight speed for the mission that is different than the default mission speed.</p>
+<h4 id="mission-end">Mission End</h4>
+<h5 id="return-to-launch-after-mission-end">Return to Launch after mission end</h5>
+<p>Check this if you want your vehicle to Return/RTL after the final mission item.</p>
+<h4 id="planned-home-position">Planned Home Position</h4>
+<p>The <a href="#planned_home">Planned Home Position</a> section allows you to simulate the vehicle&apos;s home position while planning a mission. This allows you to view the waypoint trajectory for your vehicle from takeoff to mission completion.</p>
+<p><img src="../../assets/plan/mission/mission_settings_planned_home_position_section.jpg" alt="MissionSettings Planned Home Position Section"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> This is only the <em>planned</em> home position and you should place it where you plan to start the vehicle from. It has no actual impact on flying the mission. The actual home position of a vehicle is set by the vehicle itself when arming.</p>
+</blockquote>
+<p>The section allows you to set the <strong>Altitude</strong> and <strong>Set Home to Map Centre</strong> (you can move it to another position by dragging it on the map).</p>
+<h4 id="camera">Camera</h4>
+<p>The camera section allows you to specify a camera action to take, control the gimbal and set your camera into photo or video mode.</p>
+<p><img src="../../assets/plan/mission/mission_settings_camera_section.jpg" alt="MissionSettings Camera Section"></p>
+<p>The available camera actions are:</p>
+<ul>
+<li>No change (continue current action)</li>
+<li>Take photos (time)</li>
+<li>Take photos (distance)</li>
+<li>Stop taking photos</li>
+<li>Start recording video</li>
+<li>Stop recording video</li>
+</ul>
+<h4 id="vehicle-info">Vehicle Info</h4>
+<p>The appropriate mission commands for the vehicle depend on the firmware and vehicle type.</p>
+<p>If you are planning a mission while you are <em>connected to a vehicle</em> the firmware and vehicle type will be determined from the vehicle. This section allows you to specify the vehicle firmware/type when not connected to a vehicle.</p>
+<p><img src="../../assets/plan/mission/mission_settings_vehicle_info_section.jpg" alt="MissionSettings VehicleInfoSection"></p>
+<p>The additional value that can be specified when planning a mission is the vehicle flight speed. By specifying this value, total mission or survey times can be approximated even when not connected to a vehicle.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="plan_transfer_fail">Mission (Plan) Upload/Download Failures </h3>
+<p>Plan uploading and downloading can fail over a noisy communication link (affecting missions, GeoFence, and rally points). If a failure occurs you should see a status message in the QGC UI similar to:</p>
+<blockquote>
+<p>Mission transfer failed. Retry transfer. Error: Mission write mission count failed, maximum retries exceeded.</p>
+</blockquote>
+<p>The loss rate for your link can be viewed in <a href="../SettingsView/MAVLink.md">Settings View &gt; MAVLink</a>. The loss rate should be in the low single digits (i.e. maximum of 2 or 3):</p>
+<ul>
+<li>A loss rate in the high single digits can lead to intermittent failures.</li>
+<li>Higher loss rates often lead to 100% failure.</li>
+</ul>
+<p>There is a much smaller possibility that issues are caused by bugs in either flight stack or QGC. To analyse this possibility you can turn on <a href="../SettingsView/console_logging.md">Console Logging</a> for Plan upload/download and review the protocol message traffic.</p>
+<h2 id="further-info">Further Info</h2>
+<ul>
+<li>New Plan View features for <a href="../releases/stable_v3.2_long.md#plan_view">QGC release v3.2</a></li>
+<li>New Plan View features for <a href="../releases/stable_v3.3_long.md#plan_view">QGC release v3.3</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../FlyView/VideoOverlay.html" class="navigation navigation-prev " aria-label="Previous page: Video Overlay">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../SetupView/SetupView.html" class="navigation navigation-next " aria-label="Next page: Vehicle Setup">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Plan","level":"1.6","depth":1,"next":{"title":"Vehicle Setup","level":"1.7","depth":1,"path":"SetupView/SetupView.md","ref":"SetupView/SetupView.md","articles":[{"title":"펌웨어","level":"1.7.1","depth":2,"path":"SetupView/Firmware.md","ref":"SetupView/Firmware.md","articles":[]},{"title":"비행체","level":"1.7.2","depth":2,"path":"SetupView/Airframe.md","ref":"SetupView/Airframe.md","articles":[{"title":"Airframe (ArduPilot)","level":"1.7.2.1","depth":3,"path":"SetupView/airframe_ardupilot.md","ref":"SetupView/airframe_ardupilot.md","articles":[]},{"title":"Airframe (PX4)","level":"1.7.2.2","depth":3,"path":"SetupView/airframe_px4.md","ref":"SetupView/airframe_px4.md","articles":[]}]},{"title":"라디오","level":"1.7.3","depth":2,"path":"SetupView/Radio.md","ref":"SetupView/Radio.md","articles":[]},{"title":"센서","level":"1.7.4","depth":2,"path":"SetupView/Sensors.md","ref":"SetupView/Sensors.md","articles":[{"title":"Sensors (ArduPilot)","level":"1.7.4.1","depth":3,"path":"SetupView/sensors_ardupilot.md","ref":"SetupView/sensors_ardupilot.md","articles":[]},{"title":"Sensors (PX4)","level":"1.7.4.2","depth":3,"path":"SetupView/sensors_px4.md","ref":"SetupView/sensors_px4.md","articles":[]}]},{"title":"비행모드","level":"1.7.5","depth":2,"path":"SetupView/FlightModes.md","ref":"SetupView/FlightModes.md","articles":[]},{"title":"전원","level":"1.7.6","depth":2,"path":"SetupView/Power.md","ref":"SetupView/Power.md","articles":[]},{"title":"Motors","level":"1.7.7","depth":2,"path":"SetupView/Motors.md","ref":"SetupView/Motors.md","articles":[{"title":"Motors (ArduSub)","level":"1.7.7.1","depth":3,"path":"SetupView/Motors_ardusub.md","ref":"SetupView/Motors_ardusub.md","articles":[]}]},{"title":"안전","level":"1.7.8","depth":2,"path":"SetupView/Safety.md","ref":"SetupView/Safety.md","articles":[{"title":"Safety (ArduPilot)","level":"1.7.8.1","depth":3,"path":"SetupView/safety_ardupilot.md","ref":"SetupView/safety_ardupilot.md","articles":[]}]},{"title":"튜닝","level":"1.7.9","depth":2,"path":"SetupView/Tuning.md","ref":"SetupView/Tuning.md","articles":[{"title":"Tuning (ArduPilot)","level":"1.7.9.1","depth":3,"path":"SetupView/tuning_ardupilot.md","ref":"SetupView/tuning_ardupilot.md","articles":[{"title":"ArduCopter Tuning","level":"1.7.9.1.1","depth":4,"path":"SetupView/tuning_arducopter.md","ref":"SetupView/tuning_arducopter.md","articles":[]},{"title":"ArduSub Tuning","level":"1.7.9.1.2","depth":4,"path":"SetupView/tuning_ardusub.md","ref":"SetupView/tuning_ardusub.md","articles":[]}]},{"title":"Tuning (PX4)","level":"1.7.9.2","depth":3,"path":"SetupView/tuning_px4.md","ref":"SetupView/tuning_px4.md","articles":[]}]},{"title":"카메라","level":"1.7.10","depth":2,"path":"SetupView/Camera.md","ref":"SetupView/Camera.md","articles":[]},{"title":"Joystick","level":"1.7.11","depth":2,"path":"SetupView/Joystick.md","ref":"SetupView/Joystick.md","articles":[]},{"title":"파라미터","level":"1.7.12","depth":2,"path":"SetupView/Parameters.md","ref":"SetupView/Parameters.md","articles":[]}]},"previous":{"title":"Video Overlay","level":"1.5.2","depth":2,"path":"FlyView/VideoOverlay.md","ref":"FlyView/VideoOverlay.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"ko","gitbook":"*"},"file":{"path":"PlanView/PlanView.md","mtime":"2020-05-01T18:58:07.446Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T18:58:43.610Z"},"basePath":"..","book":{"language":"ko"}});
+        });
+    </script>
+</div>
+
+    
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
