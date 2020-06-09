@@ -1261,33 +1261,35 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="vehicle-connection-problems">Vehicle Connection Problems</h1>
-<h2 id="vehicle-does-not-show-up-in-ui">Vehicle does not show up in ui</h2>
-<p>QGC will automatically connect to a vechile as soon as that communication link is created. Whether it be over USB, or WiFi, etc. If you establish that link and you don&apos;t see your vehicle show up in the QGC ui you can use <a href="../SettingsView/console_logging.html">console logging</a> to help debug the problem.</p>
+<h2 id="vehicle-does-not-show-up-in-ui">Vehicle does not show up in UI</h2>
+<p>QGC will automatically connect to a vechile as soon as that communication link is created.
+Whether it be over USB, or WiFi, etc.
+If you establish that link and you don&apos;t see your vehicle show up in the QGC UI you can use <a href="../SettingsView/console_logging.html">console logging</a> to help debug the problem.</p>
 <p>Take the following steps to debug the issue:</p>
 <ul>
-<li>Start with the hardware vehicle link not connected. Don&apos;t plug in the usb connection and/or establish the WiFi link in your OS for example.</li>
+<li>Start with the hardware vehicle link not connected. Don&apos;t plug in the USB connection and/or establish the WiFi link in your OS for example.</li>
 <li>Turn on <code>LinkManagerLog</code> <a href="../SettingsView/console_logging.html">console logging</a> in QGC. This will log output about the link which QGC sees and connects to.</li>
 <li>Establish the hardware vehicle communication link.</li>
-<li>The console log output should display something like this:</li>
-</ul>
+<li><p>The console log output should display something like this:</p>
 <pre><code>[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:572 - &quot;Waiting for next autoconnect pass &quot;/dev/cu.usbmodem4201&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:613 - &quot;New auto-connect port added:  &quot;ArduPilot ChibiOS on cu.usbmodem4201 (AutoConnect)&quot; &quot;/dev/cu.usbmodem4201&quot;&quot;
-</code></pre><ul>
+</code></pre></li>
 <li>The first few lines indicate QGC has established a hardware link and finally the auto-connect.</li>
 </ul>
-<p>If you don&apos;t see any of this then QGC is not recognizing the hardware link. To see if your hardware is being recognized at the OS level. Do this:</p>
+<p>If you don&apos;t see any of this then QGC is not recognizing the hardware link.
+To see if your hardware is being recognized at the OS level. Do this:</p>
 <ul>
-<li>Start with the hardware vehicle link not connected. Don&apos;t plug in the usb connection and/or establish the WiFi link in your OS for example.</li>
-<li>Turn on <code>LinkManagerVerboseLog</code> <a href="../SettingsView/console_logging.html">console logging</a> in QGC. This will log output for all serial hardware connections that QGC recognizes.</li>
+<li>Start with the hardware vehicle link not connected.
+Don&apos;t plug in the USB connection and/or establish the WiFi link in your OS for example.</li>
+<li>Turn on <code>LinkManagerVerboseLog</code> <a href="../SettingsView/console_logging.html">console logging</a> in QGC.
+This will log output for all serial hardware connections that QGC recognizes.</li>
 <li>You will see continuous output of the serial ports on your device.</li>
-<li>Plug in your usb comm device.</li>
-<li>You should see a new device show in in the console output. Example:</li>
-</ul>
-<pre><code>[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:520 - &quot;-----------------------------------------------------&quot;
+<li>Plug in your USB comm device.</li>
+<li>You should see a new device show in in the console output. Example:<pre><code>[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:520 - &quot;-----------------------------------------------------&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:521 - &quot;portName:           &quot;cu.usbmodem4201&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:522 - &quot;systemLocation:     &quot;/dev/cu.usbmodem4201&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:523 - &quot;description:        &quot;Pixhawk1&quot;&quot;
@@ -1295,17 +1297,21 @@
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:525 - &quot;serialNumber:       &quot;1B0034000847323433353231&quot;&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:526 - &quot;vendorIdentifier:   1155&quot;
 [D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:527 - &quot;productIdentifier:  22336&quot;
-</code></pre><ul>
+</code></pre></li>
 <li>After that it should continue to log a connection to that device as shown in the first example.</li>
 </ul>
 <p>If you don&apos;t see a new serial port should up in the console output when you plug it in then something is likely wrong with your hardware at the OS level.</p>
 <h2 id="error-vehicle-is-not-responding">Error: Vehicle is not responding</h2>
-<p>This indicates that although QGC was able to connect to the hardware link to your vehicle there is no telemetry going back and forth on the link. This can unfortunately indicate a number of problems:</p>
+<p>This indicates that although QGC was able to connect to the hardware link to your vehicle there is no telemetry going back and forth on the link.
+This can unfortunately indicate a number of problems:</p>
 <ul>
 <li>Hardware communication setup problems</li>
 <li>Firmware problems</li>
 </ul>
-<p>Lastly it can happen if QGC attempts to automatically connect to a device which is connected to your computer which isn&apos;t a vehicle. You can identify this case using the steps above and noting the device information which QGC is attempting to connect to. In order to make auto-connect work the filter it uses on devices it attempts to auto-connect to is somewhat broad and can be incorrect. If you find this happening you will need to turn off auto-connect from General Settings and create a manual connection to the comm link for your vehicle. You can also remove the device causing the problem from your computer but that may not always be possible.</p>
+<p>Lastly it can happen if QGC attempts to automatically connect to a device which is connected to your computer which isn&apos;t a vehicle.
+You can identify this case using the steps above and noting the device information which QGC is attempting to connect to.
+In order to make auto-connect work the filter it uses on devices it attempts to auto-connect to is somewhat broad and can be incorrect. If you find this happening you will need to turn off auto-connect from General Settings and create a manual connection to the comm link for your vehicle.
+You can also remove the device causing the problem from your computer but that may not always be possible.</p>
 
                                 
                                 </section>
@@ -1349,7 +1355,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Connection problems","level":"1.11.2.1","depth":3,"next":{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},"previous":{"title":"QGC/Vehicle Interaction Problems","level":"1.11.2","depth":2,"path":"Support/CommonProblems.md","ref":"Support/CommonProblems.md","articles":[{"title":"Connection problems","level":"1.11.2.1","depth":3,"path":"Support/VehicleConnection.md","ref":"Support/VehicleConnection.md","articles":[]},{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},{"title":"Plan Upload/Download failures","level":"1.11.2.3","depth":3,"path":"Support/PlanUploadDownload.md","ref":"Support/PlanUploadDownload.md","articles":[]},{"title":"Resume Mission failures","level":"1.11.2.4","depth":3,"path":"Support/ResumeMission.md","ref":"Support/ResumeMission.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"Support/VehicleConnection.md","mtime":"2020-06-08T18:48:22.684Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-08T18:49:27.882Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Connection problems","level":"1.11.2.1","depth":3,"next":{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},"previous":{"title":"QGC/Vehicle Interaction Problems","level":"1.11.2","depth":2,"path":"Support/CommonProblems.md","ref":"Support/CommonProblems.md","articles":[{"title":"Connection problems","level":"1.11.2.1","depth":3,"path":"Support/VehicleConnection.md","ref":"Support/VehicleConnection.md","articles":[]},{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},{"title":"Plan Upload/Download failures","level":"1.11.2.3","depth":3,"path":"Support/PlanUploadDownload.md","ref":"Support/PlanUploadDownload.md","articles":[]},{"title":"Resume Mission failures","level":"1.11.2.4","depth":3,"path":"Support/ResumeMission.md","ref":"Support/ResumeMission.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"Support/VehicleConnection.md","mtime":"2020-06-09T00:07:31.656Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-09T00:08:34.851Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
