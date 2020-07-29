@@ -21,11 +21,19 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
                 
             
                 
@@ -1035,7 +1043,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../Support/ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../Support/VehicleConnection.html">
+            
+                <a href="../Support/VehicleConnection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../Support/ParameterDownload.html">
             
                 <a href="../Support/ParameterDownload.html">
             
@@ -1048,7 +1069,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../Support/PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../Support/PlanUploadDownload.html">
             
                 <a href="../Support/PlanUploadDownload.html">
             
@@ -1061,7 +1082,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../Support/ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="../Support/ResumeMission.html">
             
                 <a href="../Support/ResumeMission.html">
             
@@ -1247,7 +1268,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="joystick-setup">Joystick Setup</h1>
+                                <h1 id="joystick-setup"><a name="joystick-setup" class="plugin-anchor" href="#joystick-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Joystick Setup</h1>
 <p><em>QGroundControl</em> allows you to control a vehicle using a joystick or gamepad instead of an RC Transmitter.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Flying with a Joystick (or <a href="../SettingsView/VirtualJoystick.html">virtual thumb-sticks</a>) requires a reliable high bandwidth telemetry channel to ensure that the vehicle is responsive to joystick movements (because joystick information is sent over MAVLink).</p>
@@ -1261,13 +1282,13 @@
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> The joystick is <em>enabled</em> as the last step of the calibration process.</p>
 </blockquote>
-<h2 id="enabling-px4-joystick-support">Enabling PX4 Joystick Support</h2>
+<h2 id="enabling-px4-joystick-support"><a name="enabling-px4-joystick-support" class="plugin-anchor" href="#enabling-px4-joystick-support"><i class="fa fa-link" aria-hidden="true"></i></a>Enabling PX4 Joystick Support</h2>
 <p>To enable Joystick support in PX4 you need to set the parameter <code>COM_RC_IN_MODE</code> to 1 - <em>Joystick/No RC Checks</em>. 
 If this parameter is not set then <em>Joystick</em> will not be offered as a setup option.</p>
 <p>This is enabled by default for PX4 SITL builds (see the <a href="Parameters.html">Parameters</a> topic for information on how to find and set a particular parameter). </p>
-<h2 id="ardupilot-joystick-support">Ardupilot Joystick Support</h2>
+<h2 id="ardupilot-joystick-support"><a name="ardupilot-joystick-support" class="plugin-anchor" href="#ardupilot-joystick-support"><i class="fa fa-link" aria-hidden="true"></i></a>Ardupilot Joystick Support</h2>
 <p>All ArduPilot vehicles are supported. No parameter configuration is necessary.</p>
-<h2 id="configure">Configuring the Joystick </h2>
+<h2 id="configure"><a name="configure" class="plugin-anchor" href="#configure"><i class="fa fa-link" aria-hidden="true"></i></a>Configuring the Joystick </h2>
 <p>To configure a joystick:</p>
 <ol>
 <li>Start <em>QGroundControl</em> and connect to a vehicle.</li>
@@ -1285,10 +1306,10 @@ The screen below will appear.</p>
 <li>Select the flight modes/vehicle functions activated by each joystick button.
 <img src="../../assets/setup/joystick_buttons.jpg" alt="Joystick setup - Buttons"></li>
 </ol>
-<h2 id="advanced-options">Advanced Options</h2>
+<h2 id="advanced-options"><a name="advanced-options" class="plugin-anchor" href="#advanced-options"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Options</h2>
 <p>Some additional Options are available at the <strong>Advanced</strong> tab.
 These options may be useful for specific, unsual setups, for increasing sensibility, and for handling noisy joysticks.</p>
-<h3 id="throttle-options">Throttle Options</h3>
+<h3 id="throttle-options"><a name="throttle-options" class="plugin-anchor" href="#throttle-options"><i class="fa fa-link" aria-hidden="true"></i></a>Throttle Options</h3>
 <p>   <img src="../../assets/setup/joystick_throttle_modes.jpg" alt="Joystick setup - Throttle Modes"></p>
 <ul>
 <li><strong>Center stick is zero throttle</strong>: Centered or lowered stick sends 0 in <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL <strong>z</strong></a>, raised stick sends 1000.<ul>
@@ -1301,13 +1322,13 @@ This is useful for setups where the throttle stick is spring loaded, as the user
 So that lowered stick sends -1000 in <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL <strong>z</strong></a>, centered sends zero, and raised stick sends 1000.
 This mode is only enabled for vehicles that support negative thrust, such as <a href="http://ardupilot.org/rover/index.html" target="_blank">Rover</a>.</li>
 </ul>
-<h3 id="expo">Expo</h3>
+<h3 id="expo"><a name="expo" class="plugin-anchor" href="#expo"><i class="fa fa-link" aria-hidden="true"></i></a>Expo</h3>
 <p>The expo slider allows you to make the sticks less sensitive in the center, allowing finer control in this zone. </p>
 <p><img src="../../assets/setup/joystick_throttle_expo.jpg" alt="Joystick setup - Expo"></p>
 <p>The slider adjusts the curvature of the exponential curve.</p>
 <p><img src="../../assets/setup/joystick_throttle_expo_curve.jpg" alt="Joystick setup - Expo Curve"></p>
 <p>The higher the Expo value, the flatter the curve is at the center, and steeper it is at the edges.</p>
-<h3 id="advanced-settings">Advanced Settings</h3>
+<h3 id="advanced-settings"><a name="advanced-settings" class="plugin-anchor" href="#advanced-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Settings</h3>
 <p>The advanced settings are not recommended for everyday users.
 They can cause unpredicted results if used incorrectly. </p>
 <p><img src="../../assets/setup/joystick_advanced.jpg" alt="Joystick setup - Advanced Settings"></p>
@@ -1348,16 +1369,16 @@ This helps to avoid noise or small oscillations on sensitive sticks which may be
 They can be adjusted during the first step of the <a href="#configure">calibration</a>, or by dragging vertically on the corresponding axis monitor.</p>
 </li>
 </ul>
-<h2 id="supported-joysticks">Supported Joysticks</h2>
+<h2 id="supported-joysticks"><a name="supported-joysticks" class="plugin-anchor" href="#supported-joysticks"><i class="fa fa-link" aria-hidden="true"></i></a>Supported Joysticks</h2>
 <p>The following joysticks/controllers have been shown to work with relatively recent <em>QGroundControl</em> builds.</p>
-<h3 id="sony-playstation-34-controllers">Sony Playstation 3/4 Controllers</h3>
+<h3 id="sony-playstation-34-controllers"><a name="sony-playstation-34-controllers" class="plugin-anchor" href="#sony-playstation-34-controllers"><i class="fa fa-link" aria-hidden="true"></i></a>Sony Playstation 3/4 Controllers</h3>
 <p>These are both highly recommended. 
 They work well &quot;out of the box&quot; and have many buttons that you can map to flight modes. </p>
-<h4 id="sony-ps4---dualshock-4-controller-v2-wireless-setup">Sony PS4 - DualShock 4 Controller V2 (Wireless setup)</h4>
+<h4 id="sony-ps4---dualshock-4-controller-v2-wireless-setup"><a name="sony-ps4---dualshock-4-controller-v2-wireless-setup" class="plugin-anchor" href="#sony-ps4---dualshock-4-controller-v2-wireless-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Sony PS4 - DualShock 4 Controller V2 (Wireless setup)</h4>
 <p>This controller supports both USB and Bluetooth wireless connection. 
 Wired USB connection usually works out of the box. 
 The wireless connection needs some setup.</p>
-<h5 id="linux-ubuntu-setup">Linux Ubuntu setup</h5>
+<h5 id="linux-ubuntu-setup"><a name="linux-ubuntu-setup" class="plugin-anchor" href="#linux-ubuntu-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Linux Ubuntu setup</h5>
 <p>To make the controller work wirelessly under Linux the <a href="https://jstest-gtk.gitlab.io/" target="_blank">jstest-gtk</a> and <a href="https://github.com/chrippa/ds4drv" target="_blank">ds4drv</a> utilities are needed.</p>
 <p>The steps are:</p>
 <ol>
@@ -1371,7 +1392,7 @@ The wireless connection needs some setup.</p>
 The <em>ds4drv</em> should then detect a new device.</li>
 <li>Last of all, you should check the controller setup by running the <em>jstest-gtk</em> utility. </li>
 </ol>
-<h3 id="frsky-taranis-xd9-plus">FrSky Taranis XD9 plus</h3>
+<h3 id="frsky-taranis-xd9-plus"><a name="frsky-taranis-xd9-plus" class="plugin-anchor" href="#frsky-taranis-xd9-plus"><i class="fa fa-link" aria-hidden="true"></i></a>FrSky Taranis XD9 plus</h3>
 <p>The <em>FrSky Taranis XD9 plus</em> remote control can also be connected as a joystick. 
 You will need to connect it via the USB port on the back. </p>
 <p>The Taranis does not allow you to use button options (to be precise, you can set the options, but toggling the buttons on your transmitter does not cause them to be pressed).</p>
@@ -1379,15 +1400,15 @@ You will need to connect it via the USB port on the back. </p>
 <p> The Taranis is an open system that is openly being worked on. 
 It is possible that at time of writing there is a firmware or configuration that allows it to work effectively as a joystick. </p>
 </blockquote>
-<h3 id="logitech-gamepad-f310">Logitech Gamepad F310</h3>
+<h3 id="logitech-gamepad-f310"><a name="logitech-gamepad-f310" class="plugin-anchor" href="#logitech-gamepad-f310"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech Gamepad F310</h3>
 <p>The Logitech Gamepad F310 has been tested via USB on MacOSX &quot;Sierra&quot;.</p>
-<h3 id="logitech-extreme-3d-pro">Logitech Extreme 3D Pro</h3>
+<h3 id="logitech-extreme-3d-pro"><a name="logitech-extreme-3d-pro" class="plugin-anchor" href="#logitech-extreme-3d-pro"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech Extreme 3D Pro</h3>
 <p>The <a href="http://gaming.logitech.com/en-ch/product/extreme-3d-pro-joystick" target="_blank">Logitech Extreme 3D Pro</a> Joystick has been tested on all platforms (Linux, Windows, Mac OSX). 
 This is a single stick controller that can also be twisted. The main stick axes are used for pitch and roll, while the twist action is used for yaw. The throttle is mapped onto a separate wheel.</p>
-<h3 id="logitech-f710-gamepad">Logitech F710 Gamepad</h3>
+<h3 id="logitech-f710-gamepad"><a name="logitech-f710-gamepad" class="plugin-anchor" href="#logitech-f710-gamepad"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech F710 Gamepad</h3>
 <!-- This is from http://qgroundcontrol.org/users/joystick -->
 <p>This gamepad is great for flying a multirotor manually via QGroundControl. It works on Windows, Linux and Mac OS.</p>
-<h4 id="mac-os-leopard--lion-setup">Mac OS Leopard / Lion Setup</h4>
+<h4 id="mac-os-leopard--lion-setup"><a name="mac-os-leopard--lion-setup" class="plugin-anchor" href="#mac-os-leopard--lion-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Mac OS Leopard / Lion Setup</h4>
 <p>The F710 is detected under Leopard / Lion but is not automatically configured as an input device. 
 In order to get a working configuration, the F710 has to be recognised as <em>Rumblepad2</em>. </p>
 <p>First check how it is recognised: <strong>Apple &gt; About this Mac &gt; Additional Information &gt; System Report &gt; USB</strong>.
@@ -1443,7 +1464,7 @@ It is detected as &quot;Logitech Cordless RumblePad 2&quot; then nothing further
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Joystick","level":"1.7.11","depth":2,"next":{"title":"Parameters","level":"1.7.12","depth":2,"path":"SetupView/Parameters.md","ref":"SetupView/Parameters.md","articles":[]},"previous":{"title":"Camera","level":"1.7.10","depth":2,"path":"SetupView/Camera.md","ref":"SetupView/Camera.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"SetupView/Joystick.md","mtime":"2020-05-01T14:20:07.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T14:21:08.700Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Joystick","level":"1.7.11","depth":2,"next":{"title":"Parameters","level":"1.7.12","depth":2,"path":"SetupView/Parameters.md","ref":"SetupView/Parameters.md","articles":[]},"previous":{"title":"Camera","level":"1.7.10","depth":2,"path":"SetupView/Camera.md","ref":"SetupView/Camera.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"SetupView/Joystick.md","mtime":"2020-07-29T23:50:15.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-29T23:51:22.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1468,6 +1489,10 @@ It is detected as &quot;Logitech Cordless RumblePad 2&quot; then nothing further
     
         
         <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
         
     
         

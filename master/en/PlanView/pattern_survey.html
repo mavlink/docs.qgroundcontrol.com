@@ -21,11 +21,19 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
                 
             
                 
@@ -1035,7 +1043,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../Support/ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../Support/VehicleConnection.html">
+            
+                <a href="../Support/VehicleConnection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../Support/ParameterDownload.html">
             
                 <a href="../Support/ParameterDownload.html">
             
@@ -1048,7 +1069,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../Support/PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../Support/PlanUploadDownload.html">
             
                 <a href="../Support/PlanUploadDownload.html">
             
@@ -1061,7 +1082,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../Support/ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="../Support/ResumeMission.html">
             
                 <a href="../Support/ResumeMission.html">
             
@@ -1247,11 +1268,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="survey--plan-pattern">Survey  (Plan Pattern)</h1>
+                                <h1 id="survey--plan-pattern"><a name="survey--plan-pattern" class="plugin-anchor" href="#survey--plan-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>Survey  (Plan Pattern)</h1>
 <p>A survey allows you to create a grid flight pattern over a polygonal area. 
 You can specify an arbitrary polygon, the angle and other properties of the grid, and camera settings appropriate for creating geotagged images.</p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> If the survey area has significant elevation variation then consider enabling <a href="#terrain">Terrain Following</a>.</p>
+<p> When planning a Survey using camera specifications, the ground under the survey area are assumed to be flat - i.e. at the same altitude as the launch/home location.
+  If the ground elevation under the survey is either higher or lower than the home location the effective overlap in images will be less or more (respectively) than calculated.
+  If ground elevation under the survey area is <em>significantly</em> higher than the home location you could inadvertently plan a mission path that causes the vehicle to fly into ground-level obstacles.</p>
+<p> Using terrain following ensures that the survey more closely matches the desired altitude above terrain, and reduces the likelihood of planning a mission that is too close to ground level.</p>
+</blockquote>
 <p><img src="../../assets/plan/survey/survey.jpg" alt="Survey"></p>
-<h2 id="creating-a-survey">Creating a Survey</h2>
+<h2 id="creating-a-survey"><a name="creating-a-survey" class="plugin-anchor" href="#creating-a-survey"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a Survey</h2>
 <p>To create a survey:</p>
 <ol>
 <li>Open <a href="PlanView.html">PlanView</a> <em>Plan Tools</em>.</li>
@@ -1264,14 +1292,14 @@ You can specify an arbitrary polygon, the angle and other properties of the grid
 The new vertix can then be dragged into a new position.</li>
 </ol>
 <p>The survey settings are covered in the next section.</p>
-<h2 id="settings">Settings</h2>
+<h2 id="settings"><a name="settings" class="plugin-anchor" href="#settings"><i class="fa fa-link" aria-hidden="true"></i></a>Settings</h2>
 <p>The survey can be further configured in the associated mission item (in the mission item list on the right hand side of the <em>Plan View</em>).</p>
-<h3 id="camera">Camera</h3>
+<h3 id="camera"><a name="camera" class="plugin-anchor" href="#camera"><i class="fa fa-link" aria-hidden="true"></i></a>Camera</h3>
 <p>Camera triggering behaviour depends on the camera/camera settings.
 You can select an existing camera, custom camera, or manually enter the settings.
 The list of available cameras (QGC 3.4) is given below.</p>
 <p><img src="../../assets/plan/survey/survey_camera_select.jpg" alt="Survey - Camera Select"></p>
-<h4 id="known_camera">Known Camera </h4>
+<h4 id="known_camera"><a name="known_camera" class="plugin-anchor" href="#known_camera"><i class="fa fa-link" aria-hidden="true"></i></a>Known Camera </h4>
 <p>Selecting a known camera from the option dropdown generates a grid pattern based on the camera capabilities.</p>
 <p><img src="../../assets/plan/survey/survey_camera_sony.jpg" alt="Survey - Camera Sony"></p>
 <p>The default settings can be tuned for your survey using the configuration options:</p>
@@ -1285,7 +1313,7 @@ This can be configured separately for when flying along grid lines or across the
 </ul>
 </li>
 </ul>
-<h4 id="custom_camera">Custom Camera </h4>
+<h4 id="custom_camera"><a name="custom_camera" class="plugin-anchor" href="#custom_camera"><i class="fa fa-link" aria-hidden="true"></i></a>Custom Camera </h4>
 <p>Selecting the custom camera option allows you to specify the settings for a new camera in a similar way to a known camera.</p>
 <p><img src="../../assets/plan/survey/survey_camera_custom.jpg" alt="Survey - Custom Camera"></p>
 <p>The camera-specific settings are:</p>
@@ -1295,7 +1323,7 @@ This can be configured separately for when flying along grid lines or across the
 <li><strong>Focal Length</strong> - The focal length of the camera lens.</li>
 </ul>
 <p>The remaining settings are the same as for a <a href="#known_camera">known camera</a>.</p>
-<h4 id="manual-camera">Manual Camera</h4>
+<h4 id="manual-camera"><a name="manual-camera" class="plugin-anchor" href="#manual-camera"><i class="fa fa-link" aria-hidden="true"></i></a>Manual Camera</h4>
 <p>The manual camera option allows you to specify desired survey height, trigger interval and appropriate grid spacing for your camera.</p>
 <p><img src="../../assets/plan/survey/survey_camera_manual.jpg" alt="Survey - Manual Camera Settings"></p>
 <p>The configurable options are:</p>
@@ -1304,7 +1332,7 @@ This can be configured separately for when flying along grid lines or across the
 <li><strong>Trigger Distance</strong> - The distance over ground between each camera shot.</li>
 <li><strong>Spacing</strong> - Distance between adjacent grid (flight path) lines across the corridor.</li>
 </ul>
-<h3 id="transects">Transects</h3>
+<h3 id="transects"><a name="transects" class="plugin-anchor" href="#transects"><i class="fa fa-link" aria-hidden="true"></i></a>Transects</h3>
 <p>The <em>Transects</em> section is used for grid settings that are independent of the camera used. </p>
 <p><img src="../../assets/plan/survey/survey_transects.jpg" alt="Survey - Transects"></p>
 <p>The configurable options are:</p>
@@ -1319,7 +1347,7 @@ This can be configured separately for when flying along grid lines or across the
 <li><strong>Images in turnarounds</strong> - Check to take images when turning</li>
 <li><strong>Relative altitude</strong> - Check to ... TBD.</li>
 </ul>
-<h3 id="terrain">Terrain</h3>
+<h3 id="terrain"><a name="terrain" class="plugin-anchor" href="#terrain"><i class="fa fa-link" aria-hidden="true"></i></a>Terrain</h3>
 <p>By default, a flying vehicle will follow the survey path at a fixed altitude. 
 Enabling <em>Terrain Following</em> makes the vehicle maintain a constant height relative to ground.</p>
 <p><img src="../../assets/plan/survey/survey_terrain.jpg" alt="Survey - Terrain Following Settings"></p>
@@ -1335,7 +1363,7 @@ Enabling <em>Terrain Following</em> makes the vehicle maintain a constant height
 </ul>
 </li>
 </ul>
-<h3 id="statistics">Statistics</h3>
+<h3 id="statistics"><a name="statistics" class="plugin-anchor" href="#statistics"><i class="fa fa-link" aria-hidden="true"></i></a>Statistics</h3>
 <p>The <em>Statistics</em> section shows the calculated survey area, photo interval, photo spacing and planned photo count.</p>
 <p><img src="../../assets/plan/survey/survey_statistics.jpg" alt="Survey - Statistics"></p>
 
@@ -1381,7 +1409,7 @@ Enabling <em>Terrain Following</em> makes the vehicle maintain a constant height
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Survey","level":"1.6.3.1","depth":3,"next":{"title":"Structure Scan","level":"1.6.3.2","depth":3,"path":"PlanView/pattern_structure_scan_v2.md","ref":"PlanView/pattern_structure_scan_v2.md","articles":[]},"previous":{"title":"Pattern","level":"1.6.3","depth":2,"path":"PlanView/Pattern.md","ref":"PlanView/Pattern.md","articles":[{"title":"Survey","level":"1.6.3.1","depth":3,"path":"PlanView/pattern_survey.md","ref":"PlanView/pattern_survey.md","articles":[]},{"title":"Structure Scan","level":"1.6.3.2","depth":3,"path":"PlanView/pattern_structure_scan_v2.md","ref":"PlanView/pattern_structure_scan_v2.md","articles":[]},{"title":"Corridor Scan","level":"1.6.3.3","depth":3,"path":"PlanView/pattern_corridor_scan.md","ref":"PlanView/pattern_corridor_scan.md","articles":[]},{"title":"Fixed Wing Landing Pattern","level":"1.6.3.4","depth":3,"path":"PlanView/pattern_fixed_wing_landing.md","ref":"PlanView/pattern_fixed_wing_landing.md","articles":[]},{"title":"Pattern Presets","level":"1.6.3.5","depth":3,"path":"PlanView/PatternPresets.md","ref":"PlanView/PatternPresets.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"PlanView/pattern_survey.md","mtime":"2020-05-01T14:20:07.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T14:21:08.700Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Survey","level":"1.6.3.1","depth":3,"next":{"title":"Structure Scan","level":"1.6.3.2","depth":3,"path":"PlanView/pattern_structure_scan_v2.md","ref":"PlanView/pattern_structure_scan_v2.md","articles":[]},"previous":{"title":"Pattern","level":"1.6.3","depth":2,"path":"PlanView/Pattern.md","ref":"PlanView/Pattern.md","articles":[{"title":"Survey","level":"1.6.3.1","depth":3,"path":"PlanView/pattern_survey.md","ref":"PlanView/pattern_survey.md","articles":[]},{"title":"Structure Scan","level":"1.6.3.2","depth":3,"path":"PlanView/pattern_structure_scan_v2.md","ref":"PlanView/pattern_structure_scan_v2.md","articles":[]},{"title":"Corridor Scan","level":"1.6.3.3","depth":3,"path":"PlanView/pattern_corridor_scan.md","ref":"PlanView/pattern_corridor_scan.md","articles":[]},{"title":"Fixed Wing Landing Pattern","level":"1.6.3.4","depth":3,"path":"PlanView/pattern_fixed_wing_landing.md","ref":"PlanView/pattern_fixed_wing_landing.md","articles":[]},{"title":"Pattern Presets","level":"1.6.3.5","depth":3,"path":"PlanView/PatternPresets.md","ref":"PlanView/PatternPresets.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"PlanView/pattern_survey.md","mtime":"2020-07-29T23:50:15.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-29T23:51:22.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1406,6 +1434,10 @@ Enabling <em>Terrain Following</em> makes the vehicle maintain a constant height
     
         
         <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
         
     
         

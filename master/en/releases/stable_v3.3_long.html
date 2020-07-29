@@ -21,11 +21,19 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
                 
             
                 
@@ -1035,7 +1043,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../Support/ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../Support/VehicleConnection.html">
+            
+                <a href="../Support/VehicleConnection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../Support/ParameterDownload.html">
             
                 <a href="../Support/ParameterDownload.html">
             
@@ -1048,7 +1069,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../Support/PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../Support/PlanUploadDownload.html">
             
                 <a href="../Support/PlanUploadDownload.html">
             
@@ -1061,7 +1082,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../Support/ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="../Support/ResumeMission.html">
             
                 <a href="../Support/ResumeMission.html">
             
@@ -1247,37 +1268,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qgroundcontrol-v33-release-notes-detailed">QGroundControl v3.3 Release Notes (Detailed)</h1>
+                                <h1 id="qgroundcontrol-v33-release-notes-detailed"><a name="qgroundcontrol-v33-release-notes-detailed" class="plugin-anchor" href="#qgroundcontrol-v33-release-notes-detailed"><i class="fa fa-link" aria-hidden="true"></i></a>QGroundControl v3.3 Release Notes (Detailed)</h1>
 <p>This topic contains a high level and <em>non-exhaustive</em> list of new features added to <em>QGroundControl</em> in version 3.3.</p>
-<h2 id="detailed-notes">Detailed Notes</h2>
-<h3 id="settings-view">Settings View</h3>
-<h4 id="nmea-gps-device-support">NMEA GPS Device support</h4>
+<h2 id="detailed-notes"><a name="detailed-notes" class="plugin-anchor" href="#detailed-notes"><i class="fa fa-link" aria-hidden="true"></i></a>Detailed Notes</h2>
+<h3 id="settings-view"><a name="settings-view" class="plugin-anchor" href="#settings-view"><i class="fa fa-link" aria-hidden="true"></i></a>Settings View</h3>
+<h4 id="nmea-gps-device-support"><a name="nmea-gps-device-support" class="plugin-anchor" href="#nmea-gps-device-support"><i class="fa fa-link" aria-hidden="true"></i></a>NMEA GPS Device support</h4>
 <p><img src="../../assets/settings/general/NMEADevice.jpg" alt="NMEA GPS Device support"></p>
 <p>You can specify a connection to one of these devices on the General page.
 The GPS information will then be used for ground station location and in turn follow me support.</p>
 <p>For more information see <a href="../SettingsView/General.html#auto_connect">Settings &gt; General (AutoConnect to the following devices)</a>.</p>
-<h4 id="video-recording">Video Recording</h4>
+<h4 id="video-recording"><a name="video-recording" class="plugin-anchor" href="#video-recording"><i class="fa fa-link" aria-hidden="true"></i></a>Video Recording</h4>
 <p><img src="../../assets/settings/VideoRecording.jpg" alt="Video Recording"></p>
 <p>Videos will be saved to the Video directory of your QGC file save path. 
 You can also specify the maximum amount of space you want video files to consume. 
 After that size if exceeded the oldest video files will be removed. 
 Video Recording is turned on/off from the Video widget in the Fly View.</p>
 <p>For more information see <a href="../SettingsView/General.html#video">Settings &gt; General (Video / Video Recording)</a>.</p>
-<h3 id="plan_view">Plan View </h3>
-<h4 id="structure-scan">Structure Scan</h4>
+<h3 id="plan_view"><a name="plan_view" class="plugin-anchor" href="#plan_view"><i class="fa fa-link" aria-hidden="true"></i></a>Plan View </h3>
+<h4 id="structure-scan"><a name="structure-scan" class="plugin-anchor" href="#structure-scan"><i class="fa fa-link" aria-hidden="true"></i></a>Structure Scan</h4>
 <p>A Structure Scan allows you to create a grid flight pattern that captures images over vertical surfaces (polygonal or circular).
 These are typically used for the visual inspection or creation of 3d models of structures.</p>
 <p>Details <a href="../PlanView/pattern_structure_scan_v2.html">here</a>.</p>
-<h4 id="new-mavlink-geofence-rally-point-support">New MAVLink GeoFence, Rally Point support</h4>
+<h4 id="new-mavlink-geofence-rally-point-support"><a name="new-mavlink-geofence-rally-point-support" class="plugin-anchor" href="#new-mavlink-geofence-rally-point-support"><i class="fa fa-link" aria-hidden="true"></i></a>New MAVLink GeoFence, Rally Point support</h4>
 <p>   <img src="../../assets/plan/GeoFenceRally.jpg" alt=""></p>
 <p>QGC supports the new MAVLink GeoFence and Rally Point specification/protocol. This new system supports multiple polygonal and/or circular fences which can be specified as an exclusion or an inclusion fence.</p>
 <p>The fence which is currently selected by the &quot;Edit&quot; radio button will show the on screen editing controls such as the drag points for polygon editing.</p>
 <p><strong>Note</strong> Only PX4 Pro firmware supports the new specification. ArduPilot does not yet support the new spec. Support for GeoFence/Rally is temporarily disabled in QGC until QGC ArduPilot code is reworked to the new architecture.</p>
-<h4 id="edit-position-dialog">Edit Position Dialog</h4>
+<h4 id="edit-position-dialog"><a name="edit-position-dialog" class="plugin-anchor" href="#edit-position-dialog"><i class="fa fa-link" aria-hidden="true"></i></a>Edit Position Dialog</h4>
 <p>   <img src="../../assets/plan/EditPositionDialog.jpg" alt=""></p>
 <p>The Edit Position Dialog allows you to specify a detailed position for an item in either Geographic or UTM coordinate systems. It is available from the Polygon Tools menu as well as the hamburger menu of any mission item which specifies a coordinate:</p>
 <p>   <img src="../../assets/plan/MissionItemEditorHamburger.jpg" alt=""></p>
-<h4 id="polygon-tools">Polygon Tools</h4>
+<h4 id="polygon-tools"><a name="polygon-tools" class="plugin-anchor" href="#polygon-tools"><i class="fa fa-link" aria-hidden="true"></i></a>Polygon Tools</h4>
 <p>   <img src="../../assets/plan/PolygonTools.jpg" alt=""></p>
 <p>You can now also click on the polygon center drag handle to bring up a set of polygon manipulation tools. The tools are available anywhere polygon editing is supported: Survey, Structure Scan, GeoFence, ...</p>
 <ul>
@@ -1289,17 +1310,17 @@ These are typically used for the visual inspection or creation of 3d models of s
 </ul>
 <p>Circular polygon example:</p>
 <p><img src="../../assets/plan/CircularPolygon.jpg" height="200"></p>
-<h3 id="fly-view">Fly View</h3>
-<h4 id="startstop-video-recording">Start/Stop Video Recording</h4>
+<h3 id="fly-view"><a name="fly-view" class="plugin-anchor" href="#fly-view"><i class="fa fa-link" aria-hidden="true"></i></a>Fly View</h3>
+<h4 id="startstop-video-recording"><a name="startstop-video-recording" class="plugin-anchor" href="#startstop-video-recording"><i class="fa fa-link" aria-hidden="true"></i></a>Start/Stop Video Recording</h4>
 <p>This is now a video record button in the video window. Settings for saved videos are available from General Page of Setup view.</p>
-<h4 id="multi-vehicle-vehicle-indicators">Multi-Vehicle vehicle indicators</h4>
+<h4 id="multi-vehicle-vehicle-indicators"><a name="multi-vehicle-vehicle-indicators" class="plugin-anchor" href="#multi-vehicle-vehicle-indicators"><i class="fa fa-link" aria-hidden="true"></i></a>Multi-Vehicle vehicle indicators</h4>
 <p>When you are connected to multiple vehicles the vehicle id will be shown below the vehicle icon. The active vehicle will be opaque and the inactive vehicles will be semi-transparent.</p>
 <p>   <img src="../../assets/fly/MultiVehicleIndicators.jpg" alt=""></p>
-<h4 id="multi-vehicle-view-supports-batch-commands">Multi-Vehicle View supports batch commands</h4>
+<h4 id="multi-vehicle-view-supports-batch-commands"><a name="multi-vehicle-view-supports-batch-commands" class="plugin-anchor" href="#multi-vehicle-view-supports-batch-commands"><i class="fa fa-link" aria-hidden="true"></i></a>Multi-Vehicle View supports batch commands</h4>
 <p>The multi-vehicle list now supports commands which apply to all vehicles.</p>
 <p>   <img src="../../assets/fly/MultiVehicleList.jpg" alt=""></p>
 <p>The current list of available commands are Pause and Start Mission but that will be exapanded upon with further development.</p>
-<h4 id="ads-b-sensor-vehicle-display">ADS-B sensor vehicle display</h4>
+<h4 id="ads-b-sensor-vehicle-display"><a name="ads-b-sensor-vehicle-display" class="plugin-anchor" href="#ads-b-sensor-vehicle-display"><i class="fa fa-link" aria-hidden="true"></i></a>ADS-B sensor vehicle display</h4>
 <p>Vehicle reported by ADS-B sensor on vehicle are shown on map as smaller blue icons with altitude and callsign below the icon.</p>
 <p>   <img src="../../assets/fly/ADSBVehicle.jpg" alt=""></p>
 
@@ -1345,7 +1366,7 @@ These are typically used for the visual inspection or creation of 3d models of s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"v3.3 (Detailed)","level":"1.10.1.2","depth":3,"next":{"title":"v3.2 (Detailed)","level":"1.10.1.3","depth":3,"path":"releases/stable_v3.2_long.md","ref":"releases/stable_v3.2_long.md","articles":[]},"previous":{"title":"v4.0 (Additional Notes)","level":"1.10.1.1","depth":3,"path":"releases/stable_v4.0_additional.md","ref":"releases/stable_v4.0_additional.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"releases/stable_v3.3_long.md","mtime":"2020-05-01T14:20:07.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T14:21:08.700Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"v3.3 (Detailed)","level":"1.10.1.2","depth":3,"next":{"title":"v3.2 (Detailed)","level":"1.10.1.3","depth":3,"path":"releases/stable_v3.2_long.md","ref":"releases/stable_v3.2_long.md","articles":[]},"previous":{"title":"v4.0 (Additional Notes)","level":"1.10.1.1","depth":3,"path":"releases/stable_v4.0_additional.md","ref":"releases/stable_v4.0_additional.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"releases/stable_v3.3_long.md","mtime":"2020-07-29T23:50:15.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-29T23:51:22.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1370,6 +1391,10 @@ These are typically used for the visual inspection or creation of 3d models of s
     
         
         <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
         
     
         

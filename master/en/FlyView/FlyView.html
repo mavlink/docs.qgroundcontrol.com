@@ -21,11 +21,19 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
                 
             
                 
@@ -1035,7 +1043,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../Support/ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../Support/VehicleConnection.html">
+            
+                <a href="../Support/VehicleConnection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../Support/ParameterDownload.html">
             
                 <a href="../Support/ParameterDownload.html">
             
@@ -1048,7 +1069,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../Support/PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../Support/PlanUploadDownload.html">
             
                 <a href="../Support/PlanUploadDownload.html">
             
@@ -1061,7 +1082,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../Support/ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="../Support/ResumeMission.html">
             
                 <a href="../Support/ResumeMission.html">
             
@@ -1247,7 +1268,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="fly-view">Fly View</h1>
+                                <h1 id="fly-view"><a name="fly-view" class="plugin-anchor" href="#fly-view"><i class="fa fa-link" aria-hidden="true"></i></a>Fly View</h1>
 <p>The Fly View is used to command and monitor the vehicle when flying.</p>
 <p>You can use it to:</p>
 <ul>
@@ -1258,7 +1279,7 @@
 <li>Display video, mission, telemetry, and other information for the current vehicle, and also switch between connected vehicles.</li>
 </ul>
 <p><img src="../../assets/fly/fly_view_overview.jpg" alt="Fly View"></p>
-<h2 id="ui-overview">UI Overview</h2>
+<h2 id="ui-overview"><a name="ui-overview" class="plugin-anchor" href="#ui-overview"><i class="fa fa-link" aria-hidden="true"></i></a>UI Overview</h2>
 <p>The screenshot above shows the main elements of the fly view:</p>
 <ul>
 <li><strong>Map:</strong> Displays the positions of all connected vehicles and the mission for the current vehicle.<ul>
@@ -1295,16 +1316,16 @@ Slide to start operation. Press <strong>X</strong> to cancel.</li>
 </ul>
 <p>There are a number of other elements that are not displayed by default/are only displayed in certain conditions. 
 For example, the multi-vehicle selector is only displayed if you have multiple vehicles, and the preflight checklist tool button is only displayed if the appropriate setting is enabled.</p>
-<h2 id="instrument_panel">Instrument Panel </h2>
+<h2 id="instrument_panel"><a name="instrument_panel" class="plugin-anchor" href="#instrument_panel"><i class="fa fa-link" aria-hidden="true"></i></a>Instrument Panel </h2>
 <p>The instrument panel is a multi-page widget that displays information about the current vehicle, including: telemetry, camera, video, system health, and vibration information.</p>
 <p>The default page displays vehicle telemetry - use the drop down menu on the to right to select the other options.</p>
-<h3 id="values-telemetry">Values (Telemetry)</h3>
+<h3 id="values-telemetry"><a name="values-telemetry" class="plugin-anchor" href="#values-telemetry"><i class="fa fa-link" aria-hidden="true"></i></a>Values (Telemetry)</h3>
 <p>The values page shows telemetry information; by default the altitude (relative to the home location) and the ground speed.</p>
 <p><img src="../../assets/fly/instrument_page_values.jpg" alt="Instrument Page - for values/telemetry"></p>
 <p>You can configure what information is display by pressing the small gear icon on the top left of the panel.
 Each value can be displayed in normal or &quot;large&quot; size (large size shows just one value per row in the page, while normal shows 2).</p>
 <p><img src="../../assets/fly/instrument_page_values_settings.jpg" alt="Instrument Page - values settings"></p>
-<h3 id="camera_instrument_page">Camera </h3>
+<h3 id="camera_instrument_page"><a name="camera_instrument_page" class="plugin-anchor" href="#camera_instrument_page"><i class="fa fa-link" aria-hidden="true"></i></a>Camera </h3>
 <p>The camera page is used to configure and control the camera.
 For a camera connected directly to the Flight Controller the only available option is camera triggering:</p>
 <p><img src="../../assets/fly/instrument_page_camera.jpg" alt="Instrument Page - for Camera"></p>
@@ -1317,31 +1338,31 @@ For example, if your camera supports video mode you will be able to  switch betw
 <p> Most of the settings that are displayed depend on the camera (they are defined in its <a href="https://mavlink.io/en/services/camera_def.html" target="_blank">MAVLink Camera Definition File</a>).
   A few common settings at the end are hard-coded: Photo Mode (Single/Time Lapse), Photo Interval (if Time Lapse), Reset Camera Defaults (sends a reset command to the camera), Format (storage)</p>
 </blockquote>
-<h3 id="video_instrument_page">Video Stream </h3>
+<h3 id="video_instrument_page"><a name="video_instrument_page" class="plugin-anchor" href="#video_instrument_page"><i class="fa fa-link" aria-hidden="true"></i></a>Video Stream </h3>
 <p>The video page is used to enable/disable video streaming.
 When enabled, you can start/stop the video stream, enable a grid overlay, change how the image fits the screen, and record the video locally with QGC.</p>
 <p><img src="../../assets/fly/instrument_page_video_stream.jpg" alt="Instrument Page - Video Stream"></p>
-<h3 id="health">Health</h3>
+<h3 id="health"><a name="health" class="plugin-anchor" href="#health"><i class="fa fa-link" aria-hidden="true"></i></a>Health</h3>
 <p>The health page shows you the health of the systems within your vehicle.
 <em>QGroundControl</em> will switch to this page automatically if any systems change to unhealthy.</p>
 <p><img src="../../assets/fly/instrument_page_health_good.jpg" alt="Instrument Page - Vehicle Health Good">
 <img src="../../assets/fly/instrument_page_health_bad.jpg" alt="Instrument Page - Vehicle Health Bad"></p>
-<h3 id="vibration">Vibration</h3>
+<h3 id="vibration"><a name="vibration" class="plugin-anchor" href="#vibration"><i class="fa fa-link" aria-hidden="true"></i></a>Vibration</h3>
 <p>The vibration page shows current vibration levels and clip counts.</p>
 <p><img src="../../assets/fly/instrument_page_vibration.jpg" alt="Instrument Page - Vibration Clip"></p>
-<h2 id="actionstasks">Actions/Tasks</h2>
+<h2 id="actionstasks"><a name="actionstasks" class="plugin-anchor" href="#actionstasks"><i class="fa fa-link" aria-hidden="true"></i></a>Actions/Tasks</h2>
 <p>The following sections describe how to perform common operations/tasks in the Fly View.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Many of the available options depend on both the vehicle type and its current state.</p>
 </blockquote>
-<h3 id="preflight_checklist">Pre Flight Checklist </h3>
+<h3 id="preflight_checklist"><a name="preflight_checklist" class="plugin-anchor" href="#preflight_checklist"><i class="fa fa-link" aria-hidden="true"></i></a>Pre Flight Checklist </h3>
 <p>An automated preflight checklist can be used to run through standard checks that the vehicle is configured correctly and it is safe to fly.</p>
 <p>To you the checklist, first enable the tool by navigating to <a href="../SettingsView/General.html">Application Settings &gt; General &gt; Fly View</a> and selecting the <strong>Use preflight checklist</strong> checkbox.
 The tool will then be added to the <em>Flight Tools</em>. 
 Press it to open the checklist:</p>
 <p><img src="../../assets/fly/pre_flight_checklist.jpg" alt="Pre Flight Checklist"></p>
 <p>Once you have performed each test, select it on it in the UI to mark it as complete.</p>
-<h3 id="arm">Arm </h3>
+<h3 id="arm"><a name="arm" class="plugin-anchor" href="#arm"><i class="fa fa-link" aria-hidden="true"></i></a>Arm </h3>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
 <p> Generally <em>QGroundControl</em> does not require you to arm the vehicle explicitly; this is done for you if you start a mission or takeoff.</p>
 </blockquote>
@@ -1351,19 +1372,19 @@ Press it to open the checklist:</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Vehicles usually disarm automatically if you do not take off after a few seconds.</p>
 </blockquote>
-<h3 id="disarm">Disarm </h3>
+<h3 id="disarm"><a name="disarm" class="plugin-anchor" href="#disarm"><i class="fa fa-link" aria-hidden="true"></i></a>Disarm </h3>
 <p>Disarming the vehicle stops the motors (making the vehicle safe).
 To disarm the vehicle select <strong>Armed</strong> in the <em>Fly Toolbar</em> when the vehicle is <strong>landed</strong>.</p>
 <p><img src="../../assets/fly/disarm.jpg" alt="Disarm"></p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Disarming the vehicle while it is flying is called an <a href="#emergency_stop">Emergency Stop</a></p>
 </blockquote>
-<h3 id="emergency_stop">Emergency Stop </h3>
+<h3 id="emergency_stop"><a name="emergency_stop" class="plugin-anchor" href="#emergency_stop"><i class="fa fa-link" aria-hidden="true"></i></a>Emergency Stop </h3>
 <p>Emergency stop is effectively the same as disarming the vehicle while you are flying.
 Your vehicle will crash!</p>
 <p>To disarm the vehicle select <strong>Armed</strong> in the <em>Fly Toolbar</em> when the vehicle is flying.</p>
 <p><img src="../../assets/fly/emergency_stop.jpg" alt="Emergency Stop"></p>
-<h3 id="takeoff">Takeoff </h3>
+<h3 id="takeoff"><a name="takeoff" class="plugin-anchor" href="#takeoff"><i class="fa fa-link" aria-hidden="true"></i></a>Takeoff </h3>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
 <p> If you are starting a mission for a multicopter <em>QGroundControl</em> will automatically perform the takeoff step.</p>
 </blockquote>
@@ -1374,14 +1395,14 @@ Your vehicle will crash!</p>
 <li>Confirm takeoff using the slider.</li>
 </ol>
 <p><img src="../../assets/fly/takeoff.jpg" alt="takeoff"></p>
-<h3 id="land">Land </h3>
+<h3 id="land"><a name="land" class="plugin-anchor" href="#land"><i class="fa fa-link" aria-hidden="true"></i></a>Land </h3>
 <p>You can land at the current position at any time while flying:</p>
 <ol>
 <li>Press the <strong>Land</strong> button in the <em>Fly Tools</em> (this will toggle to a <strong>Land</strong> button when landed).</li>
 <li>Confirm landing using the slider.</li>
 </ol>
 <p><img src="../../assets/fly/land.jpg" alt="land"></p>
-<h3 id="rtlreturn">RTL/Return</h3>
+<h3 id="rtlreturn"><a name="rtlreturn" class="plugin-anchor" href="#rtlreturn"><i class="fa fa-link" aria-hidden="true"></i></a>RTL/Return</h3>
 <p>Return to the home position at any time while flying:</p>
 <ol>
 <li>Press the <strong>RTL</strong> button in the <em>Fly Tools</em>.</li>
@@ -1391,7 +1412,7 @@ Your vehicle will crash!</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> The vehicle may also land at the home position, depending on its type and configuration.</p>
 </blockquote>
-<h3 id="change_altitude">Change Altitude </h3>
+<h3 id="change_altitude"><a name="change_altitude" class="plugin-anchor" href="#change_altitude"><i class="fa fa-link" aria-hidden="true"></i></a>Change Altitude </h3>
 <p>You can change altitude while flying, except when in a mission:</p>
 <ol>
 <li>Press the <strong>Action</strong> button on the <em>Fly Tools</em></li>
@@ -1402,7 +1423,7 @@ Your vehicle will crash!</p>
 <p><img src="../../assets/fly/change_altitude.jpg" alt="Change altitude"></p>
 </li>
 </ol>
-<h3 id="goto">Goto Location </h3>
+<h3 id="goto"><a name="goto" class="plugin-anchor" href="#goto"><i class="fa fa-link" aria-hidden="true"></i></a>Goto Location </h3>
 <p>After taking off you can specify that you want to fly to a particular location.</p>
 <ol>
 <li><p>Press the map where you want the vehicle to move and select <strong>Go to location</strong> on the popup.</p>
@@ -1417,7 +1438,7 @@ Your vehicle will crash!</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Goto points must be set within 1 km of the vehicle (hard-coded in QGC). </p>
 </blockquote>
-<h3 id="orbit">Orbit Location </h3>
+<h3 id="orbit"><a name="orbit" class="plugin-anchor" href="#orbit"><i class="fa fa-link" aria-hidden="true"></i></a>Orbit Location </h3>
 <p>After taking off you can specify that you want to orbit a particular location.</p>
 <ol>
 <li><p>Press on the map (near the centre of your desired orbit) and select <strong>Orbit at location</strong> on the popup.</p>
@@ -1432,7 +1453,7 @@ Your vehicle will crash!</p>
 </li>
 <li>When you&apos;re ready, drag the slider to start the operation (or press the <strong>X</strong> icon to cancel it).</li>
 </ol>
-<h3 id="pause">Pause</h3>
+<h3 id="pause"><a name="pause" class="plugin-anchor" href="#pause"><i class="fa fa-link" aria-hidden="true"></i></a>Pause</h3>
 <p>You can pause most operations, including taking off, landing, RTL, missions, Orbit at location. 
 The vehicle behaviour when paused depends on the vehicle type; typically a multicopter will hover, and a fixed wing vehicle will circle.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
@@ -1445,8 +1466,8 @@ The vehicle behaviour when paused depends on the vehicle type; typically a multi
 <li>Confirm the pause using the slider.</li>
 </ol>
 <p><img src="../../assets/fly/pause.jpg" alt="pause"></p>
-<h3 id="missions">Missions</h3>
-<h4 id="start_mission">Start Mission </h4>
+<h3 id="missions"><a name="missions" class="plugin-anchor" href="#missions"><i class="fa fa-link" aria-hidden="true"></i></a>Missions</h3>
+<h4 id="start_mission"><a name="start_mission" class="plugin-anchor" href="#start_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Start Mission </h4>
 <p>You can start a mission when the vehicle is landed (the start mission confirmation slider is often displayed by default).</p>
 <p>To start a mission from landed:</p>
 <ol>
@@ -1459,7 +1480,7 @@ The vehicle behaviour when paused depends on the vehicle type; typically a multi
 <p><img src="../../assets/fly/start_mission.jpg" alt="Start mission"></p>
 </li>
 </ol>
-<h4 id="continue_mission">Continue Mission </h4>
+<h4 id="continue_mission"><a name="continue_mission" class="plugin-anchor" href="#continue_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Continue Mission </h4>
 <p>You can <em>continue</em> mission from the <em>next</em> waypoint when you&apos;re flying (the <em>Continue Mission</em> confirmation slider is often displayed by default after you takeoff).</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> Continue and <a href="#resume_mission">Resume mission</a> are different!
@@ -1476,7 +1497,7 @@ The vehicle behaviour when paused depends on the vehicle type; typically a multi
 <p><img src="../../assets/fly/continue_mission.jpg" alt="Continue Mission"></p>
 </li>
 </ol>
-<h4 id="resume_mission">Resume Mission </h4>
+<h4 id="resume_mission"><a name="resume_mission" class="plugin-anchor" href="#resume_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Resume Mission </h4>
 <p><em>Resume Mission</em> is used to resume a mission after performing an <a href="#rtl">RTL/Return</a> or <a href="#land">Land</a> from within a mission (in order, for example, to perform a battery change).</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
 <p> If you are performing a battery change, <strong>do not</strong> disconnect QGC from the vehicle after disconnecting the battery.
@@ -1492,10 +1513,10 @@ Then use the <em>Start Mission</em> slider to continue the mission.</p>
 <p> A mission cannot simply resume from the last mission item that the vehicle executed, because there may be multiple items at the last waypoint that affect the next stage of the mission (e.g. speed commands or camera control commands).
   Instead <em>QGroundControl</em> rebuilds the mission, starting from the last mission item flown, and automatically prepending any relevant commands to the front of the mission.</p>
 </blockquote>
-<h4 id="resume_mission_prompt">Remove Mission Prompt After Landing </h4>
+<h4 id="resume_mission_prompt"><a name="resume_mission_prompt" class="plugin-anchor" href="#resume_mission_prompt"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Mission Prompt After Landing </h4>
 <p>You will be prompted to remove the mission from the vehicle after the mission completes and the vehicle lands and disarms. 
 This is meant to prevent issues where stale missions are unknowingly left on a vehicle, potentially resulting in unexpected behavior.</p>
-<h3 id="video_switcher">Display Video </h3>
+<h3 id="video_switcher"><a name="video_switcher" class="plugin-anchor" href="#video_switcher"><i class="fa fa-link" aria-hidden="true"></i></a>Display Video </h3>
 <p>When video streaming is enabled, <em>QGroundControl</em> will display the video stream for the currently selected vehicle in the &quot;video switcher window&quot; at the bottom left of the map.
 You can press the switcher anywhere to toggle <em>Video</em> and <em>Map</em> to foreground (below we show the video in the foreground).</p>
 <p><img src="../../assets/fly/video_record.jpg" alt="Video Stream Record"></p>
@@ -1511,12 +1532,12 @@ You can press the switcher anywhere to toggle <em>Video</em> and <em>Map</em> to
 (once detached, you can move and resize the window just like any other in your OS).
 If you close the detached window the switcher will re-lock to the QGC Fly view.</li>
 </ul>
-<h3 id="record-video">Record Video</h3>
+<h3 id="record-video"><a name="record-video" class="plugin-anchor" href="#record-video"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video</h3>
 <p>If supported by the camera and vehicle, <em>QGroundControl</em> can start and stop video recording on the camera itself. <em>QGroundControl</em> can also record the video stream and save it locally.</p>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
 <p> Video stored on the camera may be of much higher quality, but it is likely that your ground station will have a much larger recording capacity.</p>
 </blockquote>
-<h4 id="record-video-stream-on-gcs">Record Video Stream (on GCS)</h4>
+<h4 id="record-video-stream-on-gcs"><a name="record-video-stream-on-gcs" class="plugin-anchor" href="#record-video-stream-on-gcs"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video Stream (on GCS)</h4>
 <p>Video stream recording is controlled on the <a href="#video_instrument_page">video stream instrument page</a>.
 Press the red circle to start recording a new video (a new video file is created each time the circle is pressed); the circle will change into a red square while recording is in progress.</p>
 <p><img src="../../assets/fly/video_record.jpg" alt="Video Stream Record"></p>
@@ -1533,7 +1554,7 @@ Press the red circle to start recording a new video (a new video file is created
 <p> The stored video includes just the video stream itself.
   To record video with QGroundControl application elements displayed, you should use separate screen recording software. </p>
 </blockquote>
-<h4 id="record-video-on-camera">Record Video on Camera</h4>
+<h4 id="record-video-on-camera"><a name="record-video-on-camera" class="plugin-anchor" href="#record-video-on-camera"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video on Camera</h4>
 <p>Start/stop video recording <em>on the camera itself</em> using the <a href="#camera_instrument_page">camera instrument page</a>.
 First toggle to video mode, then select the red button to start recording.</p>
 <p><img src="../../assets/fly/instrument_page_camera_mavlink.jpg" alt="Instrument Page - Camera MAVLink Settings"></p>
@@ -1580,7 +1601,7 @@ First toggle to video mode, then select the red button to start recording.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Fly","level":"1.5","depth":1,"next":{"title":"Replay Flight Data","level":"1.5.1","depth":2,"path":"FlyView/replay_flight_data.md","ref":"FlyView/replay_flight_data.md","articles":[]},"previous":{"title":"Toolbar/Menu","level":"1.4","depth":1,"path":"toolbar/toolbar.md","ref":"toolbar/toolbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"FlyView/FlyView.md","mtime":"2020-05-01T14:20:07.484Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T14:21:08.700Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Fly","level":"1.5","depth":1,"next":{"title":"Replay Flight Data","level":"1.5.1","depth":2,"path":"FlyView/replay_flight_data.md","ref":"FlyView/replay_flight_data.md","articles":[]},"previous":{"title":"Toolbar/Menu","level":"1.4","depth":1,"path":"toolbar/toolbar.md","ref":"toolbar/toolbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"FlyView/FlyView.md","mtime":"2020-07-29T23:50:15.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-29T23:51:22.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1605,6 +1626,10 @@ First toggle to video mode, then select the red button to start recording.</p>
     
         
         <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
         
     
         

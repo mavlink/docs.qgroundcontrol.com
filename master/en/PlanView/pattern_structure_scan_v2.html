@@ -21,11 +21,19 @@
                 
             
                 
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
                 
             
                 
                 <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
                 
             
                 
@@ -1035,7 +1043,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="../Support/ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.1" data-path="../Support/VehicleConnection.html">
+            
+                <a href="../Support/VehicleConnection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../Support/ParameterDownload.html">
             
                 <a href="../Support/ParameterDownload.html">
             
@@ -1048,7 +1069,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="../Support/PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="../Support/PlanUploadDownload.html">
             
                 <a href="../Support/PlanUploadDownload.html">
             
@@ -1061,7 +1082,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="../Support/ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="../Support/ResumeMission.html">
             
                 <a href="../Support/ResumeMission.html">
             
@@ -1247,7 +1268,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="structure-scan-plan-pattern">Structure Scan (Plan Pattern)</h1>
+                                <h1 id="structure-scan-plan-pattern"><a name="structure-scan-plan-pattern" class="plugin-anchor" href="#structure-scan-plan-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>Structure Scan (Plan Pattern)</h1>
 <p>A <em>Structure Scan</em> allows you to create a grid flight pattern that captures images over <em>vertical surfaces</em> (e.g. walls) around a structure with an arbitrary polygonal (or circular) ground footprint.
 Structure Scans are typically used for the visual inspection or creating 3d models of structures.</p>
 <p><em>Structure Scans</em> may be inserted into a mission using the Plan view <strong>Pattern &gt; Structure Scan</strong> tool.</p>
@@ -1259,7 +1280,7 @@ Structure Scans are typically used for the visual inspection or creating 3d mode
 <p> This feature is not yet supported by ArduPilot firmware.
   It is supported in PX4.</p>
 </blockquote>
-<h2 id="overview">Overview</h2>
+<h2 id="overview"><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h2>
 <p>The image below shows a screenshot of structure scan.
 The green polygon is used to mark out the ground footprint of the structure, while the white line around it indicates the vehicle flight path.
 The green numbered circle on the flight path is the scan entry/exit point (where the scan starts).</p>
@@ -1267,7 +1288,7 @@ The green numbered circle on the flight path is the scan entry/exit point (where
 <p>The scan divides the structure evenly into layers; the vehicle flies all the way around the structure at a particular altitude and <em>scan distance</em> from the structure, then repeats the process at each layer until the whole surface has been scanned.</p>
 <p><img src="../../assets/plan/structure_scan_v2/layers.jpg" alt="Layer JPG"></p>
 <p>Users can set the <em>scan bottom altitude</em> to avoid obstacles at the bottom of the structure, and the <em>extrance/exit altitude</em> to avoid obstacles as the vehicle travels to/from the scan.</p>
-<h2 id="creating-a-scan">Creating a Scan</h2>
+<h2 id="creating-a-scan"><a name="creating-a-scan" class="plugin-anchor" href="#creating-a-scan"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a Scan</h2>
 <p>To create a scan:</p>
 <ol>
 <li><p>In the <strong>Plan View</strong> select <strong>Pattern tool &gt; Structure Scan</strong>.</p>
@@ -1381,7 +1402,7 @@ The settings are:</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Structure Scan","level":"1.6.3.2","depth":3,"next":{"title":"Corridor Scan","level":"1.6.3.3","depth":3,"path":"PlanView/pattern_corridor_scan.md","ref":"PlanView/pattern_corridor_scan.md","articles":[]},"previous":{"title":"Survey","level":"1.6.3.1","depth":3,"path":"PlanView/pattern_survey.md","ref":"PlanView/pattern_survey.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"language-redirect":{"baseurl":"https://donlakeflyer.gitbooks.io/qgroundcontrol-user-guide/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"PlanView/pattern_structure_scan_v2.md","mtime":"2020-05-01T14:20:07.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-01T14:21:08.700Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Structure Scan","level":"1.6.3.2","depth":3,"next":{"title":"Corridor Scan","level":"1.6.3.3","depth":3,"path":"PlanView/pattern_corridor_scan.md","ref":"PlanView/pattern_corridor_scan.md","articles":[]},"previous":{"title":"Survey","level":"1.6.3.1","depth":3,"path":"PlanView/pattern_survey.md","ref":"PlanView/pattern_survey.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","language-redirect@git+https://github.com/hamishwillee/gitbook-plugin-language-redirect.git","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"PlanView/pattern_structure_scan_v2.md","mtime":"2020-07-29T23:50:15.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-29T23:51:22.356Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
@@ -1406,6 +1427,10 @@ The settings are:</p>
     
         
         <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
         
     
         
