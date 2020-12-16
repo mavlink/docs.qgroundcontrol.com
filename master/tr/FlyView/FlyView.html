@@ -1,0 +1,1232 @@
+
+<!DOCTYPE HTML>
+<html lang="tr" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Fly · QGroundControl User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-dronecode/theme_styles.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="replay_flight_data.html" />
+    
+    
+    <link rel="prev" href="../toolbar/toolbar.html" />
+    
+
+    </head>
+    <body>
+        
+    
+    <!-- ##HW Add dronecode menu -->
+    <div id="common_dronecode_menu">
+
+      <div class="common_menu_logo large_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png" alt="Dronecode logo (large)" />
+        </a>
+      </div>
+      <div class="common_menu_logo small_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png" alt="Dronecode logo (small)" />
+        </a>
+      </div>
+      
+      <div class="common_menu_options">
+        
+            <div class="common_dronecode_menu_item"><a href="http://px4.io/">PX4</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://qgroundcontrol.com/">QGroundControl</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://qgroundcontrol.com/">QGC</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://www.dronecode.org/sdk/">SDK</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://mavlink.io/en/">MAVLink</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="https://www.dronecode.org/documentation/">Documentation</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="https://www.dronecode.org/documentation/">Docs</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://discuss.px4.io/">Support</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://discuss.px4.io/">Help</a></div>
+        
+      </div>
+    </div>
+    
+<!-- ##HW END Add dronecode menu -->
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Aramak istediğiniz" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting_started/quick_start.html">
+            
+                <a href="../getting_started/quick_start.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../getting_started/download_and_install.html">
+            
+                <a href="../getting_started/download_and_install.html">
+            
+                    
+                    Download and Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../toolbar/toolbar.html">
+            
+                <a href="../toolbar/toolbar.html">
+            
+                    
+                    Toolbar/Menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="FlyView.html">
+            
+                <a href="FlyView.html">
+            
+                    
+                    Fly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="replay_flight_data.html">
+            
+                <a href="replay_flight_data.html">
+            
+                    
+                    Replay Flight Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="VideoOverlay.html">
+            
+                <a href="VideoOverlay.html">
+            
+                    
+                    Video Overlay
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../PlanView/PlanView.html">
+            
+                <a href="../PlanView/PlanView.html">
+            
+                    
+                    Plan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SetupView/SetupView.html">
+            
+                <a href="../SetupView/SetupView.html">
+            
+                    
+                    Vehicle Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SetupView/Firmware.html">
+            
+                <a href="../SetupView/Firmware.html">
+            
+                    
+                    Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SetupView/Airframe.html">
+            
+                <a href="../SetupView/Airframe.html">
+            
+                    
+                    Airframe
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../SetupView/airframe_ardupilot.html">
+            
+                <a href="../SetupView/airframe_ardupilot.html">
+            
+                    
+                    Airframe (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../SetupView/airframe_px4.html">
+            
+                <a href="../SetupView/airframe_px4.html">
+            
+                    
+                    Airframe (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SetupView/Radio.html">
+            
+                <a href="../SetupView/Radio.html">
+            
+                    
+                    Radio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SetupView/Sensors.html">
+            
+                <a href="../SetupView/Sensors.html">
+            
+                    
+                    Sensors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../SetupView/sensors_ardupilot.html">
+            
+                <a href="../SetupView/sensors_ardupilot.html">
+            
+                    
+                    Sensors (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../SetupView/sensors_px4.html">
+            
+                <a href="../SetupView/sensors_px4.html">
+            
+                    
+                    Sensors (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SetupView/FlightModes.html">
+            
+                <a href="../SetupView/FlightModes.html">
+            
+                    
+                    Flight Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SetupView/Power.html">
+            
+                <a href="../SetupView/Power.html">
+            
+                    
+                    Power
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../SetupView/Motors.html">
+            
+                <a href="../SetupView/Motors.html">
+            
+                    
+                    Motors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" data-path="../SetupView/Motors_ardusub.html">
+            
+                <a href="../SetupView/Motors_ardusub.html">
+            
+                    
+                    Motors (ArduSub)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../SetupView/Safety.html">
+            
+                <a href="../SetupView/Safety.html">
+            
+                    
+                    Safety
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="../SetupView/safety_ardupilot.html">
+            
+                <a href="../SetupView/safety_ardupilot.html">
+            
+                    
+                    Safety (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../SetupView/Tuning.html">
+            
+                <a href="../SetupView/Tuning.html">
+            
+                    
+                    Tuning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../SetupView/tuning_ardupilot.html">
+            
+                <a href="../SetupView/tuning_ardupilot.html">
+            
+                    
+                    Tuning (ArduPilot)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1.1" data-path="../SetupView/tuning_arducopter.html">
+            
+                <a href="../SetupView/tuning_arducopter.html">
+            
+                    
+                    ArduCopter Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.1.2" data-path="../SetupView/tuning_ardusub.html">
+            
+                <a href="../SetupView/tuning_ardusub.html">
+            
+                    
+                    ArduSub Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="../SetupView/tuning_px4.html">
+            
+                <a href="../SetupView/tuning_px4.html">
+            
+                    
+                    Tuning (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../SetupView/Camera.html">
+            
+                <a href="../SetupView/Camera.html">
+            
+                    
+                    Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../SetupView/Joystick.html">
+            
+                <a href="../SetupView/Joystick.html">
+            
+                    
+                    Joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../SetupView/Parameters.html">
+            
+                <a href="../SetupView/Parameters.html">
+            
+                    
+                    Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SettingsView/SettingsView.html">
+            
+                <a href="../SettingsView/SettingsView.html">
+            
+                    
+                    Application Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../analyze_view/">
+            
+                <a href="../analyze_view/">
+            
+                    
+                    Analyze
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../analyze_view/log_download.html">
+            
+                <a href="../analyze_view/log_download.html">
+            
+                    
+                    Log Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../analyze_view/geotag_images.html">
+            
+                <a href="../analyze_view/geotag_images.html">
+            
+                    
+                    GeoTag Images (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../analyze_view/mavlink_console.html">
+            
+                <a href="../analyze_view/mavlink_console.html">
+            
+                    
+                    MAVLink Console (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../analyze_view/mavlink_inspector.html">
+            
+                <a href="../analyze_view/mavlink_inspector.html">
+            
+                    
+                    MAVLink Inspector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../releases/">
+            
+                <a href="../releases/">
+            
+                    
+                    Releases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Support/Support.html">
+            
+                <a href="../Support/Support.html">
+            
+                    
+                    Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Flight Stacks</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 Pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="http://ardupilot.org/">
+            
+                    
+                    ArduPilot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dronecode Shortcuts</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://dev.qgroundcontrol.com/en/">
+            
+                    
+                    QGroundControl Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://dev.px4.io/en/">
+            
+                    
+                    PX4 Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <a target="_blank" href="https://mavlink.io/en/">
+            
+                    
+                    MAVLink Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <a target="_blank" href="https://mavsdk.mavlink.io/">
+            
+                    
+                    MAVSDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" >
+            
+                <a target="_blank" href="https://camera-manager.dronecode.org/en/">
+            
+                    
+                    Dronecode Camera Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook ile yayınla
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Fly</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="u&#xE7;u&#x15F;-ekran&#x131;"><a name="u&#xE7;u&#x15F;-ekran&#x131;" class="plugin-anchor" href="#u&#xE7;u&#x15F;-ekran&#x131;"><i class="fa fa-link" aria-hidden="true"></i></a>U&#xE7;u&#x15F; Ekran&#x131;</h1>
+<p>U&#xE7;u&#x15F; Ekran&#x131;, arac&#x131; u&#xE7;arken izlemek ve araca komut vermek i&#xE7;in kullan&#x131;l&#x131;r.</p>
+<p>&#x15E;unlar&#x131; yapmak i&#xE7;in kullanabilirsiniz:</p>
+<ul>
+<li>Otomatik &#x15F;ekilde <a href="#preflight_checklist">pre-flight checklist</a> &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;n.</li>
+<li>G&#xF6;revleri kontrol edin: <a href="#start_mission">start</a>, <a href="#continue_mission">continue</a>, <a href="#pause">pause</a>, ve <a href="#resume_mission">resume</a>.</li>
+<li>Arac&#x131; <a href="#arm">arm</a>/<a href="#disarm">disarm</a>/<a href="#emergency_stop">emergency stop</a>, <a href="#takeoff">takeoff</a>/<a href="#land">land</a>, <a href="#change_altitude">change altitude</a>, belirli bir konuma <a href="#goto">go to</a> veya <a href="#orbit">orbit</a>, ve <a href="#rtl">return/RTL</a> i&#xE7;in y&#xF6;nlendirin.</li>
+<li>Harita g&#xF6;r&#xFC;n&#xFC;m&#xFC; ile video g&#xF6;r&#xFC;n&#xFC;m&#xFC; (e&#x11F;er varsa) aras&#x131;nda ge&#xE7;i&#x15F; yap&#x131;n</li>
+<li>Mevcut ara&#xE7; i&#xE7;in video, g&#xF6;rev, telemetri ve di&#x11F;er bilgileri g&#xF6;r&#xFC;nt&#xFC;leyin ve ayr&#x131;ca ba&#x11F;l&#x131; ara&#xE7;lar aras&#x131;nda ge&#xE7;i&#x15F; yap&#x131;n.</li>
+</ul>
+<p><img src="../../assets/fly/fly_view_overview.jpg" alt="Fly View"></p>
+<h2 id="kullan&#x131;c&#x131;-aray&#xFC;z&#xFC;ne-genel-bak&#x131;&#x15F;"><a name="kullan&#x131;c&#x131;-aray&#xFC;z&#xFC;ne-genel-bak&#x131;&#x15F;" class="plugin-anchor" href="#kullan&#x131;c&#x131;-aray&#xFC;z&#xFC;ne-genel-bak&#x131;&#x15F;"><i class="fa fa-link" aria-hidden="true"></i></a>Kullan&#x131;c&#x131; Aray&#xFC;z&#xFC;&apos;ne Genel Bak&#x131;&#x15F;</h2>
+<p>Yukar&#x131;daki ekran g&#xF6;r&#xFC;nt&#xFC;s&#xFC;, u&#xE7;u&#x15F; ekran&#x131;n&#x131;n ana &#xF6;&#x11F;elerini g&#xF6;sterir:</p>
+<ul>
+<li><strong>Harita:</strong> Ba&#x11F;l&#x131; t&#xFC;m ara&#xE7;lar&#x131;n pozisyonlar&#x131;n&#x131; ve mevcut arac&#x131;n g&#xF6;revini g&#xF6;sterir. <ul>
+<li>Haritada gezinmek i&#xE7;in haritay&#x131; s&#xFC;r&#xFC;kleyebilirsiniz (harita belirli bir s&#xFC;re sonra otomatik olarak yeniden ortalan&#x131;r).</li>
+<li>Kalk&#x131;&#x15F;tan sonra, haritaya t&#x131;klayarak bir konuma <a href="#goto">Go to</a> veya <a href="#orbit">Orbit at</a> ayarlayabilirsiniz.</li>
+</ul>
+</li>
+<li><strong>U&#xE7;u&#x15F; Ara&#xE7; &#xC7;ubu&#x11F;u:</strong> Sens&#xF6;rler (GPS, pil, RC kontrol&#xFC;) ve ara&#xE7; durumu (U&#xE7;u&#x15F; modu, Etkin (armed) / Devre D&#x131;&#x15F;&#x131; (disarmed) durumu) hakk&#x131;nda anahtar bilgiler. <ul>
+<li>Daha fazla ayr&#x131;nt&#x131; g&#xF6;rmek i&#xE7;in sens&#xF6;r g&#xF6;stergelerini se&#xE7;in.</li>
+<li>Yeni bir mod se&#xE7;mek i&#xE7;in <em> Flight mode </em> metnine (&#xF6;r. &quot;Hold&quot;) t&#x131;klay&#x131;n. T&#xFC;m modlar mevcut olmayabilir.</li>
+<li>Arac&#x131;n u&#xE7;u&#x15F;a haz&#x131;r olma durumunu de&#x11F;i&#x15F;tirmek i&#xE7;in <em>Armed/Disarmed</em> metnine t&#x131;klay&#x131;n. E&#x11F;er ara&#xE7; u&#xE7;uyorsa <em>Emergency Stop</em> i&#xE7;in bu metne t&#x131;klay&#x131;n.</li>
+</ul>
+</li>
+<li><strong>U&#xE7;u&#x15F; ara&#xE7;lar&#x131;:</strong> &#x15E;unlar&#x131; yapmak i&#xE7;in kullanabilirsiniz: <ul>
+<li>Kalk&#x131;&#x15F;/ini&#x15F; aras&#x131;nda ge&#xE7;i&#x15F; yap&#x131;n.</li>
+<li>Mevcut i&#x15F;lemi durdur/tekrar ba&#x15F;lat (&#xF6;r. ini&#x15F;, ya da g&#xF6;rev).</li>
+<li>G&#xFC;venli geri d&#xF6;n&#xFC;&#x15F; (RTL ya da Return olarakta bilinir).</li>
+<li><em>Action</em> butonu mevcut durum i&#xE7;in di&#x11F;er uygun se&#xE7;enekleri sunar (bunlar <em>Confirmation Slider</em>&apos;&#x131;n &#xFC;st&#xFC;nde g&#xF6;z&#xFC;k&#xFC;r). &#x130;&#x15F;lemler, y&#xFC;ksekli&#x11F;i de&#x11F;i&#x15F;tirmeyi veya bir g&#xF6;reve devam etmeyi i&#xE7;erir.</li>
+<li><a href="#preflight_checklist">preflight checklist</a>&apos;i etkinle&#x15F;tirin (varsay&#x131;lan olarak devre d&#x131;&#x15F;&#x131;d&#x131;r).</li>
+</ul>
+</li>
+<li><strong><a href="#instrument_panel">Bilgi Paneli</a>:</strong> Telemetri, kamera, video, sistem durumu ve titre&#x15F;im dahil olmak &#xFC;zere ara&#xE7; bilgilerini g&#xF6;r&#xFC;nt&#xFC;leyebilece&#x11F;iniz &#xE7;ok sekmeli widget.</li>
+<li><strong><a href="#video_switcher">Video/Harita</a>:</strong> Bir pencerede video ile harita aras&#x131;nda ge&#xE7;i&#x15F; yap&#x131;n. <ul>
+<li><em>Video</em> ya da <em>Map</em>&apos;i &#xF6;n plana almak i&#xE7;in &#xF6;ne almak istedi&#x11F;inize t&#x131;klay&#x131;n.</li>
+<li><em>QGroundControl</em>, arac&#x131;n&#x131;z&#x131;n UDP ba&#x11F;lant&#x131;s&#x131; &#xFC;zerinden RTP ve RTSP video yay&#x131;n&#x131; yapman&#x131;z&#x131; destekler. Ayr&#x131;ca direkt ba&#x11F;lant&#x131;l&#x131; UVC cihazlar&#x131; da destekler. QGC&apos;nin video deste&#x11F;i hakk&#x131;nda daha ayr&#x131;nt&#x131;l&#x131; bilgiyi <a href="https://github.com/mavlink/qgroundcontrol/blob/master/src/VideoStreaming/README.md" target="_blank">Video README</a>&apos;de bulabilirsiniz.</li>
+<li>Bir <a href="VideoOverlay.html">Telemetry Overlay</a> dosyas&#x131; otomatik olarak olu&#x15F;turulacakt&#x131;r</li>
+</ul>
+</li>
+<li><strong>Kayd&#x131;rmal&#x131; Onay Butonu:</strong> &#x130;stenen i&#x15F;lemi ger&#xE7;ekle&#x15F;tirmek i&#xE7;in onay butonu. Operasyonu ba&#x15F;latmak i&#xE7;in kayd&#x131;r&#x131;n. &#x130;ptal etmek i&#xE7;in <strong>X</strong> &apos;e bas&#x131;n.</li>
+</ul>
+<p>Ayr&#x131;ca varsay&#x131;lan olarak g&#xF6;r&#xFC;nt&#xFC;lenmeyen/ belirli ko&#x15F;ullarda g&#xF6;r&#xFC;nt&#xFC;lenebilen baz&#x131; &#xF6;&#x11F;elerde var. Mesela, &#xE7;oklu-ara&#xE7; se&#xE7;ici sadece birden &#xE7;ok arac&#x131;n&#x131;z varsa veya u&#xE7;u&#x15F; &#xF6;ncesi kontrol listesi e&#x11F;er etkinle&#x15F;tirilmi&#x15F;se g&#xF6;r&#xFC;nt&#xFC;lenir.</p>
+<h2 id="instrument_panel"><a name="instrument_panel" class="plugin-anchor" href="#instrument_panel"><i class="fa fa-link" aria-hidden="true"></i></a>Bilgi Paneli </h2>
+<p>Bilgi Paneli, telemetri, kamera, video, sistem durumu ve titre&#x15F;im bilgileri dahil olmak &#xFC;zere mevcut ara&#xE7; hakk&#x131;nda bilgileri g&#xF6;r&#xFC;nt&#xFC;leyebilece&#x11F;iniz &#xE7;ok sekmeli bir widgett&#x131;r.</p>
+<p>Varsay&#x131;lan &#x15F;ekilde ara&#xE7; telemetrisini g&#xF6;sterir - di&#x11F;er se&#xE7;enekleri se&#xE7;mek i&#xE7;in sa&#x11F;daki a&#xE7;&#x131;l&#x131;r men&#xFC;y&#xFC; kullanabilirsiniz.</p>
+<h3 id="de&#x11F;erler-telemetri"><a name="de&#x11F;erler-telemetri" class="plugin-anchor" href="#de&#x11F;erler-telemetri"><i class="fa fa-link" aria-hidden="true"></i></a>De&#x11F;erler (Telemetri)</h3>
+<p>De&#x11F;erler sayfas&#x131; telemetri bilgilerini g&#xF6;sterir; varsay&#x131;lan olarak rak&#x131;m (ev konumuna g&#xF6;re) ve yer h&#x131;z&#x131;.</p>
+<p><img src="../../assets/fly/instrument_page_values.jpg" alt="Instrument Page - for values/telemetry"></p>
+<p>Panelin sol &#xFC;st k&#xF6;&#x15F;esindeki k&#xFC;&#xE7;&#xFC;k di&#x15F;li simgesine basarak hangi bilgilerin g&#xF6;r&#xFC;nt&#xFC;lenece&#x11F;ini ayarlayabilirsiniz. Her de&#x11F;eri ister normal isterse &quot;b&#xFC;y&#xFC;k&quot; boyutta g&#xF6;r&#xFC;nt&#xFC;lenebilir (normal boyutta sayfadaki her sat&#x131;rda 2 de&#x11F;er varken, b&#xFC;y&#xFC;k boyutta sadece 1 de&#x11F;er olur).</p>
+<p><img src="../../assets/fly/instrument_page_values_settings.jpg" alt="Instrument Page - values settings"></p>
+<h3 id="camera_instrument_page"><a name="camera_instrument_page" class="plugin-anchor" href="#camera_instrument_page"><i class="fa fa-link" aria-hidden="true"></i></a>Kamera </h3>
+<p>Kamera sayfas&#x131;, kameray&#x131; ayarlamak ve kontrol etmek i&#xE7;in kullan&#x131;l&#x131;r. U&#xE7;u&#x15F; kontrolc&#xFC;s&#xFC;ne direkt ba&#x11F;l&#x131; bir kamera i&#xE7;in sadece kameray&#x131; ba&#x15F;latma ayar&#x131; vard&#x131;r:</p>
+<p><img src="../../assets/fly/instrument_page_camera.jpg" alt="Instrument Page - for Camera"></p>
+<p><a href="https://mavlink.io/en/services/camera.html" target="_blank">MAVLink Camera Protocol</a>&apos;&#xFC; destekleyen bir kameraya ba&#x11F;land&#x131;&#x11F;&#x131;n&#x131;zda ek olarak ge&#xE7;erli hale gelen di&#x11F;er kamera &#xF6;zelliklerini ayarlay&#x131;p kullanabilirsiniz. &#xD6;rnek olarak, e&#x11F;er kameran&#x131;z video modunu destekliyorsa, foto&#x11F;raf ve video modlar&#x131; aras&#x131;nda ge&#xE7;i&#x15F; yapabilir, kayd&#x131; ba&#x15F;lat&#x131;p/durdurabilirsiniz.</p>
+<p><img src="../../assets/fly/instrument_page_camera_mavlink.jpg" alt="Instrument Page - Camera MAVLink Settings"></p>
+<p>Geli&#x15F;mi&#x15F; ayarlara sayfan&#x131;n sol &#xFC;st&#xFC;ndeki di&#x15F;liye t&#x131;klayarak ula&#x15F;abilirsiniz.</p>
+<p><img src="../../assets/fly/instrument_page_camera_mavlink_settings.jpg" alt="Instrument Page - Camera MAVLink Settings"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> G&#xF6;sterilen ayarlar&#x131;n &#xE7;o&#x11F;u kameraya ba&#x11F;l&#x131;d&#x131;r (ayarlar <a href="https://mavlink.io/en/services/camera_def.html" target="_blank">MAVLink Camera Definition File</a>&apos;da tan&#x131;mlanm&#x131;&#x15F;t&#x131;r). Sondaki bir ka&#xE7; ortak ayar sabit olarak kodlanm&#x131;&#x15F;t&#x131;r: Foto&#x11F;raf Modu (Tekli/Photolapse), Foto&#x11F;raf Aral&#x131;&#x11F;&#x131; (Timelapse i&#xE7;in), Kamera Ayarlar&#x131;n&#x131; Varsay&#x131;lana S&#x131;f&#x131;rla (kameraya bir s&#x131;f&#x131;rlama komutu g&#xF6;nderir), Format (depolama)</p>
+</blockquote>
+<h3 id="video_instrument_page"><a name="video_instrument_page" class="plugin-anchor" href="#video_instrument_page"><i class="fa fa-link" aria-hidden="true"></i></a>Video Ak&#x131;&#x15F;&#x131; </h3>
+<p>Video sayfas&#x131; video ak&#x131;&#x15F;&#x131;n&#x131; etkinle&#x15F;tirmek ve devre d&#x131;&#x15F;&#x131; b&#x131;rakmak i&#xE7;in kullan&#x131;l&#x131;r. Etkinle&#x15F;tirildi&#x11F;inde, video ak&#x131;&#x15F;&#x131;n&#x131; durdurup ba&#x15F;latabilir, &#x131;zgara &#xE7;izgilerini a&#xE7;abilir, g&#xF6;r&#xFC;nt&#xFC;n&#xFC;n ekrana nas&#x131;l s&#x131;&#x11F;aca&#x11F;&#x131;n&#x131; de&#x11F;i&#x15F;tirebilir ve videoyu yerel olarak QGC ile kaydedebilirsiniz.</p>
+<p><img src="../../assets/fly/instrument_page_video_stream.jpg" alt="Instrument Page - Video Stream"></p>
+<h3 id="durum"><a name="durum" class="plugin-anchor" href="#durum"><i class="fa fa-link" aria-hidden="true"></i></a>Durum</h3>
+<p>Durum sayfas&#x131; arac&#x131;n&#x131;zdaki sistemin durumunu g&#xF6;sterir. E&#x11F;er sistemde bir s&#x131;k&#x131;nt&#x131; olursa <em>QGroundControl</em> bu sayfay&#x131; otomatik olarak a&#xE7;acakt&#x131;r.</p>
+<p><img src="../../assets/fly/instrument_page_health_good.jpg" alt="Instrument Page - Vehicle Health Good"> <img src="../../assets/fly/instrument_page_health_bad.jpg" alt="Instrument Page - Vehicle Health Bad"></p>
+<h3 id="titre&#x15F;im"><a name="titre&#x15F;im" class="plugin-anchor" href="#titre&#x15F;im"><i class="fa fa-link" aria-hidden="true"></i></a>Titre&#x15F;im</h3>
+<p>Titre&#x15F;im sayfas&#x131; mevcut titre&#x15F;im seviyelerini ve klips say&#x131;lar&#x131;n&#x131; g&#xF6;sterir.</p>
+<p><img src="../../assets/fly/instrument_page_vibration.jpg" alt="Instrument Page - Vibration Clip"></p>
+<h2 id="i&#x307;&#x15F;lemlerg&#xF6;revler"><a name="i&#x307;&#x15F;lemlerg&#xF6;revler" class="plugin-anchor" href="#i&#x307;&#x15F;lemlerg&#xF6;revler"><i class="fa fa-link" aria-hidden="true"></i></a>&#x130;&#x15F;lemler/G&#xF6;revler</h2>
+<p>The following sections describe how to perform common operations/tasks in the Fly View.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Many of the available options depend on both the vehicle type and its current state.</p>
+</blockquote>
+<h3 id="preflight_checklist"><a name="preflight_checklist" class="plugin-anchor" href="#preflight_checklist"><i class="fa fa-link" aria-hidden="true"></i></a>Pre Flight Checklist </h3>
+<p>An automated preflight checklist can be used to run through standard checks that the vehicle is configured correctly and it is safe to fly.</p>
+<p>To you the checklist, first enable the tool by navigating to <a href="../SettingsView/General.md">Application Settings &gt; General &gt; Fly View</a> and selecting the <strong>Use preflight checklist</strong> checkbox. The tool will then be added to the <em>Flight Tools</em>. Press it to open the checklist:</p>
+<p><img src="../../assets/fly/pre_flight_checklist.jpg" alt="Pre Flight Checklist"></p>
+<p>Once you have performed each test, select it on it in the UI to mark it as complete.</p>
+<h3 id="arm"><a name="arm" class="plugin-anchor" href="#arm"><i class="fa fa-link" aria-hidden="true"></i></a>Arm </h3>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> Generally <em>QGroundControl</em> does not require you to arm the vehicle explicitly; this is done for you if you start a mission or takeoff.</p>
+</blockquote>
+<p>Arming a vehicle starts the motors in preparation for takeoff.</p>
+<p>To arm the vehicle, select <strong>Disarmed</strong> in the <em>Fly Toolbar</em> and then use the confirmation sider.</p>
+<p><img src="../../assets/fly/arm.jpg" alt="Arm"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Vehicles usually disarm automatically if you do not take off after a few seconds.</p>
+</blockquote>
+<h3 id="disarm"><a name="disarm" class="plugin-anchor" href="#disarm"><i class="fa fa-link" aria-hidden="true"></i></a>Disarm </h3>
+<p>Disarming the vehicle stops the motors (making the vehicle safe). To disarm the vehicle select <strong>Armed</strong> in the <em>Fly Toolbar</em> when the vehicle is <strong>landed</strong>.</p>
+<p><img src="../../assets/fly/disarm.jpg" alt="Disarm"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Disarming the vehicle while it is flying is called an <a href="#emergency_stop">Emergency Stop</a></p>
+</blockquote>
+<h3 id="emergency_stop"><a name="emergency_stop" class="plugin-anchor" href="#emergency_stop"><i class="fa fa-link" aria-hidden="true"></i></a>Emergency Stop </h3>
+<p>Emergency stop is effectively the same as disarming the vehicle while you are flying. Your vehicle will crash!</p>
+<p>To disarm the vehicle select <strong>Armed</strong> in the <em>Fly Toolbar</em> when the vehicle is flying.</p>
+<p><img src="../../assets/fly/emergency_stop.jpg" alt="Emergency Stop"></p>
+<h3 id="takeoff"><a name="takeoff" class="plugin-anchor" href="#takeoff"><i class="fa fa-link" aria-hidden="true"></i></a>Takeoff </h3>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> If you are starting a mission for a multicopter <em>QGroundControl</em> will automatically perform the takeoff step.</p>
+</blockquote>
+<p>To takeoff (when landed):</p>
+<ol>
+<li>Press the <strong>Takeoff</strong> button in the <em>Fly Tools</em> (this will toggle to a <strong>Land</strong> button after taking off).</li>
+<li>Optionally set the takeoff altitude in the right-side vertical slider.</li>
+<li>Confirm takeoff using the slider.</li>
+</ol>
+<p><img src="../../assets/fly/takeoff.jpg" alt="takeoff"></p>
+<h3 id="land"><a name="land" class="plugin-anchor" href="#land"><i class="fa fa-link" aria-hidden="true"></i></a>Land </h3>
+<p>You can land at the current position at any time while flying:</p>
+<ol>
+<li>Press the <strong>Land</strong> button in the <em>Fly Tools</em> (this will toggle to a <strong>Land</strong> button when landed).</li>
+<li>Confirm landing using the slider.</li>
+</ol>
+<p><img src="../../assets/fly/land.jpg" alt="land"></p>
+<h3 id="rtlreturn"><a name="rtlreturn" class="plugin-anchor" href="#rtlreturn"><i class="fa fa-link" aria-hidden="true"></i></a>RTL/Return</h3>
+<p>Return to the home position at any time while flying:</p>
+<ol>
+<li>Press the <strong>RTL</strong> button in the <em>Fly Tools</em>.</li>
+<li>Confirm RTL using the slider.</li>
+</ol>
+<p><img src="../../assets/fly/land.jpg" alt="land"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The vehicle may also land at the home position, depending on its type and configuration.</p>
+</blockquote>
+<h3 id="change_altitude"><a name="change_altitude" class="plugin-anchor" href="#change_altitude"><i class="fa fa-link" aria-hidden="true"></i></a>Change Altitude </h3>
+<p>You can change altitude while flying, except when in a mission:</p>
+<ol>
+<li>Press the <strong>Action</strong> button on the <em>Fly Tools</em></li>
+<li><p>Select the <em>Change Altitude</em> action from the dialog.</p>
+<p><img src="../../assets/fly/continue_mission_change_altitude_action.jpg" alt="Continue Mission/Change Altitude action"></p>
+</li>
+<li><p>Move the vertical slider to the desired altitude, then drag the confirmation slider to start the action.</p>
+<p><img src="../../assets/fly/change_altitude.jpg" alt="Change altitude"></p>
+</li>
+</ol>
+<h3 id="goto"><a name="goto" class="plugin-anchor" href="#goto"><i class="fa fa-link" aria-hidden="true"></i></a>Goto Location </h3>
+<p>After taking off you can specify that you want to fly to a particular location.</p>
+<ol>
+<li><p>Press the map where you want the vehicle to move and select <strong>Go to location</strong> on the popup.</p>
+<p><img src="../../assets/fly/goto_or_orbit.jpg" alt="Goto or orbit"></p>
+</li>
+<li><p>The location will be displayed on the map, along with a confirmation slider.</p>
+<p><img src="../../assets/fly/goto.jpg" alt="Goto confirmation"></p>
+</li>
+<li><p>When you&apos;re ready, drag the slider to start the operation (or press the <strong>X</strong> icon to cancel it).</p>
+</li>
+</ol>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Goto points must be set within 1 km of the vehicle (hard-coded in QGC).</p>
+</blockquote>
+<h3 id="orbit"><a name="orbit" class="plugin-anchor" href="#orbit"><i class="fa fa-link" aria-hidden="true"></i></a>Orbit Location </h3>
+<p>After taking off you can specify that you want to orbit a particular location.</p>
+<ol>
+<li><p>Press on the map (near the centre of your desired orbit) and select <strong>Orbit at location</strong> on the popup.</p>
+<p><img src="../../assets/fly/goto_or_orbit.jpg" alt="Goto or orbit"></p>
+</li>
+<li><p>The proposed orbit will be displayed on the map, along with a confirmation sider.</p>
+<p><img src="../../assets/fly/orbit.jpg" alt="Orbit confirmation"></p>
+<ul>
+<li>Select and drag the central marker to move the orbit location.</li>
+<li>Select and drag the dot on the outer circle to change the orbit radius</li>
+</ul>
+</li>
+<li>When you&apos;re ready, drag the slider to start the operation (or press the <strong>X</strong> icon to cancel it).</li>
+</ol>
+<h3 id="pause"><a name="pause" class="plugin-anchor" href="#pause"><i class="fa fa-link" aria-hidden="true"></i></a>Pause</h3>
+<p>You can pause most operations, including taking off, landing, RTL, missions, Orbit at location. The vehicle behaviour when paused depends on the vehicle type; typically a multicopter will hover, and a fixed wing vehicle will circle.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> You cannot pause a <em>Goto location</em> operation.</p>
+</blockquote>
+<p>To pause:</p>
+<ol>
+<li>Press the <strong>Pause</strong> button in the <em>Fly Tools</em>.</li>
+<li>Optionally set a new altitude using the right-side vertical slider.</li>
+<li>Confirm the pause using the slider.</li>
+</ol>
+<p><img src="../../assets/fly/pause.jpg" alt="pause"></p>
+<h3 id="missions"><a name="missions" class="plugin-anchor" href="#missions"><i class="fa fa-link" aria-hidden="true"></i></a>Missions</h3>
+<h4 id="start_mission"><a name="start_mission" class="plugin-anchor" href="#start_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Start Mission </h4>
+<p>You can start a mission when the vehicle is landed (the start mission confirmation slider is often displayed by default).</p>
+<p>To start a mission from landed:</p>
+<ol>
+<li>Press the <strong>Action</strong> button on the <em>Fly Tools</em></li>
+<li><p>Select the <em>Start Mission</em> action from the dialog.</p>
+<p><img src="../../assets/fly/start_mission_action.jpg" alt="Start mission action"></p>
+<p>   (to display the confirmation slider)</p>
+</li>
+</ol>
+<ol>
+<li><p>When the confirmation slider appears, drag it to start the mission.</p>
+<p><img src="../../assets/fly/start_mission.jpg" alt="Start mission"></p>
+</li>
+</ol>
+<h4 id="continue_mission"><a name="continue_mission" class="plugin-anchor" href="#continue_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Continue Mission </h4>
+<p>You can <em>continue</em> mission from the <em>next</em> waypoint when you&apos;re flying (the <em>Continue Mission</em> confirmation slider is often displayed by default after you takeoff).</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Continue and <a href="#resume_mission">Resume mission</a> are different! Continue is used to restart a mission that has been paused, or where you have taken off, so you&apos;ve already missed a takeoff mission command. Resume mission is used when you&apos;ve used a RTL or landed midway through a mission (e.g. for a battery change) and then wish to continue the next mission item (i.e. it takes you to where you were up to in the mission, rather than continuing from you place in the mission).</p>
+</blockquote>
+<p>You can continue the current mission while (unless already in a mission!):</p>
+<ol>
+<li>Press the <strong>Action</strong> button on the <em>Fly Tools</em></li>
+<li><p>Select the <em>Continue Mission</em> action from the dialog.</p>
+<p><img src="../../assets/fly/continue_mission_change_altitude_action.jpg" alt="Continue Mission/Change Altitude action"></p>
+</li>
+<li><p>Drag the confirmation slider to continue the mission.</p>
+<p><img src="../../assets/fly/continue_mission.jpg" alt="Continue Mission"></p>
+</li>
+</ol>
+<h4 id="resume_mission"><a name="resume_mission" class="plugin-anchor" href="#resume_mission"><i class="fa fa-link" aria-hidden="true"></i></a>Resume Mission </h4>
+<p><em>Resume Mission</em> is used to resume a mission after performing an <a href="#rtl">RTL/Return</a> or <a href="#land">Land</a> from within a mission (in order, for example, to perform a battery change).</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> If you are performing a battery change, <strong>do not</strong> disconnect QGC from the vehicle after disconnecting the battery. After you insert the new battery <em>QGroundControl</em> will detect the vehicle again and automatically restore the connection.</p>
+</blockquote>
+<p>After landing you will be prompted with a <em>Flight Plan complete</em> dialog, which gives you the option to remove the plan from the vehicle, leave it on the vehicle, or to resume the mission from the last waypoint that was traveled through.</p>
+<p><img src="../../assets/fly/resume_mission.jpg" alt="Resume Mission"></p>
+<p>If you select to resume the mission, then <em>QGroundControl</em> will rebuild the mission and upload it to the vehicle. Then use the <em>Start Mission</em> slider to continue the mission.</p>
+<p>The image below shows the mission that was rebuilt after the Return shown above.</p>
+<p><img src="../../assets/fly/resume_mission_rebuilt.jpg" alt="Resume Rebuilt Mission"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> A mission cannot simply resume from the last mission item that the vehicle executed, because there may be multiple items at the last waypoint that affect the next stage of the mission (e.g. speed commands or camera control commands). Instead <em>QGroundControl</em> rebuilds the mission, starting from the last mission item flown, and automatically prepending any relevant commands to the front of the mission.</p>
+</blockquote>
+<h4 id="resume_mission_prompt"><a name="resume_mission_prompt" class="plugin-anchor" href="#resume_mission_prompt"><i class="fa fa-link" aria-hidden="true"></i></a>Remove Mission Prompt After Landing </h4>
+<p>You will be prompted to remove the mission from the vehicle after the mission completes and the vehicle lands and disarms. This is meant to prevent issues where stale missions are unknowingly left on a vehicle, potentially resulting in unexpected behavior.</p>
+<h3 id="video_switcher"><a name="video_switcher" class="plugin-anchor" href="#video_switcher"><i class="fa fa-link" aria-hidden="true"></i></a>Display Video </h3>
+<p>When video streaming is enabled, <em>QGroundControl</em> will display the video stream for the currently selected vehicle in the &quot;video switcher window&quot; at the bottom left of the map. You can press the switcher anywhere to toggle <em>Video</em> and <em>Map</em> to foreground (below we show the video in the foreground).</p>
+<p><img src="../../assets/fly/video_record.jpg" alt="Video Stream Record"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> Video streaming is configured/enabled in <a href="../SettingsView/General.md#video">Application Settings &gt; General tab &gt; Video</a>.</p>
+</blockquote>
+<p>You can further configure video display using controls on the switcher:</p>
+<pre><code>![Video Pop](../../assets/fly/video_pop.jpg)
+</code></pre><ul>
+<li>Resize the switcher by dragging the icon in the to right corner.</li>
+<li>Hide the switcher by pressing the toggle icon in the lower left.</li>
+<li>Detach the video switcher window by pressing on the icon in its top left corner (once detached, you can move and resize the window just like any other in your OS). If you close the detached window the switcher will re-lock to the QGC Fly view.</li>
+</ul>
+<h3 id="record-video"><a name="record-video" class="plugin-anchor" href="#record-video"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video</h3>
+<p>If supported by the camera and vehicle, <em>QGroundControl</em> can start and stop video recording on the camera itself. <em>QGroundControl</em> can also record the video stream and save it locally.</p>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> Video stored on the camera may be of much higher quality, but it is likely that your ground station will have a much larger recording capacity.</p>
+</blockquote>
+<h4 id="record-video-stream-on-gcs"><a name="record-video-stream-on-gcs" class="plugin-anchor" href="#record-video-stream-on-gcs"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video Stream (on GCS)</h4>
+<p>Video stream recording is controlled on the <a href="#video_instrument_page">video stream instrument page</a>. Press the red circle to start recording a new video (a new video file is created each time the circle is pressed); the circle will change into a red square while recording is in progress.</p>
+<p><img src="../../assets/fly/video_record.jpg" alt="Video Stream Record"></p>
+<p>Video stream recording is configured in the <a href="../SettingsView/General.md">Application Settings &gt; General tab</a>:</p>
+<ul>
+<li><a href="../SettingsView/General.md#video-recording">Video Recording</a> - specifies the recording file format and storage limits. &gt; <strong>Note</strong> Videos are saved in Matroska format (.mkv) by default. This format is relatively robust against corruption in case of errors.</li>
+<li><a href="../SettingsView/General.md#miscellaneous">Miscellaneous</a> - Streamed video is saved under the <strong>Application Load/Save Path</strong>. </li>
+</ul>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> The stored video includes just the video stream itself. To record video with QGroundControl application elements displayed, you should use separate screen recording software.</p>
+</blockquote>
+<h4 id="record-video-on-camera"><a name="record-video-on-camera" class="plugin-anchor" href="#record-video-on-camera"><i class="fa fa-link" aria-hidden="true"></i></a>Record Video on Camera</h4>
+<p>Start/stop video recording <em>on the camera itself</em> using the <a href="#camera_instrument_page">camera instrument page</a>. First toggle to video mode, then select the red button to start recording.</p>
+<p><img src="../../assets/fly/instrument_page_camera_mavlink.jpg" alt="Instrument Page - Camera MAVLink Settings"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../toolbar/toolbar.html" class="navigation navigation-prev " aria-label="Previous page: Toolbar/Menu">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="replay_flight_data.html" class="navigation navigation-next " aria-label="Next page: Replay Flight Data">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Fly","level":"1.5","depth":1,"next":{"title":"Replay Flight Data","level":"1.5.1","depth":2,"path":"FlyView/replay_flight_data.md","ref":"FlyView/replay_flight_data.md","articles":[]},"previous":{"title":"Toolbar/Menu","level":"1.4","depth":1,"path":"toolbar/toolbar.md","ref":"toolbar/toolbar.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"FlyView/FlyView.md","mtime":"2020-12-16T21:53:16.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-16T21:55:27.768Z"},"basePath":"..","book":{"language":"tr"}});
+        });
+    </script>
+</div>
+
+    
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

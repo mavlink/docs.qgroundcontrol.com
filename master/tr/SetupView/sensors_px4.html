@@ -1,0 +1,1067 @@
+
+<!DOCTYPE HTML>
+<html lang="tr" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Sensors (PX4) · QGroundControl User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-dronecode/theme_styles.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="FlightModes.html" />
+    
+    
+    <link rel="prev" href="sensors_ardupilot.html" />
+    
+
+    </head>
+    <body>
+        
+    
+    <!-- ##HW Add dronecode menu -->
+    <div id="common_dronecode_menu">
+
+      <div class="common_menu_logo large_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png" alt="Dronecode logo (large)" />
+        </a>
+      </div>
+      <div class="common_menu_logo small_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png" alt="Dronecode logo (small)" />
+        </a>
+      </div>
+      
+      <div class="common_menu_options">
+        
+            <div class="common_dronecode_menu_item"><a href="http://px4.io/">PX4</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://qgroundcontrol.com/">QGroundControl</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://qgroundcontrol.com/">QGC</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://www.dronecode.org/sdk/">SDK</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://mavlink.io/en/">MAVLink</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="https://www.dronecode.org/documentation/">Documentation</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="https://www.dronecode.org/documentation/">Docs</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://discuss.px4.io/">Support</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://discuss.px4.io/">Help</a></div>
+        
+      </div>
+    </div>
+    
+<!-- ##HW END Add dronecode menu -->
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Aramak istediğiniz" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting_started/quick_start.html">
+            
+                <a href="../getting_started/quick_start.html">
+            
+                    
+                    Quick Start
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../getting_started/download_and_install.html">
+            
+                <a href="../getting_started/download_and_install.html">
+            
+                    
+                    Download and Install
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../toolbar/toolbar.html">
+            
+                <a href="../toolbar/toolbar.html">
+            
+                    
+                    Toolbar/Menu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../FlyView/FlyView.html">
+            
+                <a href="../FlyView/FlyView.html">
+            
+                    
+                    Fly
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../FlyView/replay_flight_data.html">
+            
+                <a href="../FlyView/replay_flight_data.html">
+            
+                    
+                    Replay Flight Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../FlyView/VideoOverlay.html">
+            
+                <a href="../FlyView/VideoOverlay.html">
+            
+                    
+                    Video Overlay
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../PlanView/PlanView.html">
+            
+                <a href="../PlanView/PlanView.html">
+            
+                    
+                    Plan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="SetupView.html">
+            
+                <a href="SetupView.html">
+            
+                    
+                    Vehicle Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Firmware.html">
+            
+                <a href="Firmware.html">
+            
+                    
+                    Firmware
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="Airframe.html">
+            
+                <a href="Airframe.html">
+            
+                    
+                    Airframe
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="airframe_ardupilot.html">
+            
+                <a href="airframe_ardupilot.html">
+            
+                    
+                    Airframe (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="airframe_px4.html">
+            
+                <a href="airframe_px4.html">
+            
+                    
+                    Airframe (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="Radio.html">
+            
+                <a href="Radio.html">
+            
+                    
+                    Radio
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="Sensors.html">
+            
+                <a href="Sensors.html">
+            
+                    
+                    Sensors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="sensors_ardupilot.html">
+            
+                <a href="sensors_ardupilot.html">
+            
+                    
+                    Sensors (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4.2" data-path="sensors_px4.html">
+            
+                <a href="sensors_px4.html">
+            
+                    
+                    Sensors (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="FlightModes.html">
+            
+                <a href="FlightModes.html">
+            
+                    
+                    Flight Modes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="Power.html">
+            
+                <a href="Power.html">
+            
+                    
+                    Power
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="Motors.html">
+            
+                <a href="Motors.html">
+            
+                    
+                    Motors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" data-path="Motors_ardusub.html">
+            
+                <a href="Motors_ardusub.html">
+            
+                    
+                    Motors (ArduSub)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="Safety.html">
+            
+                <a href="Safety.html">
+            
+                    
+                    Safety
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="safety_ardupilot.html">
+            
+                <a href="safety_ardupilot.html">
+            
+                    
+                    Safety (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="Tuning.html">
+            
+                <a href="Tuning.html">
+            
+                    
+                    Tuning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="tuning_ardupilot.html">
+            
+                <a href="tuning_ardupilot.html">
+            
+                    
+                    Tuning (ArduPilot)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1.1" data-path="tuning_arducopter.html">
+            
+                <a href="tuning_arducopter.html">
+            
+                    
+                    ArduCopter Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.1.2" data-path="tuning_ardusub.html">
+            
+                <a href="tuning_ardusub.html">
+            
+                    
+                    ArduSub Tuning
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="tuning_px4.html">
+            
+                <a href="tuning_px4.html">
+            
+                    
+                    Tuning (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="Camera.html">
+            
+                <a href="Camera.html">
+            
+                    
+                    Camera
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="Joystick.html">
+            
+                <a href="Joystick.html">
+            
+                    
+                    Joystick
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="Parameters.html">
+            
+                <a href="Parameters.html">
+            
+                    
+                    Parameters
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SettingsView/SettingsView.html">
+            
+                <a href="../SettingsView/SettingsView.html">
+            
+                    
+                    Application Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../analyze_view/">
+            
+                <a href="../analyze_view/">
+            
+                    
+                    Analyze
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../analyze_view/log_download.html">
+            
+                <a href="../analyze_view/log_download.html">
+            
+                    
+                    Log Download
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../analyze_view/geotag_images.html">
+            
+                <a href="../analyze_view/geotag_images.html">
+            
+                    
+                    GeoTag Images (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../analyze_view/mavlink_console.html">
+            
+                <a href="../analyze_view/mavlink_console.html">
+            
+                    
+                    MAVLink Console (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../analyze_view/mavlink_inspector.html">
+            
+                <a href="../analyze_view/mavlink_inspector.html">
+            
+                    
+                    MAVLink Inspector
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../releases/">
+            
+                <a href="../releases/">
+            
+                    
+                    Releases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Support/Support.html">
+            
+                <a href="../Support/Support.html">
+            
+                    
+                    Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Flight Stacks</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 Pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="http://ardupilot.org/">
+            
+                    
+                    ArduPilot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dronecode Shortcuts</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://dev.qgroundcontrol.com/en/">
+            
+                    
+                    QGroundControl Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 User Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://dev.px4.io/en/">
+            
+                    
+                    PX4 Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <a target="_blank" href="https://mavlink.io/en/">
+            
+                    
+                    MAVLink Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <a target="_blank" href="https://mavsdk.mavlink.io/">
+            
+                    
+                    MAVSDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" >
+            
+                <a target="_blank" href="https://camera-manager.dronecode.org/en/">
+            
+                    
+                    Dronecode Camera Manager
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook ile yayınla
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Sensors (PX4)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="sensor-setup-px4"><a name="sensor-setup-px4" class="plugin-anchor" href="#sensor-setup-px4"><i class="fa fa-link" aria-hidden="true"></i></a>Sensor Setup (PX4)</h1>
+<p>The <em>Sensor Setup</em> section allows you to configure and calibrate the vehicle&apos;s compass, gyroscope, accelerometer and any other sensors (the available sensors will depend on the vehicle type).</p>
+<p>Available sensors are displayed as a list of buttons beside the sidebar. Sensors marked with green are already calibrated, while sensors marked with red require calibration prior to flight. Sensors with no light are simple settings with default values that you may choose not to calibrate.</p>
+<p>Click on the button for each sensor to start its calibration sequence.</p>
+<p><img src="../../assets/setup/sensors_px4_vtol.jpg" alt="Sensors Setup screen for VTOL vehicle"></p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The image shown is from a VTOL vehicle running PX4 firmware. Other autopilot firmware and vehicles will offer slightly different options.</p>
+</blockquote>
+<h2 id="compass"><a name="compass" class="plugin-anchor" href="#compass"><i class="fa fa-link" aria-hidden="true"></i></a>Compass </h2>
+<p>The process guides you to position the vehicle in a number of set orientations and rotate the vehicle about the specified axis.</p>
+<p>The calibration steps are:</p>
+<ol>
+<li>Click the <strong>Compass</strong> sensor button <img src="../../assets/setup/sensor_compass_select_px4.jpg" alt="Select Compass calibration PX4"> &gt; <strong>Note</strong> The default flight controller orientation is <code>ROTATION_NONE</code> (flight controller and compass mounted upright on the vehicle and facing the front). You can set a different value here or in <a href="#flight_controller_orientation">Set Orientations</a>. </li>
+<li>Click <strong>OK</strong> to start the calibration. </li>
+<li>Place the vehicle in any of the orientations shown in red (incomplete) and hold it still. Once prompted (the orientation-image turns yellow) rotate the vehicle around the specified axis in either/both directions. Once the calibration is complete in that orientation the associated image on the screen will turn green. <img src="../../assets/setup/sensor_compass_calibrate_px4.jpg" alt="Compass calibration steps on PX4"></li>
+<li>Repeat the calibration process for all vehicle orientations.</li>
+</ol>
+<p>Once you&apos;ve rotated the vehicle in all the positions <em>QGroundControl</em> will display <em>Calibration complete</em> (all orientation images will be displayed in green and the progress bar will fill completely) You can then proceed to the next sensor.</p>
+<h2 id="gyroscope"><a name="gyroscope" class="plugin-anchor" href="#gyroscope"><i class="fa fa-link" aria-hidden="true"></i></a>Gyroscope </h2>
+<p>You will be guided to place the vehicle on a flat surface and keep it still.</p>
+<p>The calibration steps are:</p>
+<ol>
+<li>Click the <strong>Gyroscope</strong> sensor button <img src="../../assets/setup/sensor/gyroscope_calibrate_px4.jpg" alt="Select Gyroscope calibration PX4"></li>
+<li>Place the vehicle on a surface and leave it still.</li>
+<li><p>Click <strong>Ok</strong> to start the calibration.</p>
+<p> The bar at the top shows the progress:</p>
+<p> <img src="../../assets/setup/sensor/gyroscope_calibrate_progress_px4.jpg" alt="Gyro calibration in progress on PX4"></p>
+</li>
+<li><p>When finished, <em>QGroundControl</em> will display a progress bar <em>Calibration complete</em> <img src="../../assets/setup/sensor/gyroscope_calibrate_complete_px4.jpg" alt="Gyro calibration complete on PX4"></p>
+</li>
+</ol>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> If you move the vehicle <em>QGroundControl</em> will automatically restart the calibration.</p>
+</blockquote>
+<p>You can then proceed to the next sensor.</p>
+<h2 id="accelerometer"><a name="accelerometer" class="plugin-anchor" href="#accelerometer"><i class="fa fa-link" aria-hidden="true"></i></a>Accelerometer </h2>
+<p>To calibrate the flight controller accelerometers you will be asked to place and hold your vehicle a number of orientations (you will be prompted when to move between positions).</p>
+<p>The calibration steps are:</p>
+<ol>
+<li>Click the <strong>Accelerometer</strong> sensor button. <img src="../../assets/setup/sensor/accelerometer_px4.jpg" alt="Accelerometer calibration"> &gt; <strong>Note</strong> You should already have set the <a href="#flight_controller_orientation">Flight Controller Orientation</a> above. If not, you can also set it here. </li>
+<li>Click <strong>OK</strong> to start the calibration. </li>
+<li>Position the vehicle as guided by the <em>images</em> on the screen. This is very similar to compass calibration. <img src="../../assets/setup/sensor/accelerometer_positions_px4.jpg" alt="Accelerometer calibration"></li>
+<li>Repeat the calibration process for all vehicle orientations.</li>
+</ol>
+<p>Once you&apos;ve rotated the vehicle in all the positions <em>QGroundControl</em> will display <em>Calibration complete</em>.</p>
+<p>You can then proceed to the next sensor.</p>
+<h2 id="level-horizon"><a name="level-horizon" class="plugin-anchor" href="#level-horizon"><i class="fa fa-link" aria-hidden="true"></i></a>Level Horizon</h2>
+<p>If the horizon (as shown in the HUD) is not level after completing accelerometer calibration you can calibrate the level horizon for your vehicle. You will be asked to place the vehicle in a level orientation while it captures the information.</p>
+<ol>
+<li>Click the <strong>Level Horizon</strong> sensor button. <img src="../../assets/setup/sensor_level_horizon.jpg" alt="Level Horizon calibration"> &gt; <strong>Note</strong> You should already have set the <a href="#flight_controller_orientation">Flight Controller Orientation</a> above. If not, you can also set it here. </li>
+<li>Place the vehicle in its level flight orientation on a level surface: <ul>
+<li>For planes this is the position during level flight (planes tend to have their wings slightly pitched up!)</li>
+<li>For copters this is the hover position.</li>
+</ul>
+</li>
+<li>Click <strong>OK</strong> to start the calibration.</li>
+</ol>
+<h2 id="airspeed"><a name="airspeed" class="plugin-anchor" href="#airspeed"><i class="fa fa-link" aria-hidden="true"></i></a>Airspeed </h2>
+<p>The airspeed calibration needs to read a stable baseline with 0 airspeed in order to determine an offset. Cup your hands over the pitot to block any wind (if calibrating the sensor indoors this is not needed) and then blow into the tube using your mouth (to signal completion of the calibration).</p>
+<p>To calibrate the airspeed sensor:</p>
+<ol>
+<li><p>Click the <strong>Airspeed</strong> sensor button</p>
+<p> <img src="../../assets/setup/sensors_airspeed.jpg" alt="Airspeed calibration"></p>
+</li>
+<li><p>Cover the sensor (i.e. with your hand)</p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> Do not touch the sensor (obstruct any holes) during calibration.</p>
+</blockquote>
+</li>
+<li><p>Click <strong>OK</strong> to start the calibration.</p>
+</li>
+<li><p>Blow into the sensor.</p>
+</li>
+<li>Wait for 2-3 seconds before removing the covering (calibration completes silently after several seconds)</li>
+</ol>
+<h2 id="flight_controller_orientation"><a name="flight_controller_orientation" class="plugin-anchor" href="#flight_controller_orientation"><i class="fa fa-link" aria-hidden="true"></i></a>Set Orientations </h2>
+<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
+<p> You can skip this section if the flight controller and compass are mounted upright on the vehicle and facing the front (this is the default orientation - <code>ROTATION_NONE</code>).</p>
+</blockquote>
+<p>If the autopilot/compass are mounted in any other way you will need to specify their orientations as YAW, PITCH and/or ROLL offsets relative to the forward-facing-upright orientation (clock-wise rotation around the Z, Y and X axis, respectively).</p>
+<p><img src="../../assets/setup/flight_controller_orientation.png" style="width: 600px;"></p>
+<p>For example, the image below are at orientations: <code>ROTATION_NONE</code>, <code>ROTATION_YAW_90</code>,<code>ROTATION_YAW_180</code>,<code>ROTATION_YAW_270</code>.</p>
+<p><img src="../../assets/setup/flight_controller_yaw_rotation.png" style="width: 600px;"></p>
+<p>To set the orientation(s) on PX4:</p>
+<ol>
+<li><p>Select the <strong>Set Orientations</strong> button.</p>
+<p> <img src="../../assets/setup/sensor_orientation_set_orientations.jpg" style="width: 600px;"></p>
+</li>
+<li><p>Select the <strong>AutoPilot Orientation</strong>.</p>
+</li>
+<li><p>Select the <strong>External Compass Orientation</strong> (this option will only be displayed if there is an external compass).</p>
+</li>
+<li>Press <strong>OK</strong>.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sensors_ardupilot.html" class="navigation navigation-prev " aria-label="Previous page: Sensors (ArduPilot)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="FlightModes.html" class="navigation navigation-next " aria-label="Next page: Flight Modes">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Sensors (PX4)","level":"1.7.4.2","depth":3,"next":{"title":"Flight Modes","level":"1.7.5","depth":2,"path":"SetupView/FlightModes.md","ref":"SetupView/FlightModes.md","articles":[]},"previous":{"title":"Sensors (ArduPilot)","level":"1.7.4.1","depth":3,"path":"SetupView/sensors_ardupilot.md","ref":"SetupView/sensors_ardupilot.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/sensors_px4.md","mtime":"2020-12-16T21:53:16.624Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-16T21:55:27.768Z"},"basePath":"..","book":{"language":"tr"}});
+        });
+    </script>
+</div>
+
+    
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
