@@ -869,125 +869,132 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="flight-modes-setup"><a name="flight-modes-setup" class="plugin-anchor" href="#flight-modes-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Flight Modes Setup</h1>
-<p>The <em>Flight Modes</em> section allows you to map flight modes to radio channel(s), and hence to the switches on your radio control transmitter. Both flight mode setup and the available flight modes are different in PX4 and ArduPilot (and there are some differences between ArduCopter and ArduPlane).</p>
-<p>To access this section, select the <strong>Gear</strong> icon (Vehicle Setup) in the top toolbar and then <strong>Flight Modes</strong> in the sidebar.</p>
+                                <h1 id="u&#xE7;u&#x15F;-modlar&#x131;-kurulumu"><a name="u&#xE7;u&#x15F;-modlar&#x131;-kurulumu" class="plugin-anchor" href="#u&#xE7;u&#x15F;-modlar&#x131;-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>U&#xE7;u&#x15F; Modlar&#x131; Kurulumu</h1>
+<ul>
+<li>U&#xE7;u&#x15F; Modlar&#x131; * b&#xF6;l&#xFC;m&#xFC;, u&#xE7;u&#x15F; modlar&#x131;n&#x131; radyo kanal(lar)&#x131;na ve dolay&#x131;s&#x131;yla radyo kontrol vericinizdeki anahtarlara e&#x15F;lemenize olanak tan&#x131;r. Hem u&#xE7;u&#x15F; modu kurulumu hem de mevcut u&#xE7;u&#x15F; modlar&#x131; PX4 ve ArduPilot&apos;ta farkl&#x131;d&#x131;r (ve ArduCopter ile ArduPlane aras&#x131;nda baz&#x131; farkl&#x131;l&#x131;klar vard&#x131;r).</li>
+</ul>
+<p>Bu b&#xF6;l&#xFC;me eri&#x15F;mek i&#xE7;in, &#xFC;stteki ara&#xE7; &#xE7;ubu&#x11F;undan <strong>di&#x15F;li</strong> simgesini (Vehicle Setup), daha sonra kenar &#xE7;ubu&#x11F;undan <strong>Flight Modes</strong>&apos;u se&#xE7;in.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> You must already have <a href="Radio.html">configured your radio</a> in order to set flight modes.</p>
+<p> U&#xE7;u&#x15F; modlar&#x131;n&#x131; ayarlamak i&#xE7;in &#xF6;nceden <a href="Radio.html"> telsizinizi yap&#x131;land&#x131;rm&#x131;&#x15F; </a> olman&#x131;z gerekir.</p>
 </blockquote>
 <p><span></span></p>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> Flight modes provide different levels of <em>autopilot-assisted flight</em>, and <em>fully autonomous flight</em> via missions or offboard (API-based) control. Different flight modes allow new users to learn flying with a more forgiving platform than provided by basic RC control alone. They also enable automation of common tasks like taking off, landing and returning to the original launch position.</p>
+<p> U&#xE7;u&#x15F; modlar&#x131;, farkl&#x131; seviyelerde <em> otopilot destekli u&#xE7;u&#x15F;lar&#x131; </em> ve <em> tam otonom u&#xE7;u&#x15F;lar&#x131; </em>, g&#xF6;revler veya d&#x131;&#x15F;ar&#x131;dan (API tabanl&#x131;) kontrol yoluyla sa&#x11F;lar. Farkl&#x131; u&#xE7;u&#x15F; modlar&#x131;, yeni kullan&#x131;c&#x131;lar&#x131;n, yaln&#x131;zca temel RC kontrol&#xFC;n&#xFC;n sa&#x11F;lad&#x131;&#x11F;&#x131;ndan hataya daha toleransl&#x131; bir platformla u&#xE7;may&#x131; &#xF6;&#x11F;renmelerine olanak tan&#x131;r. Kalk&#x131;&#x15F;, ini&#x15F; ve f&#x131;rlatma konumuna geri d&#xF6;nme gibi yayg&#x131;n g&#xF6;revlerin otomasyonunu da sa&#x11F;larlar.</p>
 </blockquote>
 <div>
 </div>
 
 <blockquote>
-<p>For more information about the flight modes on each platform see: <em> <a href="https://docs.px4.io/en/flight_modes/" target="_blank">PX4 Flight Modes</a> </em> <a href="http://ardupilot.org/copter/docs/flight-modes.html" target="_blank">ArduCopter Flight Modes</a> * <a href="http://ardupilot.org/plane/docs/flight-modes.html" target="_blank">ArduPlane Flight Modes</a></p>
+<p>Her platformdaki u&#xE7;u&#x15F; modlar&#x131; hakk&#x131;nda daha fazla bilgi i&#xE7;in bak&#x131;n&#x131;z: <em> <a href="https://docs.px4.io/en/flight_modes/" target="_blank">PX4 Flight Modes</a> </em> <a href="http://ardupilot.org/copter/docs/flight-modes.html" target="_blank">ArduCopter Flight Modes</a> * <a href="http://ardupilot.org/plane/docs/flight-modes.html" target="_blank">ArduPlane Flight Modes</a></p>
 </blockquote>
-<h2 id="ardupilot-flight-mode-setup"><a name="ardupilot-flight-mode-setup" class="plugin-anchor" href="#ardupilot-flight-mode-setup"><i class="fa fa-link" aria-hidden="true"></i></a>ArduPilot Flight Mode Setup</h2>
-<p>On ArduPilot you can assign up to 6 different flight modes to a single channel of your transmitter (the channel is selectable on Plane, but fixed to channel 5 on Copter).</p>
-<p>ArduCopter (only) also allows you to specify additional <em>Channel Options</em> for channels 7-12. These allow you to assign functions to these switches (for example, to turn on a camera, or return to launch). There is additional information about channel configuration in the ArduCopter docs: [Auxiliary Function Switches](</p>
-<p>To set the flight modes:</p>
+<h2 id="ardupilot-u&#xE7;u&#x15F;-modu-kurulumu"><a name="ardupilot-u&#xE7;u&#x15F;-modu-kurulumu" class="plugin-anchor" href="#ardupilot-u&#xE7;u&#x15F;-modu-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>ArduPilot U&#xE7;u&#x15F; Modu Kurulumu</h2>
+<p>ArduPilot&apos;ta vericinizin tek bir kanal&#x131;na 6&apos;ya kadar farkl&#x131; u&#xE7;u&#x15F; modu atayabilirsiniz (kanal Plane&apos;de se&#xE7;ilebilir, ancak Copter&apos;de kanal 5&apos;e sabitlenmi&#x15F;tir).</p>
+<p>ArduCopter (yaln&#x131;zca), 7-12. Kanallar i&#xE7;in ek <em> Kanal Se&#xE7;enekleri </em> belirlemenize de olanak tan&#x131;r. Bunlar, bu anahtarlara i&#x15F;levler ataman&#x131;za izin verir (&#xF6;rne&#x11F;in, bir kameray&#x131; a&#xE7;mak veya ba&#x15F;latmak i&#xE7;in geri d&#xF6;nmek i&#xE7;in). ArduCopter belgelerinde kanal yap&#x131;land&#x131;rmas&#x131; hakk&#x131;nda ek bilgi bulunmaktad&#x131;r: [Auxiliary Function Switches]</p>
+<p>U&#xE7;u&#x15F; modlar&#x131;n&#x131; ayarlamak i&#xE7;in:</p>
 <ol>
-<li>Turn on your RC transmitter.</li>
-<li><p>Select the <strong>Gear</strong> icon (Vehicle Setup) in the top toolbar and then <strong>Flight Modes</strong> in the sidebar.</p>
-<p> <img src="../../assets/setup/flight_modes_copter_ardupilot.jpg" alt="Flight modes setup - ArduCopter"></p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The above image is a screenshot of the flight mode setup for ArduCopter.</p>
+<li>RC vericinizi a&#xE7;&#x131;n.</li>
+<li><p>&#xDC;stteki ara&#xE7; &#xE7;ubu&#x11F;undan <strong>di&#x15F;li</strong> simgesini (Vechicle Setup), daha sonra kenar &#xE7;ubu&#x11F;undan <strong>Flight Modes</strong>&apos;u se&#xE7;in.</p>
+<p> <img src="../../assets/setup/flight_modes_copter_ardupilot.jpg" alt="U&#xE7;u&#x15F; Modlar&#x131; Kurulumu - Arducopter"></p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Yukar&#x131;daki g&#xF6;r&#xFC;nt&#xFC; ArduCopter i&#xE7;in u&#xE7;u&#x15F; modu kurulumunun bir ekran g&#xF6;r&#xFC;nt&#xFC;s&#xFC;d&#xFC;r.</p>
 </blockquote>
 </li>
-<li><p>Select up to 6 flight modes in the drop downs.</p>
+<li><p>A&#xE7;&#x131;l&#x131;r men&#xFC;lerden 6&apos;ya kadar u&#xE7;u&#x15F; modu se&#xE7;in.</p>
 </li>
-<li><p><strong>ArduCopter only:</strong> Select additional <em>Channel Options</em> for channels 7-12.</p>
+<li><p><strong> Yaln&#x131;zca ArduCopter: </strong> 7-12. kanallar i&#xE7;in ek <em> Kanal Se&#xE7;enekleri</em>ni se&#xE7;in.</p>
 </li>
-<li><p><strong>ArduPlane only:</strong> Select the mode channel from the dropdown.</p>
-<p> <img src="../../assets/setup/flight_modes_plane_ardupilot.jpg" alt="Flight modes setup - ArduPlane"></p>
+<li><p><strong> Yaln&#x131;zca ArduPlane: </strong> A&#xE7;&#x131;l&#x131;r men&#xFC;den mod kanal&#x131;n&#x131; se&#xE7;in.</p>
+<p> <img src="../../assets/setup/flight_modes_plane_ardupilot.jpg" alt="U&#xE7;u&#x15F; Modlar&#x131; Kurulumu - Arduplane"></p>
 </li>
-<li><p>Test that the modes are mapped to the right transmitter switches by selecting each mode switch on your transmitter in turn, and check that the desired flight mode is activated (the text turns yellow on <em>QGroundControl</em> for the active mode).</p>
+<li><p>Vericinizdeki her bir mod anahtar&#x131;n&#x131; s&#x131;rayla se&#xE7;erek modlar&#x131;n do&#x11F;ru verici anahtarlar&#x131;yla e&#x15F;le&#x15F;tirildi&#x11F;ini test edin ve istenen u&#xE7;u&#x15F; modunun etkinle&#x15F;tirilip etkinle&#x15F;tirilmedi&#x11F;ini kontrol edin (etkin mod metni <em> QGroundControl </em> &apos;de sar&#x131;ya d&#xF6;ner).</p>
 </li>
 </ol>
-<p>All values are automatically saved as they are changed.</p>
+<p>T&#xFC;m de&#x11F;erler de&#x11F;i&#x15F;tirildik&#xE7;e otomatik olarak kaydedilir.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The ArduCopter screenshot above shows a typical setup for a three position flight mode switch with an additional option of RTL being on a channel 7 switch. You can also setup 6 flight modes using two switches plus mixing on your transmitter. Scroll down to the center section of this <a href="http://ardupilot.org/copter/docs/common-rc-transmitter-flight-mode-configuration.html#common-rc-transmitter-flight-mode-configuration" target="_blank">page</a> for tutorials on how to do that.</p>
+<p> Yukar&#x131;daki ArduCopter ekran g&#xF6;r&#xFC;nt&#xFC;s&#xFC;, kanal 7 anahtar&#x131;nda ek bir RTL se&#xE7;ene&#x11F;i bulunan &#xFC;&#xE7; konumlu u&#xE7;u&#x15F; modu anahtar&#x131; i&#xE7;in tipik bir kurulumu g&#xF6;stermektedir. Ayr&#x131;ca iki anahtar ve vericinizde miks kullanarak 6 u&#xE7;u&#x15F; modu kurabilirsiniz. Bunun nas&#x131;l yap&#x131;laca&#x11F;&#x131;na ili&#x15F;kin e&#x11F;itimler i&#xE7;in bu <a href="http://ardupilot.org/copter/docs/common-rc-transmitter-flight-mode-configuration.html#common-rc-transmitter-flight-mode-configuration" target="_blank"> sayfan&#x131;n </a> orta b&#xF6;l&#xFC;m&#xFC;ne gidin.</p>
 </blockquote>
-<h2 id="px4-pro-flight-mode-setup"><a name="px4-pro-flight-mode-setup" class="plugin-anchor" href="#px4-pro-flight-mode-setup"><i class="fa fa-link" aria-hidden="true"></i></a>PX4 Pro Flight Mode Setup</h2>
-<p><em>PX4</em> (<em>QGroundControl</em>) supports two modes for mapping flight modes to transmitter switches/dials:</p>
+<h2 id="px4-pro-u&#xE7;u&#x15F;-modu-kurulumu"><a name="px4-pro-u&#xE7;u&#x15F;-modu-kurulumu" class="plugin-anchor" href="#px4-pro-u&#xE7;u&#x15F;-modu-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>PX4 Pro U&#xE7;u&#x15F; Modu Kurulumu</h2>
 <ul>
-<li><strong>Single Channel Mode Selection:</strong> Assign up to 6 flight modes to switch positions encoded in a single channel. </li>
-<li><strong>Multi Channel Mode Selection:</strong> Assign modes to switch positions encoded in one or more channels. Some modes are hard coded to share channels, or are defined/set automatically based on other mode selections (the behaviour of multi-channel mode selection can sometimes be confusing). </li>
+<li><p>PX4 <em> (</em> QGroundControl *) u&#xE7;u&#x15F; modlar&#x131;n&#x131; verici anahtarlar&#x131;/kadranlar&#x131;yla e&#x15F;le&#x15F;tirmek i&#xE7;in iki modu destekler:</p>
+</li>
+<li><p><strong> Tek Kanall&#x131; Mod Se&#xE7;imi: </strong> Tek bir kanalda kodlanm&#x131;&#x15F; konumlar&#x131; de&#x11F;i&#x15F;tirmek i&#xE7;in 6&apos;ya kadar u&#xE7;u&#x15F; modu atay&#x131;n. </p>
+</li>
+<li><strong> &#xC7;ok Kanall&#x131; Mod Se&#xE7;imi: </strong> Bir veya daha fazla kanalda kodlanm&#x131;&#x15F; konumlar&#x131;n de&#x11F;i&#x15F;tirilmesi i&#xE7;in modlar atay&#x131;n. Baz&#x131; modlar, kanallar&#x131; payla&#x15F;mak i&#xE7;in kodlanm&#x131;&#x15F;t&#x131;r veya di&#x11F;er mod se&#xE7;imlerine g&#xF6;re otomatik olarak tan&#x131;mlan&#x131;r / ayarlan&#x131;r (&#xE7;ok kanall&#x131; mod se&#xE7;iminin davran&#x131;&#x15F;&#x131; bazen kafa kar&#x131;&#x15F;t&#x131;r&#x131;c&#x131; olabilir). </li>
 </ul>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> The recommended approach is use <em>Single Channel Mode Selection</em> because it easy to understand and configure. It is similar to the approach used by ArduPilot.</p>
+<p> &#xD6;nerilen yakla&#x15F;&#x131;m <em> Tek Kanall&#x131; Mod Se&#xE7;imi </em> &apos;i kullanmakt&#x131;r &#xE7;&#xFC;nk&#xFC; anla&#x15F;&#x131;lmas&#x131; ve yap&#x131;land&#x131;r&#x131;lmas&#x131; kolayd&#x131;r. ArduPilot taraf&#x131;ndan kullan&#x131;lan yakla&#x15F;&#x131;ma benzer.</p>
 </blockquote>
-<h3 id="single_channel"><a name="single_channel" class="plugin-anchor" href="#single_channel"><i class="fa fa-link" aria-hidden="true"></i></a>Single-Channel Mode </h3>
-<p>The single-channel selection mode allows you to specify a &quot;mode&quot; channel and select up to 6 flight modes that will be activated based on the PWM value of the channel. You can also separately specify channels for mapping a kill switch, return to launch mode, and offboard mode.</p>
+<h3 id="single_channel"><a name="single_channel" class="plugin-anchor" href="#single_channel"><i class="fa fa-link" aria-hidden="true"></i></a>Tek Kanal Modu </h3>
+<p>Tek kanall&#x131; se&#xE7;im modu, bir &quot;mod&quot; kanal&#x131; belirlemenize ve kanal&#x131;n PWM de&#x11F;erine ba&#x11F;l&#x131; olarak etkinle&#x15F;tirilecek en fazla 6 u&#xE7;u&#x15F; modu se&#xE7;menize olanak tan&#x131;r. Ayr&#x131;ca, kapatma anahtar&#x131;, kalk&#x131;&#x15F; moduna geri d&#xF6;nmek ve offboard modu i&#xE7;in kanallar&#x131; ayr&#x131; ayr&#x131; belirtebilirsiniz.</p>
 <blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> In order to use approach you will first need to configure your <em>transmitter</em> to encode the physical positions of your mode switch(es) into a single channel. There is a video guide of how this is done for the popular <em>Taranis</em> transmitter <a href="#taranis_setup">below</a> (check your documentation if you use a different transmitter).</p>
+<p> Yakla&#x15F;&#x131;m&#x131; kullanmak i&#xE7;in, &#xF6;nce <em> vericinizi</em>, mod anahtar(lar)&#x131;n&#x131;z&#x131;n fiziksel konumlar&#x131;n&#x131; tek bir kanala kodlayacak &#x15F;ekilde yap&#x131;land&#x131;rman&#x131;z gerekir. <a href="#taranis_setup"> a&#x15F;a&#x11F;&#x131;da </a> pop&#xFC;ler <em> Taranis </em> vericisi i&#xE7;in bunun nas&#x131;l yap&#x131;ld&#x131;&#x11F;&#x131;na dair bir video k&#x131;lavuzuna eri&#x15F;ebilirsiniz(farkl&#x131; bir verici kullan&#x131;yorsan&#x131;z belgelerinizi kontrol edin).</p>
 </blockquote>
-<p>To configure single-channel flight mode selection:</p>
+<p>Tek kanall&#x131; u&#xE7;u&#x15F; modu se&#xE7;imini yap&#x131;land&#x131;rmak i&#xE7;in:</p>
 <ol>
-<li>Turn on your RC transmitter.</li>
-<li><p>Select the <strong>Gear</strong> icon (Vehicle Setup) in the top toolbar and then <strong>Flight Modes</strong> in the sidebar.</p>
-<p> <img src="../../assets/setup/flight_modes_single_channel_px4.jpg" alt="Flight modes multi-channel"></p>
+<li>RC vericinizi a&#xE7;&#x131;n.</li>
+<li><p>&#xDC;stteki ara&#xE7; &#xE7;ubu&#x11F;undan <strong>di&#x15F;li</strong> simgesini (Vehicle Setup), daha sonra kenar &#xE7;ubu&#x11F;undan <strong>Flight Modes</strong>&apos;u se&#xE7;in.</p>
+<p> <img src="../../assets/setup/flight_modes_single_channel_px4.jpg" alt="&#xC7;ok kanall&#x131; u&#xE7;u&#x15F; modlar&#x131;"></p>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> If the screen opens in <em>Multi Channel Mode</em> click the <strong>Use Single Channel Mode Selection</strong> button to change screen.</p>
+<p> Ekran <em> &#xC7;ok Kanall&#x131; Mod </em> &apos;da a&#xE7;&#x131;l&#x131;rsa, ekran&#x131; de&#x11F;i&#x15F;tirmek i&#xE7;in <strong> Tek Kanall&#x131; Mod Se&#xE7;imini Kullan </strong> d&#xFC;&#x11F;mesine t&#x131;klay&#x131;n.</p>
 </blockquote>
 </li>
-<li><p>Specify <em>Flight Mode Settings</em>:</p>
+<li><ul>
+<li><p>U&#xE7;u&#x15F; Modu Ayarlar&#x131;n&#x131; * &#xF6;zelle&#x15F;tirin:</p>
 <ul>
-<li>Select the <strong>Mode channel</strong> (above this shown as Channel 5, but this will depend on your transmitter configuration). </li>
-<li>Select up to six <strong>Flight Modes</strong>.</li>
+<li><strong> Modu kanal&#x131;n&#x131; </strong> se&#xE7;in (yukar&#x131;da Kanal 5 olarak g&#xF6;sterilirse de, verici yap&#x131;land&#x131;rman&#x131;za ba&#x11F;l&#x131; olacakt&#x131;r). </li>
+<li>Alt&#x131; adede kadar <strong> U&#xE7;u&#x15F; Modu </strong> se&#xE7;in.</li>
 </ul>
 </li>
-<li>Specify <em>Switch Settings</em>: <ul>
-<li>Select the channels that you want to map to specific actions - e.g. <em>Return</em> mode, <em>Kill switch</em>, <em>offboard</em> mode, etc. (if you have spare switches and channels on your transmitter).</li>
 </ul>
 </li>
-<li>Test that the modes are mapped to the right transmitter switches: <ul>
-<li>Check the <em>Channel Monitor</em> to confirm that the expected channel is changed by each switch.</li>
-<li>Select each mode switch on your transmitter in turn, and check that the desired flight mode is activated (the text turns yellow on <em>QGroundControl</em> for the active mode).</li>
+<li><em>Anahtar Ayarlar&#x131;</em>&apos;n&#x131; &#xF6;zelle&#x15F;tirin: <ul>
+<li>Belirli eylemlerle e&#x15F;lemek istedi&#x11F;iniz kanallar&#x131; se&#xE7;in - &#xF6;r. <em> D&#xF6;n&#xFC;&#x15F; </em> modu, <em> &#xD6;ld&#xFC;rme anahtar&#x131; </em>, <em> Offboard</em> modu, vb. (vericinizde fazla anahtarlar&#x131;n&#x131;z ve kanallar&#x131;n&#x131;z varsa).</li>
+</ul>
+</li>
+<li>Modlar&#x131;n do&#x11F;ru verici anahtarlar&#x131;na e&#x15F;lendi&#x11F;ini test edin: <ul>
+<li>Her anahatar&#x131;n istenen kanal i&#xE7;in ayarland&#x131;&#x11F;&#x131;n&#x131; do&#x11F;rulamak i&#xE7;in <em>Kanal Monit&#xF6;r&#xFC;</em>&apos;n&#xFC; kontrol edin.</li>
+<li>Vericinizdeki her bir mod anahtar&#x131;n&#x131; s&#x131;rayla se&#xE7;erek ve istenen u&#xE7;u&#x15F; modunun etkinle&#x15F;tirilip etkinle&#x15F;tirilmedi&#x11F;ini kontrol edin (etkin mod metni <em> QGroundControl </em> &apos;de sar&#x131;ya d&#xF6;ner).</li>
 </ul>
 </li>
 </ol>
-<p>All values are automatically saved as they are changed.</p>
-<h4 id="video-example-including-transmitter-setup"><a name="video-example-including-transmitter-setup" class="plugin-anchor" href="#video-example-including-transmitter-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Video Example (including Transmitter Setup)</h4>
-<p>It is common to use the positions of a 2- and a 3-position switch on the transmitter to represent the 6 flight modes, and encode each combination of switches as a particular PWM value for the mode that will be sent on a single channel.</p>
-<p>The video below shows how this is done with the <em>FrSky Taranis</em> transmitter (a very popular and highly recommended RC transmitter). The process involves assigning a &quot;logical switch&quot; to each combination of positions of the two real switches. Each logical switch is then assigned to a different PWM value on the same channel.</p>
+<p>T&#xFC;m de&#x11F;erler de&#x11F;i&#x15F;tirildik&#xE7;e otomatik olarak kaydedilir.</p>
+<h4 id="video-&#xF6;rne&#x11F;i-verici-kurulumu-dahil"><a name="video-&#xF6;rne&#x11F;i-verici-kurulumu-dahil" class="plugin-anchor" href="#video-&#xF6;rne&#x11F;i-verici-kurulumu-dahil"><i class="fa fa-link" aria-hidden="true"></i></a>Video &#xD6;rne&#x11F;i (Verici Kurulumu dahil)</h4>
+<p>Verici &#xFC;zerindeki 2 ve 3&apos;de konumlu bir anahtar&#x131;n konumlar&#x131;n&#x131; 6 u&#xE7;u&#x15F; modunu temsil etmek i&#xE7;in kullanmak ve her anahtar kombinasyonunu tek bir kanalda g&#xF6;nderilecek mod i&#xE7;in belirli bir PWM de&#x11F;erinde kodlamak yayg&#x131;nd&#x131;r.</p>
+<p>A&#x15F;a&#x11F;&#x131;daki video, bunun <em> FrSky Taranis </em> vericisi (&#xE7;ok pop&#xFC;ler ve &#x15F;iddetle tavsiye edilen bir RC vericisi) ile nas&#x131;l yap&#x131;ld&#x131;&#x11F;&#x131;n&#x131; g&#xF6;stermektedir. &#x130;&#x15F;lem, iki ger&#xE7;ek anahtar&#x131;n her bir pozisyon kombinasyonuna bir &quot;mant&#x131;ksal anahtar&quot; atamay&#x131; i&#xE7;erir. Her mant&#x131;ksal anahtar daha sonra ayn&#x131; kanal &#xFC;zerinde farkl&#x131; bir PWM de&#x11F;erine atan&#x131;r.</p>
 <p><span id="taranis_setup"></span>
-The video then shows how to use <em>QGroundControl</em> to specify the mode channel and map modes to each of the 6 &quot;slots&quot;. <div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;"><iframe frameborder="0" allowfullscreen style="border: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="//www.youtube.com/embed/scqO7vbH2jo"></iframe></div></p>
-<h3 id="multi-channel-mode"><a name="multi-channel-mode" class="plugin-anchor" href="#multi-channel-mode"><i class="fa fa-link" aria-hidden="true"></i></a>Multi-Channel Mode</h3>
+Ard&#x131;ndan video, mod kanal&#x131;n&#x131; &#xF6;zelle&#x15F;tirmek ve 6 &quot;slot&quot; un her birine modlar&#x131; e&#x15F;lemek i&#xE7;in <em> QGroundControl </em> &apos;&#x131;n nas&#x131;l kullan&#x131;laca&#x11F;&#x131;n&#x131; g&#xF6;sterir. <div style="position: relative;padding-bottom: 56.25%;padding-top: 25px;height: 0;"><iframe frameborder="0" allowfullscreen style="border: none;position: absolute;top: 0;left: 0;width: 100%;height: 100%;" src="//www.youtube.com/embed/scqO7vbH2jo"></iframe></div></p>
+<h3 id="&#xE7;ok-kanall&#x131;-mod"><a name="&#xE7;ok-kanall&#x131;-mod" class="plugin-anchor" href="#&#xE7;ok-kanall&#x131;-mod"><i class="fa fa-link" aria-hidden="true"></i></a>&#xC7;ok Kanall&#x131; Mod</h3>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> We recommend you use <a href="#single_channel">Single Channel Flight Mode</a> selection because the Multi Channel selection user interface can be confusing. If you do choose to use this method, then the best approach is to start assigning channels and take note of information displayed by <em>QGroundControl</em> following your selection.</p>
+<p> &#xC7;ok Kanall&#x131; mod se&#xE7;im kullan&#x131;c&#x131; aray&#xFC;z&#xFC; kafa kar&#x131;&#x15F;t&#x131;r&#x131;c&#x131; olabilece&#x11F;inden <a href="#single_channel"> Tek Kanall&#x131; U&#xE7;u&#x15F; Modu </a> se&#xE7;imini kullanman&#x131;z&#x131; &#xF6;neririz. Bu y&#xF6;ntemi kullanmay&#x131; se&#xE7;erseniz, en iyi yakla&#x15F;&#x131;m kanallar&#x131; atamaya ba&#x15F;lamak ve se&#xE7;iminizi takiben <em> QGroundControl </em> taraf&#x131;ndan g&#xF6;r&#xFC;nt&#xFC;lenen bilgileri not almakt&#x131;r.</p>
 </blockquote>
-<p>The multi-channel selection UI allows you to map one or more modes to one or more channels. There are some modes (and hence switches) that must always be defined, and the channel to which they must be allocated.</p>
-<p>To configure flight modes using the multi-channel UI:</p>
+<p>&#xC7;ok kanall&#x131; mod se&#xE7;imi kullan&#x131;c&#x131; aray&#xFC;z&#xFC;, bir veya daha fazla modu bir veya daha fazla kanalla e&#x15F;lemenize olanak tan&#x131;r. Her zaman tan&#x131;mlanmas&#x131; gereken baz&#x131; modlar (ve dolay&#x131;s&#x131;yla anahtarlar) ve bunlar&#x131;n tahsis edilmesi gereken kanal vard&#x131;r.</p>
+<p>&#xC7;ok kanall&#x131; mod kullan&#x131;c&#x131; aray&#xFC;z&#xFC;n&#xFC; kullanarak u&#xE7;u&#x15F; modlar&#x131;n&#x131; yap&#x131;land&#x131;rmak i&#xE7;in:</p>
 <ol>
-<li>Turn on your RC transmitter.</li>
-<li><p>Select the <strong>Gear</strong> icon (Vehicle Setup) in the top toolbar and then <strong>Flight Modes</strong> in the sidebar.</p>
-<p> <img src="../../assets/setup/flight_modes_multi_channel_px4.jpg" alt="Flight modes multi-channel"></p>
+<li>RC vericinizi a&#xE7;&#x131;n.</li>
+<li><p>&#xDC;stteki ara&#xE7; &#xE7;ubu&#x11F;undan <strong>di&#x15F;li</strong> simgesini (Vehicle Setup), daha sonra kenar &#xE7;ubu&#x11F;undan <strong>Flight Modes</strong>&apos;u se&#xE7;in.</p>
+<p> <img src="../../assets/setup/flight_modes_multi_channel_px4.jpg" alt="&#xC7;ok kanall&#x131; u&#xE7;u&#x15F; modlar&#x131;"></p>
 <blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> If the screen opens in <em>Single Channel Mode</em> click the <strong>Use Multi Channel Mode Selection</strong> button to change screen.</p>
+<p> Ekran <em> Tek Kanal Modu </em> &apos;nda a&#xE7;&#x131;l&#x131;rsa, ekran&#x131; de&#x11F;i&#x15F;tirmek i&#xE7;in <strong> &#xC7;ok Kanall&#x131; Mod Se&#xE7;imini Kullan </strong> d&#xFC;&#x11F;mesine t&#x131;klay&#x131;n.</p>
 </blockquote>
 </li>
-<li><p>Select the modes you want to assign to your switches and select the associated channel (selected modes will <em>move</em> in the UI to be grouped by channel). There are a number of complications on the mode to channel assignments:</p>
+<li><p>Anahtarlar&#x131;n&#x131;za atamak istedi&#x11F;iniz modlar&#x131; ve ilgili kanal&#x131; se&#xE7;in (se&#xE7;ilen modlar, kanala g&#xF6;re gruplanacak kullan&#x131;c&#x131; aray&#xFC;z&#xFC;ne <em> ta&#x15F;&#x131;n&#x131;r</em>). Modu kanala atamada bir tak&#x131;m karma&#x15F;&#x131;kl&#x131;klar vard&#x131;r:</p>
 <ul>
-<li>Some modes will have a grayed out channel selector because they cannot be disabled and you cannot directly set the value. For example: <ul>
-<li><em>Mission</em> mode - Has the same channel number as <em>Hold</em> (if it is defined), or otherwise the same channel as <em>Stabilized/Main</em> mode.</li>
-<li><em>Altitude</em> mode - Has the same channel number as <em>Position Control</em> (if it is defined), or otherwise the same channel as <em>Stabilized/Main</em> mode.</li>
+<li>Baz&#x131; modlarda devre d&#x131;&#x15F;&#x131; b&#x131;rak&#x131;lamayacaklar&#x131; ve de&#x11F;erleri do&#x11F;rudan ayarlayanayacaklar&#x131; i&#xE7;in gri bir kanal se&#xE7;icisi olacakt&#x131;r. &#xD6;rne&#x11F;in: <ul>
+<li><em>Mission</em> Modu - <em> Hold </em> (tan&#x131;mlanm&#x131;&#x15F;sa) ile ayn&#x131; kanal numaras&#x131;na veya <em> Stabilized/Main</em> moduyla ayn&#x131; kanala sahiptir.</li>
+<li><em>Altitude</em> modu: <em> Position Control </em> (tan&#x131;mlanm&#x131;&#x15F;sa) ile ayn&#x131; kanal numaras&#x131;na veya <em> Stabilized/Main </em> moduyla ayn&#x131; kanala sahiptir.</li>
 </ul>
 </li>
-<li><em>Assist</em> mode - This mode is added to the same channel as <em>Stabilized/Main</em> mode if (and only if) <em>Position Control</em> is enabled and defined on a different channel than <em>Stabilized/Main</em>.</li>
+<li><em>Assist</em> modu - Bu mod, ancak (ve ancak) <em> Position Control </em> <em>Stabilized/Main</em>&apos;den farkl&#x131; bir kanalda etkinle&#x15F;tirilir ve tan&#x131;mlan&#x131;rsa,<em> Stabilized/Main </em> modu ile ayn&#x131; kanala eklenir.</li>
 </ul>
 </li>
-<li>Click the <strong>Generate Thresholds</strong> button. <ul>
-<li>This will automatically create threshold values for all modes, spread evenly across each channel for its assigned modes. For example, in the mode assignment shown above, most modes are assigned to mode 5, and you can see that the channel thresholds for each mode are spread evenly across the channel. </li>
+<li><strong> Generate Thresholds</strong>&apos;a t&#x131;klay&#x131;n. <ul>
+<li>Bu, t&#xFC;m modlar i&#xE7;in otomatik olarak e&#x15F;ik de&#x11F;erleri olu&#x15F;turacak ve atanm&#x131;&#x15F; modlar i&#xE7;in her kanala e&#x15F;it olarak yayacakt&#x131;r. &#xD6;rne&#x11F;in, yukar&#x131;da g&#xF6;sterilen mod atamas&#x131;nda, &#xE7;o&#x11F;u mod mod 5&apos;e atan&#x131;r ve her mod i&#xE7;in kanal e&#x15F;iklerinin kanal boyunca e&#x15F;it olarak da&#x11F;&#x131;ld&#x131;&#x11F;&#x131;n&#x131; g&#xF6;rebilirsiniz. </li>
 </ul>
 </li>
 </ol>
-<p>This mode is demonstrated in the <a href="https://youtu.be/91VGmdSlbo4?t=6m53s" target="_blank">PX4 setup video @6m53s</a> (youtube).</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> This flight mode selection mechanism is relatively complicated due to the way that PX4 works out which mode should be selected. You may be able to gain some insight from this <a href="https://dev.px4.io/en/concept/flight_modes.html#flight-mode-evaluation-diagram" target="_blank">flow chart</a> (PX4 Developer Guide).</p>
+<p>Bu mod <a href="https://youtu.be/91VGmdSlbo4?t=6m53s" target="_blank"> PX4 kurulum videosunda @ 6m53s </a> (youtube) i&#xE7;inde g&#xF6;sterilir.</p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Bu u&#xE7;u&#x15F; modu se&#xE7;im mekanizmas&#x131;, PX4&apos;&#xFC;n hangi modun se&#xE7;ilmesi gerekti&#x11F;ini belirleme y&#xF6;ntemi nedeniyle nispeten karma&#x15F;&#x131;kt&#x131;r. Bu <a href="https://dev.px4.io/en/concept/flight_modes.html#flight-mode-evaluation-diagram" target="_blank"> ak&#x131;&#x15F; &#x15F;emas&#x131;ndan </a> (PX4 Geli&#x15F;tirici K&#x131;lavuzu) biraz fikir edinebilirsiniz.</p>
 </blockquote>
 
                                 
@@ -1032,7 +1039,7 @@ The video then shows how to use <em>QGroundControl</em> to specify the mode chan
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Flight Modes","level":"1.7.5","depth":2,"next":{"title":"Power","level":"1.7.6","depth":2,"path":"SetupView/Power.md","ref":"SetupView/Power.md","articles":[]},"previous":{"title":"Sensors (PX4)","level":"1.7.4.2","depth":3,"path":"SetupView/sensors_px4.md","ref":"SetupView/sensors_px4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/FlightModes.md","mtime":"2020-12-23T05:39:08.164Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-23T05:39:46.728Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Flight Modes","level":"1.7.5","depth":2,"next":{"title":"Power","level":"1.7.6","depth":2,"path":"SetupView/Power.md","ref":"SetupView/Power.md","articles":[]},"previous":{"title":"Sensors (PX4)","level":"1.7.4.2","depth":3,"path":"SetupView/sensors_px4.md","ref":"SetupView/sensors_px4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/FlightModes.md","mtime":"2020-12-26T03:56:20.978Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-26T03:57:03.425Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>

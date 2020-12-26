@@ -869,133 +869,146 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="joystick-setup"><a name="joystick-setup" class="plugin-anchor" href="#joystick-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Joystick Setup</h1>
-<p><em>QGroundControl</em> allows you to control a vehicle using a joystick or gamepad instead of an RC Transmitter.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Flying with a Joystick (or <a href="../SettingsView/VirtualJoystick.md">virtual thumb-sticks</a>) requires a reliable high bandwidth telemetry channel to ensure that the vehicle is responsive to joystick movements (because joystick information is sent over MAVLink).</p>
-</blockquote>
-<p><span></span></p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Joystick and Gamepad support is enabled using the cross-platform <a href="http://www.libsdl.org/index.php" target="_blank">SDL2</a> library. Compatibility with a particular controller depends on SDL (all buttons that are exposed by that API are displayed through the <em>QGroundControl</em> UI). A <a href="#supported-joysticks">number of common joysticks and gamepads</a> are known to work.</p>
-</blockquote>
-<p><span></span></p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The joystick is <em>enabled</em> as the last step of the calibration process.</p>
-</blockquote>
-<h2 id="enabling-px4-joystick-support"><a name="enabling-px4-joystick-support" class="plugin-anchor" href="#enabling-px4-joystick-support"><i class="fa fa-link" aria-hidden="true"></i></a>Enabling PX4 Joystick Support</h2>
-<p>To enable Joystick support in PX4 you need to set the parameter <code>COM_RC_IN_MODE</code> to 1 - <em>Joystick/No RC Checks</em>. If this parameter is not set then <em>Joystick</em> will not be offered as a setup option.</p>
-<p>This is enabled by default for PX4 SITL builds (see the <a href="Parameters.html">Parameters</a> topic for information on how to find and set a particular parameter).</p>
-<h2 id="ardupilot-joystick-support"><a name="ardupilot-joystick-support" class="plugin-anchor" href="#ardupilot-joystick-support"><i class="fa fa-link" aria-hidden="true"></i></a>Ardupilot Joystick Support</h2>
-<p>All ArduPilot vehicles are supported. No parameter configuration is necessary.</p>
-<h2 id="configure"><a name="configure" class="plugin-anchor" href="#configure"><i class="fa fa-link" aria-hidden="true"></i></a>Configuring the Joystick </h2>
-<p>To configure a joystick:</p>
-<ol>
-<li>Start <em>QGroundControl</em> and connect to a vehicle.</li>
-<li>Connect the Joystick or Gamepad to a USB port.</li>
-<li><p>Select the <strong>Gear</strong> icon (Vehicle Setup) in the top toolbar and then <strong>Joystick</strong> in the sidebar. The screen below will appear.</p>
-<p> <img src="../../assets/setup/joystick_sony_playstation.jpg" alt="Joystick setup - PlayStation"></p>
-</li>
-<li><p>Make sure your joystick is selected in the <strong>Active joystick</strong> dropdown.</p>
-</li>
-<li><p>Go to the <strong>Calibrate</strong> Tab, press the <strong>Start</strong> button and then follow the on-screen instructions to calibrate/move the sticks.</p>
-<p> <img src="../../assets/setup/joystick_calibration.jpg" alt="Joystick setup - Calibration"></p>
-<p> The joystick is <em>enabled</em> as the last step of the calibration process.</p>
-</li>
-<li><p>Test the buttons and sticks work as intended by pressing them, and viewing the result in the Axis/Button monitor in the <strong>General</strong> tab.</p>
-</li>
-<li><p>Select the flight modes/vehicle functions activated by each joystick button. <img src="../../assets/setup/joystick_buttons.jpg" alt="Joystick setup - Buttons"></p>
-</li>
-</ol>
-<h2 id="advanced-options"><a name="advanced-options" class="plugin-anchor" href="#advanced-options"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Options</h2>
-<p>Some additional Options are available at the <strong>Advanced</strong> tab. These options may be useful for specific, unsual setups, for increasing sensibility, and for handling noisy joysticks.</p>
-<h3 id="throttle-options"><a name="throttle-options" class="plugin-anchor" href="#throttle-options"><i class="fa fa-link" aria-hidden="true"></i></a>Throttle Options</h3>
-<p><img src="../../assets/setup/joystick_throttle_modes.jpg" alt="Joystick setup - Throttle Modes"></p>
+                                <h1 id="joystick-kurulumu"><a name="joystick-kurulumu" class="plugin-anchor" href="#joystick-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>Joystick Kurulumu</h1>
 <ul>
-<li><strong>Center stick is zero throttle</strong>: Centered or lowered stick sends 0 in <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL <strong>z</strong></a>, raised stick sends 1000. <ul>
-<li><strong>Spring loaded throttle smoothing</strong>: In this mode you control not the throttle itself, but the rate at which it increases/decreases. This is useful for setups where the throttle stick is spring loaded, as the user can hold the desired throttle while releasing the stick.</li>
+<li>QGroundControl *, bir arac&#x131; RC Verici yerine bir joystick veya gamepad kullanarak kontrol etmenizi sa&#x11F;lar.</li>
+</ul>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Bir Joystick (veya <a href="../SettingsView/VirtualJoystick.md"> sanal analoglar </a>) ile u&#xE7;mak, arac&#x131;n kumanda kolu hareketlerine yan&#x131;t vermesini sa&#x11F;lamak i&#xE7;in g&#xFC;venilir bir y&#xFC;ksek bant geni&#x15F;li&#x11F;ine sahip telemetri kanal&#x131; gerektirir (&#xE7;&#xFC;nk&#xFC; joystick bilgileri MAVLink &#xFC;zerinden g&#xF6;nderilir).</p>
+</blockquote>
+<p><span></span></p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Joystick ve Gamepad deste&#x11F;i, &#xE7;apraz platform <a href="http://www.libsdl.org/index.php" target="_blank"> SDL2 </a> kitapl&#x131;&#x11F;&#x131; kullan&#x131;larak etkinle&#x15F;tirilir. Belirli bir kontrolc&#xFC;yle uyumluluk, SDL&apos;ye ba&#x11F;l&#x131;d&#x131;r (bu API taraf&#x131;ndan g&#xF6;sterilen t&#xFC;m d&#xFC;&#x11F;meler, <em> QGroundControl </em> aray&#xFC;z&#xFC; arac&#x131;l&#x131;&#x11F;&#x131;yla g&#xF6;r&#xFC;nt&#xFC;lenir). <a href="#supported-joysticks">&#xC7;ok say&#x131;da yayg&#x131;n oyun &#xE7;ubu&#x11F;u ve oyun kolunun </a> &#xE7;al&#x131;&#x15F;t&#x131;&#x11F;&#x131; bilinmektedir.</p>
+</blockquote>
+<p><span></span></p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Kumanda kolu, kalibrasyon i&#x15F;leminin son ad&#x131;m&#x131; olarak <em> etkinle&#x15F;tirilir </em>.</p>
+</blockquote>
+<h2 id="px4-joystick-deste&#x11F;ini-etkinle&#x15F;tirme"><a name="px4-joystick-deste&#x11F;ini-etkinle&#x15F;tirme" class="plugin-anchor" href="#px4-joystick-deste&#x11F;ini-etkinle&#x15F;tirme"><i class="fa fa-link" aria-hidden="true"></i></a>PX4 Joystick Deste&#x11F;ini Etkinle&#x15F;tirme</h2>
+<p>PX4&apos;te Joystick deste&#x11F;ini etkinle&#x15F;tirmek i&#xE7;in <code>COM_RC_IN_MODE</code> parametresini 1 - <em> Joystick/No RC Checks </em> olarak ayarlaman&#x131;z gerekir. Bu parametre ayarlanmazsa, <em> Joystick </em> bir kurulum se&#xE7;ene&#x11F;i olarak sunulmayacakt&#x131;r.</p>
+<p>Bu, PX4 SITL yap&#x131;lar&#x131; i&#xE7;in varsay&#x131;lan olarak etkindir (belirli bir parametrenin nas&#x131;l bulunaca&#x11F;&#x131; ve ayarlanaca&#x11F;&#x131; hakk&#x131;nda bilgi i&#xE7;in <a href="Parameters.html">Parametreler</a> konusuna bak&#x131;n).</p>
+<h2 id="ardupilot-joystick-deste&#x11F;i"><a name="ardupilot-joystick-deste&#x11F;i" class="plugin-anchor" href="#ardupilot-joystick-deste&#x11F;i"><i class="fa fa-link" aria-hidden="true"></i></a>Ardupilot Joystick Deste&#x11F;i</h2>
+<p>T&#xFC;m ArduPilot ara&#xE7;lar&#x131; desteklenmektedir. Parametre yap&#x131;land&#x131;rmas&#x131;na gerek yoktur.</p>
+<h2 id="configure"><a name="configure" class="plugin-anchor" href="#configure"><i class="fa fa-link" aria-hidden="true"></i></a>Joystick&apos;i Ayarlama </h2>
+<p>Joystick&apos;i ayarlamak i&#xE7;in:</p>
+<ol>
+<li><ul>
+<li>QGroundControl * &apos;&#x131; ba&#x15F;lat&#x131;n ve bir araca ba&#x11F;lay&#x131;n.</li>
 </ul>
 </li>
-<li><strong>Full down stick is zero throttle</strong>: In this mode, lowered stick sends 0 in <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL <strong>z</strong></a>, centered stick 500, and raised 1000.</li>
-<li><strong>Allow negative thrust</strong>: When in <strong>Center stick is zero throttle</strong> mode, this allows the user to send negative values by lowering the stick. So that lowered stick sends -1000 in <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL <strong>z</strong></a>, centered sends zero, and raised stick sends 1000. This mode is only enabled for vehicles that support negative thrust, such as <a href="http://ardupilot.org/rover/index.html" target="_blank">Rover</a>.</li>
+<li>Joystick ya da Gamepad&apos;i bir USB portuna ba&#x11F;lay&#x131;n.</li>
+<li><p>&#xDC;stteki ara&#xE7; &#xE7;ubu&#x11F;undan <strong>di&#x15F;li</strong> simgesini (Vechicle Setup), daha sonra kenar &#xE7;ubu&#x11F;undan <strong>Joystick</strong>&apos;i se&#xE7;in. A&#x15F;a&#x11F;&#x131;daki ekran g&#xF6;r&#xFC;necektir.</p>
+<p> <img src="../../assets/setup/joystick_sony_playstation.jpg" alt="Joystick Kurulumu - Playstation"></p>
+</li>
+<li><p><strong> Active joystick </strong> a&#xE7;&#x131;l&#x131;r men&#xFC;s&#xFC;nde kumanda &#xE7;ubu&#x11F;unuzun se&#xE7;ildi&#x11F;inden emin olun.</p>
+</li>
+<li><p><strong>Calibrate </strong> Sekmesine gidin, <strong> Start </strong> tu&#x15F;una bas&#x131;n ve sonra &#xE7;ubuklar&#x131; kalibre etmek/hareket ettirmek i&#xE7;in ekrandaki talimatlar&#x131; izleyin.</p>
+<p> <img src="../../assets/setup/joystick_calibration.jpg" alt="Joystick Kurulumu - Kalibrasyon"></p>
+<p> Joystick, kalibrasyon i&#x15F;leminin son ad&#x131;m&#x131; olarak <em> etkinle&#x15F;tirilir </em>.</p>
+</li>
+<li><p>D&#xFC;&#x11F;melerin ve &#xE7;ubuklar&#x131;n ama&#xE7;land&#x131;&#x11F;&#x131; gibi &#xE7;al&#x131;&#x15F;&#x131;p &#xE7;al&#x131;&#x15F;mad&#x131;&#x11F;&#x131;n&#x131; onlara basarak ve sonucu <strong> General </strong> sekmesindeki Axis/Buton monit&#xF6;r&#xFC;nde g&#xF6;r&#xFC;nt&#xFC;leyerek test edin.</p>
+</li>
+<li><p>Her bir kumanda kolu d&#xFC;&#x11F;mesiyle etkinle&#x15F;tirilen u&#xE7;u&#x15F; modlar&#x131;n&#x131;/ara&#xE7; i&#x15F;levlerini se&#xE7;in. <img src="../../assets/setup/joystick_buttons.jpg" alt="Joystick Kurulumu - Butonlar"></p>
+</li>
+</ol>
+<h2 id="geli&#x15F;mi&#x15F;-se&#xE7;enekler"><a name="geli&#x15F;mi&#x15F;-se&#xE7;enekler" class="plugin-anchor" href="#geli&#x15F;mi&#x15F;-se&#xE7;enekler"><i class="fa fa-link" aria-hidden="true"></i></a>Geli&#x15F;mi&#x15F; Se&#xE7;enekler</h2>
+<p>Baz&#x131; ek Se&#xE7;enekler <strong> Advanced </strong> sekmesinde mevcuttur. Bu se&#xE7;enekler, duyarl&#x131;l&#x131;&#x11F;&#x131; art&#x131;rmak i&#xE7;in belirli al&#x131;&#x15F;&#x131;lmad&#x131;k kurulumlarda ve s&#x131;k&#x131;nt&#x131;l&#x131; joystickleri kullanmak i&#xE7;in yararl&#x131; olabilir.</p>
+<h3 id="gaz-kolu-se&#xE7;enekleri"><a name="gaz-kolu-se&#xE7;enekleri" class="plugin-anchor" href="#gaz-kolu-se&#xE7;enekleri"><i class="fa fa-link" aria-hidden="true"></i></a>Gaz Kolu Se&#xE7;enekleri</h3>
+<p><img src="../../assets/setup/joystick_throttle_modes.jpg" alt="Joystick Kurulumu - Gaz Kolu Modlar&#x131;"></p>
+<ul>
+<li><strong>Center stick is zero throttle</strong>: Ortalanm&#x131;&#x15F; veya al&#xE7;alt&#x131;lm&#x131;&#x15F; gaz &#xE7;ubu&#x11F;u <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank"> MANUAL_CONTROL <strong>z</strong> </a> ile 0, kald&#x131;r&#x131;lm&#x131;&#x15F; gaz &#xE7;ubu&#x11F;u 1000 g&#xF6;nderir. <ul>
+<li><strong>Spring loaded throttle smoothing</strong>: Bu modda gaz&#x131;n kendisini de&#x11F;il, art&#x131;p / azald&#x131;&#x11F;&#x131; h&#x131;z&#x131; kontrol edersiniz. Bu, gaz kolunun yayl&#x131; oldu&#x11F;u kurulumlar i&#xE7;in kullan&#x131;&#x15F;l&#x131;d&#x131;r, &#xE7;&#xFC;nk&#xFC; kullan&#x131;c&#x131; &#xE7;ubu&#x11F;u b&#x131;rakarak gaz&#x131; istenen seviyede tutabilir.</li>
+</ul>
+</li>
+<li><strong>Full down stick is zero throttle</strong>: Bu modda, al&#xE7;alt&#x131;lm&#x131;&#x15F; &#xE7;ubuk <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank"> MANUAL_CONTROL <strong>z</strong> </a> i&#xE7;in 0, ortalanm&#x131;&#x15F; &#xE7;ubuk 500 ve kald&#x131;r&#x131;lm&#x131;&#x15F; &#xE7;ubuk 1000 g&#xF6;nderir.</li>
+<li><strong>Allow negative thrust</strong>: <strong> Center stick is zero throttle </strong> modundayken, bu mod, kullan&#x131;c&#x131;n&#x131;n &#xE7;ubu&#x11F;u indirerek negatif de&#x11F;erler g&#xF6;ndermesini sa&#x11F;lar. B&#xF6;ylece, indirilen &#xE7;ubuk <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank"> MANUAL_CONTROL <strong>z</strong> </a> &apos;de -1000 g&#xF6;nderir, ortalanm&#x131;&#x15F; &#xE7;ubuk 0 g&#xF6;nderir ve y&#xFC;kseltilmi&#x15F; &#xE7;ubuk 1000 g&#xF6;nderir. Bu mod sadece <a href="http://ardupilot.org/rover/index.html" target="_blank"> Rover </a> gibi negatif iti&#x15F;i destekleyen ara&#xE7;lar i&#xE7;in etkinle&#x15F;tirilebilir.</li>
 </ul>
 <h3 id="expo"><a name="expo" class="plugin-anchor" href="#expo"><i class="fa fa-link" aria-hidden="true"></i></a>Expo</h3>
-<p>The expo slider allows you to make the sticks less sensitive in the center, allowing finer control in this zone.</p>
-<p><img src="../../assets/setup/joystick_throttle_expo.jpg" alt="Joystick setup - Expo"></p>
-<p>The slider adjusts the curvature of the exponential curve.</p>
-<p><img src="../../assets/setup/joystick_throttle_expo_curve.jpg" alt="Joystick setup - Expo Curve"></p>
-<p>The higher the Expo value, the flatter the curve is at the center, and steeper it is at the edges.</p>
-<h3 id="advanced-settings"><a name="advanced-settings" class="plugin-anchor" href="#advanced-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Settings</h3>
-<p>The advanced settings are not recommended for everyday users. They can cause unpredicted results if used incorrectly.</p>
-<p><img src="../../assets/setup/joystick_advanced.jpg" alt="Joystick setup - Advanced Settings"></p>
-<p>The following settings are available:</p>
+<p>Expo kayd&#x131;r&#x131;c&#x131;s&#x131;, &#xE7;ubuklar&#x131; merkezde daha az hassas hale getirmenize ve bu b&#xF6;lgede daha iyi kontrol sa&#x11F;laman&#x131;za olanak tan&#x131;r.</p>
+<p><img src="../../assets/setup/joystick_throttle_expo.jpg" alt="Joystick Kurulumu - Expo"></p>
+<p>Kayd&#x131;r&#x131;c&#x131;, &#xFC;stel e&#x11F;rinin e&#x11F;rili&#x11F;ini ayarlar.</p>
+<p><img src="../../assets/setup/joystick_throttle_expo_curve.jpg" alt="Joystick Kurulumu - Expo E&#x11F;risi"></p>
+<p>Expo de&#x11F;eri ne kadar y&#xFC;ksekse, e&#x11F;ri merkezde o kadar d&#xFC;z ve kenarlarda diktir.</p>
+<h3 id="geli&#x15F;mi&#x15F;-ayarlar"><a name="geli&#x15F;mi&#x15F;-ayarlar" class="plugin-anchor" href="#geli&#x15F;mi&#x15F;-ayarlar"><i class="fa fa-link" aria-hidden="true"></i></a>Geli&#x15F;mi&#x15F; Ayarlar</h3>
+<p>Geli&#x15F;mi&#x15F; ayarlar, g&#xFC;nl&#xFC;k kullan&#x131;c&#x131;lar i&#xE7;in &#xF6;nerilmez. Yanl&#x131;&#x15F; kullan&#x131;l&#x131;rlarsa beklenmeyen sonu&#xE7;lara neden olabilirler.</p>
+<p><img src="../../assets/setup/joystick_advanced.jpg" alt="Joystick Kurulumu - Geli&#x15F;mi&#x15F; Se&#xE7;enekler"></p>
+<p>&#x15E;u se&#xE7;enekler mevcuttur:</p>
 <ul>
-<li><p><strong>Enable Gimbal Control</strong>: Enabled two additional channels for controlling a gimbal.</p>
+<li><p><strong>Enable Gimbal Control</strong>: Bir gimbali kontrol etmek i&#xE7;in iki ek kanal etkinle&#x15F;tirilir.</p>
 </li>
-<li><p><strong>Joystick Mode</strong>: Changes what the joystick actually controls, and the MAVLink messages sent to the vehicle.</p>
+<li><p><strong>Joystick Mode</strong>: Joystick&apos;in ger&#xE7;ekte neyi kontrol etti&#x11F;ini ve araca g&#xF6;nderilen MAVLink mesajlar&#x131;n&#x131; de&#x11F;i&#x15F;tirir.</p>
 <ul>
-<li><strong>Normal</strong>: User controls as if using a regular RC radio, MAVLink <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank">MANUAL_CONTROL</a> messages are used.</li>
-<li><strong>Attitude</strong>: User controls the vehicle attitude, MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_ATTITUDE_TARGET" target="_blank">SET_ATTITUDE_TARGET</a> messages are used.</li>
-<li><strong>Position</strong>: User controls the vehicle position, MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank">SET_POSITION_TARGET_LOCAL_NED</a> messages with bitmask for <strong>position</strong> only are used.</li>
-<li><strong>Force</strong>: User controls the forces applied to the vehicle, MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank">SET_POSITION_TARGET_LOCAL_NED</a> messages with bitmask for <strong>force</strong> only are used.</li>
-<li><strong>Velocity</strong>: User controls the forces applied to the vehicle, MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank">SET_POSITION_TARGET_LOCAL_NED</a> messages with bitmask for <strong>velocity</strong> only are used.</li>
+<li><strong>Normal</strong>: Kullan&#x131;c&#x131; normal bir RC radyo kullan&#x131;yormu&#x15F; gibi kontrol eder, MAVLink <a href="https://mavlink.io/en/messages/common.html#MANUAL_CONTROL" target="_blank"> MANUAL_CONTROL </a> mesajlar&#x131; kullan&#x131;l&#x131;r.</li>
+<li><strong>Attitude</strong>: Kullan&#x131;c&#x131; arac&#x131;n duru&#x15F;unu kontrol eder, MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_ATTITUDE_TARGET" target="_blank"> SET_ATTITUDE_TARGET </a> mesajlar&#x131; kullan&#x131;l&#x131;r.</li>
+<li><strong>Position</strong>: Kullan&#x131;c&#x131; ara&#xE7; konumunu kontrol eder, <strong> konumu </strong> i&#xE7;in yaln&#x131;zca bit maskeli MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank"> SET_POSITION_TARGET_LOCAL_NED </a> mesajlar&#x131; kullan&#x131;l&#x131;r.</li>
+<li><strong>Force</strong>: Kullan&#x131;c&#x131; araca uygulanan kuvvetleri kontrol eder, <strong> kuvvet </strong> i&#xE7;in yaln&#x131;zca bit maskeli MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank"> SET_POSITION_TARGET_LOCAL_NED </a> mesajlar&#x131; kullan&#x131;l&#x131;r.</li>
+<li><strong>Velocity</strong>: Kullan&#x131;c&#x131; araca uygulanan kuvvetleri kontrol eder, <strong> h&#x131;z </strong> i&#xE7;in yaln&#x131;zca bit maskeli MAVLink <a href="https://mavlink.io/en/messages/common.html#SET_POSITION_TARGET_LOCAL_NED" target="_blank"> SET_POSITION_TARGET_LOCAL_NED </a> mesajlar&#x131; kullan&#x131;l&#x131;r.</li>
 </ul>
 </li>
-<li><p><strong>Axis Frequency</strong>: When the joystick is idle (inputs are not changing), the joystick commands are sent to the vehicle at 5Hz. When the joystick is in use (input values are changing), the joystick commands are sent to the vehicle at the (higher) frequency configured by this setting. The default is 25Hz.</p>
+<li><p><strong>Axis Frequency</strong>: Joystick bo&#x15F;tayken (gelen veriler de&#x11F;i&#x15F;miyorken), joystick komutlar&#x131; araca 5Hz&apos;de g&#xF6;nderilir. Joystick kullan&#x131;mdayken (giri&#x15F; de&#x11F;erleri de&#x11F;i&#x15F;iyorken), joystick komutlar&#x131; araca bu ayarla yap&#x131;land&#x131;r&#x131;lan (daha y&#xFC;ksek) frekansta g&#xF6;nderilir. Varsay&#x131;lan de&#x11F;er 25Hz&apos;dir.</p>
 </li>
-<li><p><strong>Button Frequency</strong>: Controls the frequency at which repeated button actions are sent.</p>
+<li><p><strong>Button Frequency</strong>: Tekrarlanan buton eylemlerinin g&#xF6;nderilme s&#x131;kl&#x131;&#x11F;&#x131;n&#x131; kontrol eder.</p>
 </li>
-<li><p><strong>Enable Circle Correction</strong>: RC controllers sticks describe a square, while joysticks usually describe a circle. When this option is enabled a square is inscribed inside the joystick movement area to make it more like an RC controller (so it is possible to reach all four corners). The cost is decreased resolution, as the effective stick travel is reduced.</p>
+<li><p><strong>Enable Circle Correction</strong>: Uzaktan kumanda &#xE7;ubuklar&#x131; bir kareyi tan&#x131;mlarken, kumanda &#xE7;ubuklar&#x131; genellikle bir daireyi tan&#x131;mlar. Bu se&#xE7;enek etkinle&#x15F;tirildi&#x11F;inde, daha &#xE7;ok bir RC kontrol&#xF6;r&#xFC; gibi olmas&#x131;n&#x131; sa&#x11F;lamak i&#xE7;in joystick hareket alan&#x131;n&#x131;n i&#xE7;ine bir kare yaz&#x131;l&#x131;r (b&#xF6;ylece d&#xF6;rt k&#xF6;&#x15F;enin tamam&#x131;na ula&#x15F;mak m&#xFC;mk&#xFC;nd&#xFC;r). &#xC7;ubu&#x11F;un etkili hareket alan&#x131; azald&#x131;&#x11F;&#x131;ndan, &#xE7;&#xF6;z&#xFC;n&#xFC;rl&#xFC;kte azal&#x131;r.</p>
 <ul>
-<li><p><strong>Disabled:</strong> When this is <strong>disabled</strong> the joystick position is sent to the vehicle unchanged (the way that it is read from the joystick device). On some joysticks, the (roll, pitch) values are confined to the space of a circle inscribed inside of a square. In this figure, point B would command full pitch forward and full roll right, but the joystick is not able to reach point B because the retainer is circular. This means that you will not be able to achieve full roll and pitch deflection simultaneously.</p>
+<li><p><strong>Disabled:</strong>Bu <strong> devre d&#x131;&#x15F;&#x131; b&#x131;rak&#x131;ld&#x131;&#x11F;&#x131;nda </strong> joystick konumu de&#x11F;i&#x15F;tirilmeden araca g&#xF6;nderilir (joystick cihaz&#x131;ndan okunma &#x15F;ekli). Baz&#x131; oyun &#xE7;ubuklar&#x131;nda, (yuvarlanma, e&#x11F;im) de&#x11F;erleri, bir karenin i&#xE7;indeki bir dairenin alan&#x131;yla s&#x131;n&#x131;rl&#x131;d&#x131;r. Bu &#x15F;ekilde, B noktas&#x131; tam ad&#x131;m ileri ve sa&#x11F;a tam yuvarlanma komutu verir, ancak kumanda kolu B noktas&#x131;na ula&#x15F;amaz &#xE7;&#xFC;nk&#xFC; tutucu daireseldir. Bu, ayn&#x131; anda tam roll ve ad&#x131;m pitch elde edemeyece&#x11F;iniz anlam&#x131;na gelir.</p>
 <p><img src="../../assets/setup/joystick_circle_correction.jpg" alt=""></p>
 </li>
-<li><p><strong>Enabled:</strong> The joystick values are adjusted in software to ensure full range of commands. The usable area of travel and resolution is decreased, however, because the area highlighted grey in the figure is no longer used.</p>
-<p><img src="../../assets/setup/joystick_circle_correction2.jpg" alt="Circle correction enabled"></p>
+<li><p><strong>Enabled:</strong> Joystick de&#x11F;erleri, komut aral&#x131;&#x11F;&#x131;n&#x131; eksiksiz sa&#x11F;lamak i&#xE7;in yaz&#x131;l&#x131;mda ayarlan&#x131;r. Kullan&#x131;labilir hareket alan&#x131; ve &#xE7;&#xF6;z&#xFC;n&#xFC;rl&#xFC;k azal&#x131;r, ancak &#x15F;ekilde gri ile vurgulanan alan art&#x131;k kullan&#x131;lmamaktad&#x131;r.</p>
+<p><img src="../../assets/setup/joystick_circle_correction2.jpg" alt="Daire d&#xFC;zeltmesi etkinle&#x15F;tirildi"></p>
 </li>
 </ul>
 </li>
-<li><p><strong>Deadbands:</strong> Deadbands allow input changes to be ignored when the sticks are near their neutral positions. This helps to avoid noise or small oscillations on sensitive sticks which may be interpreted as commands, or small offsets when sticks do not re-center well. They can be adjusted during the first step of the <a href="#configure">calibration</a>, or by dragging vertically on the corresponding axis monitor.</p>
+<li><p><strong>Deadbands:</strong>Deadbandler, &#xE7;ubuklar n&#xF6;tr konumlar&#x131;na yak&#x131;n oldu&#x11F;unda giri&#x15F; de&#x11F;i&#x15F;ikliklerinin g&#xF6;z ard&#x131; edilmesini sa&#x11F;lar. Bu, hassas &#xE7;ubuklarda komut olarak yorumlanabilecek parazitleri veya k&#xFC;&#xE7;&#xFC;k sal&#x131;n&#x131;mlar&#x131; ya da &#xE7;ubuklar yeniden ortalanmad&#x131;&#x11F;&#x131;nda k&#xFC;&#xE7;&#xFC;k farklar&#x131; &#xF6;nlemeye yard&#x131;mc&#x131; olur. <a href="#configure"> Kalibrasyonunun </a> ilk ad&#x131;m&#x131; s&#x131;ras&#x131;nda veya ilgili eksen monit&#xF6;r&#xFC;nde dikey olarak s&#xFC;r&#xFC;klenerek ayarlanabilirler.</p>
 </li>
 </ul>
-<h2 id="supported-joysticks"><a name="supported-joysticks" class="plugin-anchor" href="#supported-joysticks"><i class="fa fa-link" aria-hidden="true"></i></a>Supported Joysticks</h2>
-<p>The following joysticks/controllers have been shown to work with relatively recent <em>QGroundControl</em> builds.</p>
-<h3 id="sony-playstation-34-controllers"><a name="sony-playstation-34-controllers" class="plugin-anchor" href="#sony-playstation-34-controllers"><i class="fa fa-link" aria-hidden="true"></i></a>Sony Playstation 3/4 Controllers</h3>
-<p>These are both highly recommended. They work well &quot;out of the box&quot; and have many buttons that you can map to flight modes.</p>
-<h4 id="sony-ps4---dualshock-4-controller-v2-wireless-setup"><a name="sony-ps4---dualshock-4-controller-v2-wireless-setup" class="plugin-anchor" href="#sony-ps4---dualshock-4-controller-v2-wireless-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Sony PS4 - DualShock 4 Controller V2 (Wireless setup)</h4>
-<p>This controller supports both USB and Bluetooth wireless connection. Wired USB connection usually works out of the box. The wireless connection needs some setup.</p>
-<h5 id="linux-ubuntu-setup"><a name="linux-ubuntu-setup" class="plugin-anchor" href="#linux-ubuntu-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Linux Ubuntu setup</h5>
-<p>To make the controller work wirelessly under Linux the <a href="https://jstest-gtk.gitlab.io/" target="_blank">jstest-gtk</a> and <a href="https://github.com/chrippa/ds4drv" target="_blank">ds4drv</a> utilities are needed.</p>
-<p>The steps are:</p>
+<h2 id="desteklenen-joystickler"><a name="desteklenen-joystickler" class="plugin-anchor" href="#desteklenen-joystickler"><i class="fa fa-link" aria-hidden="true"></i></a>Desteklenen Joystickler</h2>
+<p>A&#x15F;a&#x11F;&#x131;daki kumanda kollar&#x131;n&#x131;n/kontrol cihazlar&#x131;n&#x131;n nispeten yeni <em> QGroundControl </em> versiyonlar&#x131;yla &#xE7;al&#x131;&#x15F;t&#x131;&#x11F;&#x131; g&#xF6;r&#xFC;lm&#xFC;&#x15F;t&#xFC;r.</p>
+<h3 id="sony-playstation-34-kontrolc&#xFC;leri"><a name="sony-playstation-34-kontrolc&#xFC;leri" class="plugin-anchor" href="#sony-playstation-34-kontrolc&#xFC;leri"><i class="fa fa-link" aria-hidden="true"></i></a>Sony Playstation 3/4 Kontrolc&#xFC;leri</h3>
+<p>&#x130;kisi de olduk&#xE7;a tavsiye edilir. &quot;Kutudan &#xE7;&#x131;kar &#xE7;&#x131;kmaz&quot; iyi &#xE7;al&#x131;&#x15F;&#x131;rlar ve u&#xE7;u&#x15F; modlar&#x131;na e&#x15F;leyebilece&#x11F;iniz bir&#xE7;ok d&#xFC;&#x11F;me vard&#x131;r.</p>
+<h4 id="sony-ps4---dualshock-4-kontrolc&#xFC;-v2-kablosuz-kurulum"><a name="sony-ps4---dualshock-4-kontrolc&#xFC;-v2-kablosuz-kurulum" class="plugin-anchor" href="#sony-ps4---dualshock-4-kontrolc&#xFC;-v2-kablosuz-kurulum"><i class="fa fa-link" aria-hidden="true"></i></a>Sony PS4 - DualShock 4 Kontrolc&#xFC; V2 (Kablosuz kurulum)</h4>
+<p>Bu kontrolc&#xFC; hem USB hem de Bluetooth kablosuz ba&#x11F;lant&#x131;s&#x131;n&#x131; destekler. Kablolu USB ba&#x11F;lant&#x131;s&#x131; genellikle kutudan &#xE7;&#x131;kar &#xE7;&#x131;kmaz &#xE7;al&#x131;&#x15F;&#x131;r. Kablosuz ba&#x11F;lant&#x131; i&#xE7;in baz&#x131; kurulumlara ihtiyac&#x131; vard&#x131;r.</p>
+<h5 id="linux-ubuntuda-kurulumu"><a name="linux-ubuntuda-kurulumu" class="plugin-anchor" href="#linux-ubuntuda-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>Linux Ubuntu&apos;da Kurulumu</h5>
+<p>Kontrolc&#xFC;n&#xFC;n Linux alt&#x131;nda kablosuz olarak &#xE7;al&#x131;&#x15F;mas&#x131;n&#x131; sa&#x11F;lamak i&#xE7;in <a href="https://jstest-gtk.gitlab.io/" target="_blank"> jstest-gtk </a> ve <a href="https://github.com/chrippa/ds4drv" target="_blank"> ds4drv </a> yard&#x131;mc&#x131; programlar&#x131;na ihtiya&#xE7; vard&#x131;r.</p>
+<p>Ad&#x131;mlar &#x15F;unlard&#x131;r:</p>
 <ol>
-<li>Install <em>jstest-gtk</em>: <code>sudo apt install jstest-gtk</code></li>
-<li>Install <em>ds4drv</em>: <code>sudo pip install ds4drv</code></li>
-<li>Run ds4drv <code>sudo ds4drv</code></li>
-<li>Hold <strong>Share</strong> button and then <strong>PS</strong> button until controller LED starts blinking rapidly. The <em>ds4drv</em> should then detect a new device.</li>
-<li>Last of all, you should check the controller setup by running the <em>jstest-gtk</em> utility. </li>
+<li><ul>
+<li>jstest-gtk * &apos;yi y&#xFC;kleyin: <code>sudo apt install jstest-gtk</code></li>
+</ul>
+</li>
+<li><ul>
+<li>ds4drv * y&#xFC;kleyin: <code>sudo pip install ds4drv</code></li>
+</ul>
+</li>
+<li>Ds4drv&apos;yi &#xE7;al&#x131;&#x15F;t&#x131;r&#x131;n <code>sudo ds4drv</code></li>
+<li>Kontrolc&#xFC;n&#xFC;n LED&apos;i h&#x131;zla yan&#x131;p s&#xF6;nmeye ba&#x15F;layana kadar <strong> Share </strong> d&#xFC;&#x11F;mesini ve sonra <strong> PS </strong> d&#xFC;&#x11F;mesini bas&#x131;l&#x131; tutun. Daha sonra <em> ds4drv </em> yeni bir ayg&#x131;t alg&#x131;lamal&#x131;d&#x131;r.</li>
+<li>Son olarak, <em> jstest-gtk </em> yard&#x131;mc&#x131; program&#x131;n&#x131; &#xE7;al&#x131;&#x15F;t&#x131;rarak denetleyici kurulumunu kontrol etmelisiniz. </li>
 </ol>
 <h3 id="frsky-taranis-xd9-plus"><a name="frsky-taranis-xd9-plus" class="plugin-anchor" href="#frsky-taranis-xd9-plus"><i class="fa fa-link" aria-hidden="true"></i></a>FrSky Taranis XD9 plus</h3>
-<p>The <em>FrSky Taranis XD9 plus</em> remote control can also be connected as a joystick. You will need to connect it via the USB port on the back.</p>
-<p>The Taranis does not allow you to use button options (to be precise, you can set the options, but toggling the buttons on your transmitter does not cause them to be pressed).</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> The Taranis is an open system that is openly being worked on. It is possible that at time of writing there is a firmware or configuration that allows it to work effectively as a joystick.</p>
+<ul>
+<li>FrSky Taranis XD9 plus * uzaktan kumandas&#x131; da bir joystick olarak ba&#x11F;lanabilir. Arkadaki USB ba&#x11F;lant&#x131; noktas&#x131; &#xFC;zerinden ba&#x11F;lanmas&#x131; gerekecektir.</li>
+</ul>
+<p>Taranis, d&#xFC;&#x11F;me se&#xE7;eneklerini kullanman&#x131;za izin vermez (kesin olmak gerekirse, se&#xE7;enekleri ayarlayabilirsiniz, ancak vericinizdeki d&#xFC;&#x11F;melerin de&#x11F;i&#x15F;tirilmesi, bunlara bas&#x131;lmas&#x131;na neden olmaz).</p>
+<blockquote class="clearfix alert alert-quote"><strong class="fa fa-2x fa-quote-left"></strong>
+<p> Taranis a&#xE7;&#x131;k bir &#x15F;ekilde &#xFC;zerinde &#xE7;al&#x131;&#x15F;&#x131;lan a&#xE7;&#x131;k bir sistemdir. Yazma s&#x131;ras&#x131;nda, bir joystick olarak etkili bir &#x15F;ekilde &#xE7;al&#x131;&#x15F;mas&#x131;na izin veren bir ayg&#x131;t yaz&#x131;l&#x131;m&#x131; veya konfig&#xFC;rasyon olmas&#x131; m&#xFC;mk&#xFC;nd&#xFC;r.</p>
 </blockquote>
 <h3 id="logitech-gamepad-f310"><a name="logitech-gamepad-f310" class="plugin-anchor" href="#logitech-gamepad-f310"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech Gamepad F310</h3>
-<p>The Logitech Gamepad F310 has been tested via USB on MacOSX &quot;Sierra&quot;.</p>
+<p>Logitech Gamepad F310, MacOS &quot;Sierra&quot; &#xFC;zerinde USB arac&#x131;l&#x131;&#x11F;&#x131;yla test edilmi&#x15F;tir.</p>
 <h3 id="logitech-extreme-3d-pro"><a name="logitech-extreme-3d-pro" class="plugin-anchor" href="#logitech-extreme-3d-pro"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech Extreme 3D Pro</h3>
-<p>The <a href="http://gaming.logitech.com/en-ch/product/extreme-3d-pro-joystick" target="_blank">Logitech Extreme 3D Pro</a> Joystick has been tested on all platforms (Linux, Windows, Mac OSX). This is a single stick controller that can also be twisted. The main stick axes are used for pitch and roll, while the twist action is used for yaw. The throttle is mapped onto a separate wheel.</p>
+<p><a href="http://gaming.logitech.com/en-ch/product/extreme-3d-pro-joystick" target="_blank"> Logitech Extreme 3D Pro </a> Joystick t&#xFC;m platformlarda (Linux, Windows, Mac OSX) test edilmi&#x15F;tir. Bu, ayn&#x131; zamanda b&#xFC;k&#xFC;lebilen tek &#xE7;ubuklu bir kontrolc&#xFC;d&#xFC;r. Ana &#xE7;ubuk eksenleri e&#x11F;im ve yuvarlanma i&#xE7;in kullan&#x131;l&#x131;rken, b&#xFC;kme hareketi sapma i&#xE7;in kullan&#x131;l&#x131;r. Gaz pedal&#x131; ayr&#x131; bir tekerle&#x11F;e yerle&#x15F;tirilmi&#x15F;tir.</p>
 <h3 id="logitech-f710-gamepad"><a name="logitech-f710-gamepad" class="plugin-anchor" href="#logitech-f710-gamepad"><i class="fa fa-link" aria-hidden="true"></i></a>Logitech F710 Gamepad</h3>
 <!-- This is from http://qgroundcontrol.org/users/joystick -->
-<p>This gamepad is great for flying a multirotor manually via QGroundControl. It works on Windows, Linux and Mac OS.</p>
-<h4 id="mac-os-leopard--lion-setup"><a name="mac-os-leopard--lion-setup" class="plugin-anchor" href="#mac-os-leopard--lion-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Mac OS Leopard / Lion Setup</h4>
-<p>The F710 is detected under Leopard / Lion but is not automatically configured as an input device. In order to get a working configuration, the F710 has to be recognised as <em>Rumblepad2</em>.</p>
-<p>First check how it is recognised: <strong>Apple &gt; About this Mac &gt; Additional Information &gt; System Report &gt; USB</strong>. It is detected as &quot;Logitech Cordless RumblePad 2&quot; then nothing further needs to be done.</p>
-<p>If it is detected as a &quot;Logitech Wireless 710&quot;, perform these steps:</p>
+<p>Bu oyun kumandas&#x131;, QGroundControl arac&#x131;l&#x131;&#x11F;&#x131;yla bir multirotoru manuel olarak u&#xE7;urmak i&#xE7;in m&#xFC;kemmeldir. Windows, Linux ve Mac OS &#xFC;zerinde &#xE7;al&#x131;&#x15F;&#x131;r.</p>
+<h4 id="mac-os-leopard--lion-kurulumu"><a name="mac-os-leopard--lion-kurulumu" class="plugin-anchor" href="#mac-os-leopard--lion-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>Mac OS Leopard / Lion Kurulumu</h4>
+<p>F710, Leopard / Lion&apos;da alg&#x131;lan&#x131;r, ancak otomatik olarak bir giri&#x15F; cihaz&#x131; olarak yap&#x131;land&#x131;r&#x131;lmaz. &#xC7;al&#x131;&#x15F;an bir konfig&#xFC;rasyon elde etmek i&#xE7;in, F710&apos;un <em> Rumblepad2 </em> olarak tan&#x131;nmas&#x131; gerekir.</p>
+<p>&#xD6;nce nas&#x131;l tan&#x131;nd&#x131;&#x11F;&#x131;n&#x131; kontrol edin: <strong> Apple&gt; Bu Mac Hakk&#x131;nda&gt; Ek Bilgi&gt; Sistem Raporu&gt; USB </strong>. &quot;Logitech Cordless RumblePad 2&quot; olarak alg&#x131;lanm&#x131;&#x15F;sa bundan sonra ba&#x15F;ka bir i&#x15F;lem yap&#x131;lmas&#x131;na gerek yoktur.</p>
+<p>&quot;Logitech Wireless 710&quot; olarak alg&#x131;lan&#x131;rsa, &#x15F;u ad&#x131;mlar&#x131; ger&#xE7;ekle&#x15F;tirin:</p>
 <ol>
-<li>Unplug the USB receiver of the gamepad</li>
-<li>Prepare to quickly plug it into a USB port</li>
-<li>Hit the Logitech button (its silver with the Logitech Logo on it in the center of the pad)</li>
-<li>Quickly connect the USB receiver to your Mac</li>
-<li>The pad should now be detected in the system report as &quot;Logitech Cordless RumblePad 2&quot;. If not, retry the above steps.</li>
+<li>Oyun kumandas&#x131;n&#x131;n USB al&#x131;c&#x131;s&#x131;n&#x131; &#xE7;&#x131;kar&#x131;n</li>
+<li>H&#x131;zl&#x131; bir &#x15F;ekilde bir USB ba&#x11F;lant&#x131; noktas&#x131;na takmaya haz&#x131;rlan&#x131;n</li>
+<li>Logitech d&#xFC;&#x11F;mesine bas&#x131;n (kumandan&#x131;n ortas&#x131;nda bulunan g&#xFC;m&#xFC;&#x15F; rengi Logitech logosu)</li>
+<li>USB al&#x131;c&#x131;s&#x131;n&#x131; Mac&apos;inize h&#x131;zla ba&#x11F;lay&#x131;n</li>
+<li>Kumanda art&#x131;k sistem raporunda &quot;Logitech Cordless RumblePad 2&quot; olarak alg&#x131;lanmal&#x131;d&#x131;r. E&#x11F;er alg&#x131;lanmazsa yukar&#x131;daki ad&#x131;mlar&#x131; tekrar deneyin.</li>
 </ol>
 
                                 
@@ -1040,7 +1053,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Joystick","level":"1.7.11","depth":2,"next":{"title":"Parameters","level":"1.7.12","depth":2,"path":"SetupView/Parameters.md","ref":"SetupView/Parameters.md","articles":[]},"previous":{"title":"Camera","level":"1.7.10","depth":2,"path":"SetupView/Camera.md","ref":"SetupView/Camera.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/Joystick.md","mtime":"2020-12-23T05:39:08.164Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-23T05:39:46.728Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Joystick","level":"1.7.11","depth":2,"next":{"title":"Parameters","level":"1.7.12","depth":2,"path":"SetupView/Parameters.md","ref":"SetupView/Parameters.md","articles":[]},"previous":{"title":"Camera","level":"1.7.10","depth":2,"path":"SetupView/Camera.md","ref":"SetupView/Camera.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/Joystick.md","mtime":"2020-12-26T03:56:20.978Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-26T03:57:03.425Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>
