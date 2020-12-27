@@ -869,48 +869,48 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="power-setup"><a name="power-setup" class="plugin-anchor" href="#power-setup"><i class="fa fa-link" aria-hidden="true"></i></a>Power Setup</h1>
-<p>The <em>Power Setup</em> screen is used to configure battery parameters and also provide advanced settings for propellers.</p>
-<p><img src="../../assets/setup/PX4Power.jpg" alt="Battery Calibration"></p>
-<h2 id="battery-voltagecurrent-calibration"><a name="battery-voltagecurrent-calibration" class="plugin-anchor" href="#battery-voltagecurrent-calibration"><i class="fa fa-link" aria-hidden="true"></i></a>Battery Voltage/Current Calibration</h2>
-<p>Enter data for your battery/power module from its data sheet: number of cells, full voltage per cell, empty voltage per cell. If provided, also enter voltage divider and amps-per-volt information.</p>
-<p><em>QGroundControl</em> can be used to calculate appropriate voltage divider and amps-per-volt values from measurements:</p>
+                                <h1 id="g&#xFC;&#xE7;-kurulumu"><a name="g&#xFC;&#xE7;-kurulumu" class="plugin-anchor" href="#g&#xFC;&#xE7;-kurulumu"><i class="fa fa-link" aria-hidden="true"></i></a>G&#xFC;&#xE7; Kurulumu</h1>
+<p><em>Power Setup</em> ekran&#x131; batarya parametrelerini d&#xFC;zenlemek i&#xE7;in kullan&#x131;l&#x131;r ve ayr&#x131;ca pervaneler hakk&#x131;nda geli&#x15F;mi&#x15F; ayarlar sunar.</p>
+<p><img src="../../assets/setup/PX4Power.jpg" alt="Batarya Kalibrasyonu"></p>
+<h2 id="batarya-voltajak&#x131;m-kalibrasyonu"><a name="batarya-voltajak&#x131;m-kalibrasyonu" class="plugin-anchor" href="#batarya-voltajak&#x131;m-kalibrasyonu"><i class="fa fa-link" aria-hidden="true"></i></a>Batarya Voltaj/Ak&#x131;m Kalibrasyonu</h2>
+<p>Batarya/g&#xFC;&#xE7; mod&#xFC;l&#xFC;n&#xFC;z i&#xE7;in veri sayfas&#x131;ndan verileri girin: h&#xFC;cre say&#x131;s&#x131;, h&#xFC;cre ba&#x15F;&#x131;na tam voltaj, h&#xFC;cre ba&#x15F;&#x131;na bo&#x15F; voltaj. E&#x11F;er varsa, voltaj b&#xF6;l&#xFC;c&#xFC; ve volt ba&#x15F;&#x131;na amper bilgilerini de girin.</p>
+<p><em>QGroundControl</em>, &#xF6;l&#xE7;&#xFC;mlerden uygun voltaj b&#xF6;l&#xFC;c&#xFC; ve volt ba&#x15F;&#x131;na amper de&#x11F;erlerini hesaplamak i&#xE7;in kullan&#x131;labilir:</p>
 <ol>
-<li>Measure the voltage from the battery using a multimeter.</li>
-<li>Click <strong>Calculate</strong> next to the <em>Voltage divider</em> field. On the prompt that appears: <ol>
-<li>Enter the measured voltage.</li>
-<li>Click <strong>Calculate</strong> to generate a new voltage-divider value.</li>
-<li>Click <strong>Close</strong> to save the value into the main form. </li>
+<li>Bir multimetre kullanarak pilden gelen voltaj&#x131; &#xF6;l&#xE7;&#xFC;n.</li>
+<li><em>Voltage divider</em>&apos;&#x131;n yan&#x131;ndaki <strong>Calculate</strong> butonuna t&#x131;klay&#x131;n. Gelen pencerede: <ol>
+<li>&#xD6;l&#xE7;&#xFC;len voltaj&#x131; girin.</li>
+<li><strong>Calculate</strong>&apos;e t&#x131;klayarak yeni bir voltaj b&#xF6;l&#xFC;c&#xFC; de&#x11F;eri olu&#x15F;turun.</li>
+<li>De&#x11F;eri ana forma kaydetmek i&#xE7;in <strong>Close</strong>&apos;a t&#x131;klay&#x131;n. </li>
 </ol>
 </li>
-<li>Measure the current from the battery.</li>
-<li>Click <strong>Calculate</strong> next to the <em>Amps per volt</em> field. On the prompt that appears: <ol>
-<li>Enter the measured current.</li>
-<li>Click <strong>Calculate</strong> to generate a new <em>amps per volt</em> value.</li>
-<li>Click <strong>Close</strong> to save the value into the main form. </li>
+<li>Bataryadaki ak&#x131;m&#x131; &#xF6;l&#xE7;&#xFC;n.</li>
+<li><em>Amps per volt</em>&apos;un yan&#x131;ndaki <strong>Calculate</strong> butonuna t&#x131;klay&#x131;n. Gelen pencerede: <ol>
+<li>&#xD6;l&#xE7;&#xFC;len ak&#x131;m&#x131; girin.</li>
+<li><strong>Calculate</strong>&apos;e t&#x131;klayarak yeni bir <em>volt ba&#x15F;&#x131;na ak&#x131;m</em> de&#x11F;eri olu&#x15F;turun.</li>
+<li>De&#x11F;eri ana forma kaydetmek i&#xE7;in <strong>Close</strong>&apos;a t&#x131;klay&#x131;n. </li>
 </ol>
 </li>
 </ol>
-<h2 id="advanced-power-settings"><a name="advanced-power-settings" class="plugin-anchor" href="#advanced-power-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Advanced Power Settings</h2>
-<p>Click the <strong>Show Advanced Settings</strong> checkbox to specify advanced power settings.</p>
-<h3 id="voltage-drop-on-full-load"><a name="voltage-drop-on-full-load" class="plugin-anchor" href="#voltage-drop-on-full-load"><i class="fa fa-link" aria-hidden="true"></i></a>Voltage Drop on Full Load</h3>
-<p>Batteries show less voltage at high throttle. Enter the difference in Volts between idle throttle and full throttle, divided by the number of battery cells. The default value should be used if unsure!</p>
+<h2 id="geli&#x15F;mi&#x15F;-g&#xFC;&#xE7;-ayarlar&#x131;"><a name="geli&#x15F;mi&#x15F;-g&#xFC;&#xE7;-ayarlar&#x131;" class="plugin-anchor" href="#geli&#x15F;mi&#x15F;-g&#xFC;&#xE7;-ayarlar&#x131;"><i class="fa fa-link" aria-hidden="true"></i></a>Geli&#x15F;mi&#x15F; G&#xFC;&#xE7; Ayarlar&#x131;</h2>
+<p>Geli&#x15F;mi&#x15F; g&#xFC;&#xE7; ayarlar&#x131;n&#x131; &#xF6;zelle&#x15F;tirmek i&#xE7;in <strong>Show Advanced Settings</strong> onay kutusuna t&#x131;klay&#x131;n.</p>
+<h3 id="tam-y&#xFC;kte-voltaj-d&#xFC;&#x15F;&#xFC;&#x15F;&#xFC;"><a name="tam-y&#xFC;kte-voltaj-d&#xFC;&#x15F;&#xFC;&#x15F;&#xFC;" class="plugin-anchor" href="#tam-y&#xFC;kte-voltaj-d&#xFC;&#x15F;&#xFC;&#x15F;&#xFC;"><i class="fa fa-link" aria-hidden="true"></i></a>Tam Y&#xFC;kte Voltaj D&#xFC;&#x15F;&#xFC;&#x15F;&#xFC;</h3>
+<p>Bataryalar y&#xFC;ksek motor y&#xFC;klemelerinde daha az voltaj g&#xF6;sterir. Motorlar bo&#x15F;tayken ve tam kapasitede &#xE7;al&#x131;&#x15F;&#x131;rkenki volt fark&#x131;n&#x131; batarya h&#xFC;crelerinin say&#x131;s&#x131;na b&#xF6;lerek girin. Emin de&#x11F;ilseniz varsay&#x131;lan de&#x11F;er kullan&#x131;lmal&#x131;d&#x131;r!</p>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
-<p> If the value is too high the battery may be deep-discharged and damaged.</p>
+<p> E&#x11F;er de&#x11F;er &#xE7;ok y&#xFC;ksekse batarya deep-discharged olabilir ve hasar g&#xF6;rebilir.</p>
 </blockquote>
-<h2 id="esc-pwm-minimum-and-maximum-calibration"><a name="esc-pwm-minimum-and-maximum-calibration" class="plugin-anchor" href="#esc-pwm-minimum-and-maximum-calibration"><i class="fa fa-link" aria-hidden="true"></i></a>ESC PWM Minimum and Maximum Calibration</h2>
-<p>To calibrate the ESC max/min PWM values:</p>
+<h2 id="esc-pwm-minimum-ve-maksimum-kalibrasyonu"><a name="esc-pwm-minimum-ve-maksimum-kalibrasyonu" class="plugin-anchor" href="#esc-pwm-minimum-ve-maksimum-kalibrasyonu"><i class="fa fa-link" aria-hidden="true"></i></a>ESC PWM Minimum ve Maksimum Kalibrasyonu</h2>
+<p>ESC&apos;nin max/min PWM de&#x11F;erlerini kalibre etmek i&#xE7;in:</p>
 <ol>
-<li>Remove the propellers. </li>
-<li>Connect the vehicle to QGC via USB (only). </li>
-<li>Click the <strong>Calibrate</strong> button.</li>
+<li>Pervaneleri &#xE7;&#x131;kar&#x131;n. </li>
+<li>Arac&#x131; QGC&apos;ye USB (sadece) arac&#x131;l&#x131;&#x11F;&#x131; ile ba&#x11F;lay&#x131;n. </li>
+<li><strong>Calibrate</strong> butonuna bas&#x131;n.</li>
 </ol>
 <blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
-<p> Never attempt ESC calibration with props on.</p>
-<p>Motors should not spin during ESC calibration. However if an ESC doesn&apos;t properly support/detect the calibration sequence then it will respond to the PWM input by running the motor at maximum speed.</p>
+<p> Pervaneler tak&#x131;l&#x131;yken hi&#xE7;bir zaman ESC kalibrasyonunu denemeyin.</p>
+<p>ESC kalibrasyonu s&#x131;ras&#x131;nda motorlar d&#xF6;nmemelidir. Bununla birlikte, bir ESC kalibrasyon s&#x131;ras&#x131;n&#x131; do&#x11F;ru &#x15F;ekilde desteklemez/tespit etmezse, motoru maksimum h&#x131;zda &#xE7;al&#x131;&#x15F;t&#x131;rarak PWM giri&#x15F;ine yan&#x131;t verecektir.</p>
 </blockquote>
-<h2 id="other-settings"><a name="other-settings" class="plugin-anchor" href="#other-settings"><i class="fa fa-link" aria-hidden="true"></i></a>Other Settings</h2>
-<p>Select the <strong>Show UAVCAN Settings</strong> checkbox to access additional settings for UAVCAN Bus Configuration and motor index and direction assignment.</p>
+<h2 id="di&#x11F;er-ayarlar"><a name="di&#x11F;er-ayarlar" class="plugin-anchor" href="#di&#x11F;er-ayarlar"><i class="fa fa-link" aria-hidden="true"></i></a>Di&#x11F;er Ayarlar</h2>
+<p>UAVCAN Veriyolu Yap&#x131;land&#x131;rmas&#x131; ve motor indeksi ve y&#xF6;n atamas&#x131; i&#xE7;in ek ayarlara eri&#x15F;mek i&#xE7;in <strong>Show UAVCAN Settings</strong> onay kutusunu se&#xE7;in.</p>
 
                                 
                                 </section>
@@ -954,7 +954,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Power","level":"1.7.6","depth":2,"next":{"title":"Motors","level":"1.7.7","depth":2,"path":"SetupView/Motors.md","ref":"SetupView/Motors.md","articles":[{"title":"Motors (ArduSub)","level":"1.7.7.1","depth":3,"path":"SetupView/Motors_ardusub.md","ref":"SetupView/Motors_ardusub.md","articles":[]}]},"previous":{"title":"Flight Modes","level":"1.7.5","depth":2,"path":"SetupView/FlightModes.md","ref":"SetupView/FlightModes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/Power.md","mtime":"2020-12-26T03:56:20.978Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-26T03:57:03.425Z"},"basePath":"..","book":{"language":"tr"}});
+            gitbook.page.hasChanged({"page":{"title":"Power","level":"1.7.6","depth":2,"next":{"title":"Motors","level":"1.7.7","depth":2,"path":"SetupView/Motors.md","ref":"SetupView/Motors.md","articles":[{"title":"Motors (ArduSub)","level":"1.7.7.1","depth":3,"path":"SetupView/Motors_ardusub.md","ref":"SetupView/Motors_ardusub.md","articles":[]}]},"previous":{"title":"Flight Modes","level":"1.7.5","depth":2,"path":"SetupView/FlightModes.md","ref":"SetupView/FlightModes.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","anchors","page-toc-button","collapsible-menu","language-picker","custom-favicon","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git","validate-links","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"validate-links":{"defaultScheme":"https","local":"warn","remote":"disabled"},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"tr","gitbook":"*"},"file":{"path":"SetupView/Power.md","mtime":"2020-12-27T21:54:37.801Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-27T21:55:18.039Z"},"basePath":"..","book":{"language":"tr"}});
         });
     </script>
 </div>
