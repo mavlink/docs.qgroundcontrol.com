@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>QGC Install/Config Problems · QGroundControl User Guide</title>
+        <title>Connection problems · QGroundControl User Guide</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="CommonProblems.html" />
+    <link rel="next" href="parameter_download.html" />
     
     
-    <link rel="prev" href="Support.html" />
+    <link rel="prev" href="qgc_usage.html" />
     
 
     </head>
@@ -1002,12 +1002,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11" data-path="Support.html">
+        <li class="chapter " data-level="1.11" data-path="./">
             
-                <a href="Support.html">
+                <a href="./">
             
                     
-                    Support
+                    Troubleshooting
             
                 </a>
             
@@ -1016,12 +1016,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.11.1" data-path="troubleshooting_qgc.html">
+        <li class="chapter " data-level="1.11.1" data-path="qgc_setup.html">
             
-                <a href="troubleshooting_qgc.html">
+                <a href="qgc_setup.html">
             
                     
-                    QGC Install/Config Problems
+                    Setup Problems
             
                 </a>
             
@@ -1029,12 +1029,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2" data-path="CommonProblems.html">
+        <li class="chapter " data-level="1.11.2" data-path="qgc_usage.html">
             
-                <a href="CommonProblems.html">
+                <a href="qgc_usage.html">
             
                     
-                    QGC/Vehicle Interaction Problems
+                    Usage Problems
             
                 </a>
             
@@ -1043,9 +1043,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.11.2.1" data-path="VehicleConnection.html">
+        <li class="chapter active" data-level="1.11.2.1" data-path="vehicle_connection.html">
             
-                <a href="VehicleConnection.html">
+                <a href="vehicle_connection.html">
             
                     
                     Connection problems
@@ -1056,9 +1056,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.2" data-path="ParameterDownload.html">
+        <li class="chapter " data-level="1.11.2.2" data-path="parameter_download.html">
             
-                <a href="ParameterDownload.html">
+                <a href="parameter_download.html">
             
                     
                     Parameter Download failures
@@ -1069,9 +1069,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.3" data-path="PlanUploadDownload.html">
+        <li class="chapter " data-level="1.11.2.3" data-path="plan_upload_download.html">
             
-                <a href="PlanUploadDownload.html">
+                <a href="plan_upload_download.html">
             
                     
                     Plan Upload/Download failures
@@ -1082,9 +1082,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.11.2.4" data-path="ResumeMission.html">
+        <li class="chapter " data-level="1.11.2.4" data-path="resume_mission.html">
             
-                <a href="ResumeMission.html">
+                <a href="resume_mission.html">
             
                     
                     Resume Mission failures
@@ -1102,6 +1102,19 @@
     
 
             </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Support/Support.html">
+            
+                <a href="../Support/Support.html">
+            
+                    
+                    Support
+            
+                </a>
+            
+
             
         </li>
     
@@ -1253,7 +1266,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >QGC Install/Config Problems</a>
+        <a href=".." >Connection problems</a>
     </h1>
 </div>
 
@@ -1268,67 +1281,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="qgc-installationconfiguration-problems"><a name="qgc-installationconfiguration-problems" class="plugin-anchor" href="#qgc-installationconfiguration-problems"><i class="fa fa-link" aria-hidden="true"></i></a>QGC Installation/Configuration Problems</h1>
-<p>This topic lists troubleshooting information related to <strong>running</strong> <em>QGroundControl</em> on the host computer (e.g. QGC setup and configuration issues).</p>
-<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> Problems when <strong>using</strong> <em>QGroundControl</em> to interact with a vehicle are covered in: <a href="CommonProblems.html">QGC/Vehicle Interaction Problems</a>.</p>
-</blockquote>
-<h2 id="64-bit-windows-audio-in-unexpected-language"><a name="64-bit-windows-audio-in-unexpected-language" class="plugin-anchor" href="#64-bit-windows-audio-in-unexpected-language"><i class="fa fa-link" aria-hidden="true"></i></a>64-bit Windows: Audio in Unexpected Language</h2>
-<p>On Windows 64-bit machines <em>QGroundControl</em> may sometimes play audio/messages in a language that does not match the <em>Text-to-speech</em> setting in <strong>Control Panel &gt; Speech</strong> (e.g. audio spoken in German on an English machine).</p>
-<p>This can occur because 64-bit Windows only displays 64-bit voices, while <em>QGroundControl</em> is a 32-bit application (on Windows) and hence can only run 32-bit voices.</p>
-<p>The solution is to set the desired <em>32-bit voice</em> for your system:</p>
-<ol>
-<li>Run the control panel application: <strong>C:\Windows\SysWOW64\Speech\SpeechUX\sapi.cpl</strong>.</li>
-<li>Make your desired <em>Voice selection</em> and then click <strong>OK</strong> at the bottom of the dialog.
-<img src="../../assets/support/windows_text_to_speech.png" alt="Windows 32-bit Text-To-Speech Control Panel"></li>
-</ol>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> Additional information about the Windows speech APIs can be found <a href="https://www.webbie.org.uk/blog/microsoft-speech/" target="_blank">here</a>.</p>
-</blockquote>
-<h2 id="opengl_troubleshooting"><a name="opengl_troubleshooting" class="plugin-anchor" href="#opengl_troubleshooting"><i class="fa fa-link" aria-hidden="true"></i></a>Windows: UI Rendering/Video Driver Issues </h2>
-<p>If you experience UI rendering issues or video driver crashes on Windows, this may be caused by &quot;flaky&quot; OpenGL drivers. <em>QGroundControl</em> provides 3 shortcuts that you can use to start <em>QGroundControl</em> in &quot;safer&quot; video modes (try these in order):</p>
+                                <h1 id="vehicle-connection-problems"><a name="vehicle-connection-problems" class="plugin-anchor" href="#vehicle-connection-problems"><i class="fa fa-link" aria-hidden="true"></i></a>Vehicle Connection Problems</h1>
+<h2 id="vehicle-does-not-show-up-in-ui"><a name="vehicle-does-not-show-up-in-ui" class="plugin-anchor" href="#vehicle-does-not-show-up-in-ui"><i class="fa fa-link" aria-hidden="true"></i></a>Vehicle does not show up in UI</h2>
+<p>QGC will automatically connect to a vehicle as soon as a communication link is created (using USB, or WiFi, etc.)
+If you establish that link and you don&apos;t see your vehicle show up in the QGC UI you can use <a href="../SettingsView/console_logging.html">console logging</a> to help debug the problem.</p>
+<p>Use the following steps to debug the issue:</p>
 <ul>
-<li><strong>QGroundControl:</strong> QGC uses OpenGL graphics drivers directly.</li>
-<li><strong>GPU Compatibility Mode:</strong> QGC uses ANGLE drivers, which implement OpenGL on top of DirectX.</li>
-<li><strong>GPU Safe Mode:</strong> QGC uses a software rasterizer for the UI (this is very slow).</li>
+<li>Start with the hardware vehicle link not connected.
+Don&apos;t plug in the USB connection and/or establish the WiFi link in your OS for example.</li>
+<li>Turn on <code>LinkManagerLog</code> <a href="../SettingsView/console_logging.html">console logging</a> in QGC.
+This will log output about the link which QGC sees and connects to.</li>
+<li>Establish the hardware vehicle communication link.</li>
+<li><p>The console log output should display something like this:</p>
+<pre><code>[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:563 - &quot;Waiting for bootloader to finish &quot;/dev/cu.usbmodem01&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:572 - &quot;Waiting for next autoconnect pass &quot;/dev/cu.usbmodem4201&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:613 - &quot;New auto-connect port added:  &quot;ArduPilot ChibiOS on cu.usbmodem4201 (AutoConnect)&quot; &quot;/dev/cu.usbmodem4201&quot;&quot;
+</code></pre></li>
+<li>The first few lines indicate QGC has established a hardware link and finally the auto-connect.</li>
 </ul>
-<h2 id="waiting_for_connection"><a name="waiting_for_connection" class="plugin-anchor" href="#waiting_for_connection"><i class="fa fa-link" aria-hidden="true"></i></a>Windows: Waiting For Vehicle Connection over WiFi </h2>
-<p>If <em>QGroundControl</em> sits forever <em>Waiting For Vehicle Connection</em> when trying to connect to the vehicle over Wifi, a possible cause is that IP traffic is being blocked by firewall software (e.g. Windows Defender, Norton, etc.).</p>
-<p><img src="../../assets/support/waiting_for_connection.jpg" alt="Waiting for connection"></p>
-<p>The solution is to allow the <em>QGroundControl</em> app through the firewall.</p>
-<p>If using <em>Windows Defender</em>:</p>
+<p>If you don&apos;t see any of this then QGC is not recognizing the hardware link.
+To see if your hardware is being recognized at the OS level do this:</p>
 <ul>
-<li>In the <strong>Start</strong> bar, enter/select: <em>Firewall &amp; Network Protection</em> (System Settings).</li>
-<li>Scroll to and select the option: <em>Allow an app through firewall</em>.</li>
-<li>Select <em>QGroundControl</em> and change the <em>Access</em> selector to <strong>Allow</strong>.<blockquote class="clearfix alert alert-success"><strong class="fa fa-2x fa-thumbs-o-up"></strong>
-<p> Programs are listed in alphabetical order by description (not filename).
-You&apos;ll find QGC under <strong>O</strong>: <em>Open source ground control app provided by QGroundControl dev team</em></p>
-</blockquote>
-</li>
+<li>Start with the hardware vehicle link not connected.
+Don&apos;t plug in the USB connection and/or establish the WiFi link in your OS for example.</li>
+<li>Turn on <code>LinkManagerVerboseLog</code> <a href="../SettingsView/console_logging.html">console logging</a> in QGC.
+This will log output for all serial hardware connections that QGC recognizes.</li>
+<li>You will see continuous output of the serial ports on your device.</li>
+<li>Plug in your USB comm device.</li>
+<li>You should see a new device show in in the console output. Example:<pre><code>[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:520 - &quot;-----------------------------------------------------&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:521 - &quot;portName:           &quot;cu.usbmodem4201&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:522 - &quot;systemLocation:     &quot;/dev/cu.usbmodem4201&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:523 - &quot;description:        &quot;Pixhawk1&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:524 - &quot;manufacturer:       &quot;ArduPilot&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:525 - &quot;serialNumber:       &quot;1B0034000847323433353231&quot;&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:526 - &quot;vendorIdentifier:   1155&quot;
+[D] at /Users/travis/build/mavlink/qgroundcontrol/src/comm/LinkManager.cc:527 - &quot;productIdentifier:  22336&quot;
+</code></pre></li>
+<li>After that it should continue to log a connection to that device as shown in the first example.</li>
 </ul>
-<h2 id="waiting_for_connection"><a name="waiting_for_connection" class="plugin-anchor" href="#waiting_for_connection"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu: Video Streaming Fails (Missing Gstreamer) </h2>
-<p>On Ubuntu you must install <em>Gstreamer</em> components in order to see video streams.
-If these are not installed <em>QGroundControl</em> is unable to create the gstreamer nodes and fails with:</p>
-<pre><code class="lang-sh">VideoReceiver::start() failed. Error with gst_element_factory_make(&#x2018;avdec_h264&#x2019;)
-</code></pre>
-<p>The <a href="../getting_started/download_and_install.html#ubuntu">download/install instructions for Ubuntu</a> include <em>GStreamer</em> setup information.</p>
-<h2 id="dual_vga"><a name="dual_vga" class="plugin-anchor" href="#dual_vga"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu 18.04: Video Streaming Fails on Dual Video Adapter Systems </h2>
-<p><img src="../../assets/support/troubleshooting_dual_vga_driver.jpg" alt="Video on Ubuntu 18.04"></p>
-<p>The version of GSteamer in Ubuntu 18.04 has a bug that prevents video displaying when using a VA API based decoder (i.e. vaapih264dec etc.) on systems that have both Intel and NVidia video display adapters.</p>
-<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
-<p> More generally, while the problem is known to occur on Ubuntu 18.04 with Intel and NVidia VGAs, it might occur on any linux system and other types of (dual) VGAs.</p>
-</blockquote>
-<p>The easiest way to get <em>QGroundControl</em> to work in this case is to start it using the following command line:</p>
-<pre><code>LIBVA_DRIVER_NAME=fakedriver ./QGroundControl)  will this make the
-</code></pre><p>Other alternatives are to disable one of the VGAs, uninstall VA API components, or upgrade to GStreamer 1.16 (there is no easy way to do this on Ubuntu 18.04 - please contribute a recipe if you find one!)</p>
-<h2 id="glibc_2_27"><a name="glibc_2_27" class="plugin-anchor" href="#glibc_2_27"><i class="fa fa-link" aria-hidden="true"></i></a>Ubuntu 16.04: GLIBC_2.27 not found </h2>
-<p>The pre-built AppImages for QGroundControl 4.0 (and later) can only run on Ubuntu 18.04 LTS (or later).
-They do not run on Ubuntu 16.04.</p>
-<p>If you try you will get the error as shown:</p>
-<pre><code class="lang-sh">$ ./QGroundControl.AppImage 
-/tmp/.mount_i4hPuB/QGroundControl: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.27<span class="hljs-string">&apos; not found (required by /tmp/.mount_i4hPuB/QGroundControl)
-</span></code></pre>
-<p> If you need to use Ubuntu 16.04 then one workaround is to build from source without the video libraries.</p>
+<p>If you don&apos;t see a new serial port should up in the console output when you plug it in then something is likely wrong with your hardware at the OS level.</p>
+<h2 id="error-vehicle-is-not-responding"><a name="error-vehicle-is-not-responding" class="plugin-anchor" href="#error-vehicle-is-not-responding"><i class="fa fa-link" aria-hidden="true"></i></a>Error: Vehicle is not responding</h2>
+<p>This indicates that although QGC was able to connect to the hardware link to your vehicle there is no telemetry going back and forth on the link.
+This can unfortunately indicate a number of problems:</p>
+<ul>
+<li>Hardware communication setup problems</li>
+<li>Firmware problems</li>
+</ul>
+<p>Lastly it can happen if QGC attempts to automatically connect to a device which is connected to your computer which isn&apos;t a vehicle.
+You can identify this case using the steps above and noting the device information which QGC is attempting to connect to.
+In order to make auto-connect work the filter it uses on devices it attempts to auto-connect to is somewhat broad and can be incorrect.
+If you find this happening you will need to turn off auto-connect from General Settings and create a manual connection to the comm link for your vehicle.
+You can also remove the device causing the problem from your computer but that may not always be possible.</p>
 
                                 
                                 </section>
@@ -1356,12 +1362,12 @@ They do not run on Ubuntu 16.04.</p>
 
             
                 
-                <a href="Support.html" class="navigation navigation-prev " aria-label="Previous page: Support">
+                <a href="qgc_usage.html" class="navigation navigation-prev " aria-label="Previous page: Usage Problems">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="CommonProblems.html" class="navigation navigation-next " aria-label="Next page: QGC/Vehicle Interaction Problems">
+                <a href="parameter_download.html" class="navigation navigation-next " aria-label="Next page: Parameter Download failures">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1372,7 +1378,7 @@ They do not run on Ubuntu 16.04.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"QGC Install/Config Problems","level":"1.11.1","depth":2,"next":{"title":"QGC/Vehicle Interaction Problems","level":"1.11.2","depth":2,"path":"Support/CommonProblems.md","ref":"Support/CommonProblems.md","articles":[{"title":"Connection problems","level":"1.11.2.1","depth":3,"path":"Support/VehicleConnection.md","ref":"Support/VehicleConnection.md","articles":[]},{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},{"title":"Plan Upload/Download failures","level":"1.11.2.3","depth":3,"path":"Support/PlanUploadDownload.md","ref":"Support/PlanUploadDownload.md","articles":[]},{"title":"Resume Mission failures","level":"1.11.2.4","depth":3,"path":"Support/ResumeMission.md","ref":"Support/ResumeMission.md","articles":[]}]},"previous":{"title":"Support","level":"1.11","depth":1,"path":"Support/Support.md","ref":"Support/Support.md","articles":[{"title":"QGC Install/Config Problems","level":"1.11.1","depth":2,"path":"Support/troubleshooting_qgc.md","ref":"Support/troubleshooting_qgc.md","articles":[]},{"title":"QGC/Vehicle Interaction Problems","level":"1.11.2","depth":2,"path":"Support/CommonProblems.md","ref":"Support/CommonProblems.md","articles":[{"title":"Connection problems","level":"1.11.2.1","depth":3,"path":"Support/VehicleConnection.md","ref":"Support/VehicleConnection.md","articles":[]},{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"Support/ParameterDownload.md","ref":"Support/ParameterDownload.md","articles":[]},{"title":"Plan Upload/Download failures","level":"1.11.2.3","depth":3,"path":"Support/PlanUploadDownload.md","ref":"Support/PlanUploadDownload.md","articles":[]},{"title":"Resume Mission failures","level":"1.11.2.4","depth":3,"path":"Support/ResumeMission.md","ref":"Support/ResumeMission.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["youtube","anchors","page-toc-button","collapsible-menu","custom-favicon","language-picker","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"Support/troubleshooting_qgc.md","mtime":"2022-03-03T23:46:26.577Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-03T23:47:04.908Z"},"basePath":"..","book":{"language":"en"}});
+            gitbook.page.hasChanged({"page":{"title":"Connection problems","level":"1.11.2.1","depth":3,"next":{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"troubleshooting/parameter_download.md","ref":"troubleshooting/parameter_download.md","articles":[]},"previous":{"title":"Usage Problems","level":"1.11.2","depth":2,"path":"troubleshooting/qgc_usage.md","ref":"troubleshooting/qgc_usage.md","articles":[{"title":"Connection problems","level":"1.11.2.1","depth":3,"path":"troubleshooting/vehicle_connection.md","ref":"troubleshooting/vehicle_connection.md","articles":[]},{"title":"Parameter Download failures","level":"1.11.2.2","depth":3,"path":"troubleshooting/parameter_download.md","ref":"troubleshooting/parameter_download.md","articles":[]},{"title":"Plan Upload/Download failures","level":"1.11.2.3","depth":3,"path":"troubleshooting/plan_upload_download.md","ref":"troubleshooting/plan_upload_download.md","articles":[]},{"title":"Resume Mission failures","level":"1.11.2.4","depth":3,"path":"troubleshooting/resume_mission.md","ref":"troubleshooting/resume_mission.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["youtube","anchors","page-toc-button","collapsible-menu","custom-favicon","language-picker","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"en","gitbook":"*"},"file":{"path":"troubleshooting/vehicle_connection.md","mtime":"2022-03-29T23:38:45.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-29T23:39:18.081Z"},"basePath":"..","book":{"language":"en"}});
         });
     </script>
 </div>
