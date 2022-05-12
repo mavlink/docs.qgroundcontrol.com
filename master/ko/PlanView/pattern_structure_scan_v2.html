@@ -1,0 +1,1467 @@
+
+<!DOCTYPE HTML>
+<html lang="ko" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Structure Scan · QGroundControl User Guide</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-language-picker/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-select/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-dronecode/theme_styles.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pattern_corridor_scan.html" />
+    
+    
+    <link rel="prev" href="pattern_survey.html" />
+    
+
+    </head>
+    <body>
+        
+    
+    <!-- ##HW Add dronecode menu -->
+    <div id="common_dronecode_menu">
+
+      <div class="common_menu_logo large_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png" alt="Dronecode logo (large)" />
+        </a>
+      </div>
+      <div class="common_menu_logo small_version">
+        <a href="https://www.dronecode.org/">
+          <img src="../../gitbook/gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png" alt="Dronecode logo (small)" />
+        </a>
+      </div>
+      
+      <div class="common_menu_options">
+        
+            <div class="common_dronecode_menu_item"><a href="http://px4.io/">PX4</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://qgroundcontrol.com/">QGroundControl</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://qgroundcontrol.com/">QGC</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://www.dronecode.org/sdk/">SDK</a></div>
+            <div class="common_dronecode_menu_item"><a href="https://mavlink.io/en/">MAVLink</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="https://www.dronecode.org/documentation/">Documentation</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="https://www.dronecode.org/documentation/">Docs</a></div>
+            <div class="common_dronecode_menu_item large_version"><a href="http://discuss.px4.io/">Support</a></div>
+            <div class="common_dronecode_menu_item small_version"><a href="http://discuss.px4.io/">Help</a></div>
+        
+      </div>
+    </div>
+    
+<!-- ##HW END Add dronecode menu -->
+    
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="검색어 입력" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    개요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../getting_started/quick_start.html">
+            
+                <a href="../getting_started/quick_start.html">
+            
+                    
+                    바로 시작하기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../getting_started/download_and_install.html">
+            
+                <a href="../getting_started/download_and_install.html">
+            
+                    
+                    다운로드 및 설치
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../toolbar/toolbar.html">
+            
+                <a href="../toolbar/toolbar.html">
+            
+                    
+                    도구바/메뉴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../FlyView/FlyView.html">
+            
+                <a href="../FlyView/FlyView.html">
+            
+                    
+                    비행화면
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../FlyView/replay_flight_data.html">
+            
+                <a href="../FlyView/replay_flight_data.html">
+            
+                    
+                    비행데이터 재생
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../FlyView/VideoOverlay.html">
+            
+                <a href="../FlyView/VideoOverlay.html">
+            
+                    
+                    비디오 오버레이
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="PlanView.html">
+            
+                <a href="PlanView.html">
+            
+                    
+                    Plan
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="PlanGeoFence.html">
+            
+                <a href="PlanGeoFence.html">
+            
+                    
+                    GeoFence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="PlanRallyPoints.html">
+            
+                <a href="PlanRallyPoints.html">
+            
+                    
+                    Rally Points
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="Pattern.html">
+            
+                <a href="Pattern.html">
+            
+                    
+                    Pattern
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="pattern_survey.html">
+            
+                <a href="pattern_survey.html">
+            
+                    
+                    Survey
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.3.2" data-path="pattern_structure_scan_v2.html">
+            
+                <a href="pattern_structure_scan_v2.html">
+            
+                    
+                    Structure Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.3" data-path="pattern_corridor_scan.html">
+            
+                <a href="pattern_corridor_scan.html">
+            
+                    
+                    Corridor Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.4" data-path="pattern_fixed_wing_landing.html">
+            
+                <a href="pattern_fixed_wing_landing.html">
+            
+                    
+                    Fixed Wing Landing Pattern
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.5" data-path="PatternPresets.html">
+            
+                <a href="PatternPresets.html">
+            
+                    
+                    Pattern Presets
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SetupView/SetupView.html">
+            
+                <a href="../SetupView/SetupView.html">
+            
+                    
+                    기체 설정
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../SetupView/Firmware.html">
+            
+                <a href="../SetupView/Firmware.html">
+            
+                    
+                    펌웨어
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../SetupView/Airframe.html">
+            
+                <a href="../SetupView/Airframe.html">
+            
+                    
+                    비행체
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.2.1" data-path="../SetupView/airframe_ardupilot.html">
+            
+                <a href="../SetupView/airframe_ardupilot.html">
+            
+                    
+                    기체 (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2.2" data-path="../SetupView/airframe_px4.html">
+            
+                <a href="../SetupView/airframe_px4.html">
+            
+                    
+                    기체 (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../SetupView/Radio.html">
+            
+                <a href="../SetupView/Radio.html">
+            
+                    
+                    라디오
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../SetupView/Sensors.html">
+            
+                <a href="../SetupView/Sensors.html">
+            
+                    
+                    센서
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.4.1" data-path="../SetupView/sensors_ardupilot.html">
+            
+                <a href="../SetupView/sensors_ardupilot.html">
+            
+                    
+                    센서 설정 (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4.2" data-path="../SetupView/sensors_px4.html">
+            
+                <a href="../SetupView/sensors_px4.html">
+            
+                    
+                    센서 설정 (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../SetupView/FlightModes.html">
+            
+                <a href="../SetupView/FlightModes.html">
+            
+                    
+                    비행모드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../SetupView/Power.html">
+            
+                <a href="../SetupView/Power.html">
+            
+                    
+                    전원
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../SetupView/Motors.html">
+            
+                <a href="../SetupView/Motors.html">
+            
+                    
+                    모터
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" data-path="../SetupView/Motors_ardusub.html">
+            
+                <a href="../SetupView/Motors_ardusub.html">
+            
+                    
+                    모터 설정 (ArduSub)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../SetupView/Safety.html">
+            
+                <a href="../SetupView/Safety.html">
+            
+                    
+                    안전
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.8.1" data-path="../SetupView/safety_ardupilot.html">
+            
+                <a href="../SetupView/safety_ardupilot.html">
+            
+                    
+                    안전 설정 (ArduPilot)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../SetupView/Tuning.html">
+            
+                <a href="../SetupView/Tuning.html">
+            
+                    
+                    튜닝
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1" data-path="../SetupView/tuning_ardupilot.html">
+            
+                <a href="../SetupView/tuning_ardupilot.html">
+            
+                    
+                    튜닝 설정 (ArduPilot)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.9.1.1" data-path="../SetupView/tuning_arducopter.html">
+            
+                <a href="../SetupView/tuning_arducopter.html">
+            
+                    
+                    ArduCopter 튜닝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.1.2" data-path="../SetupView/tuning_ardusub.html">
+            
+                <a href="../SetupView/tuning_ardusub.html">
+            
+                    
+                    ArduSub 튜닝
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9.2" data-path="../SetupView/tuning_px4.html">
+            
+                <a href="../SetupView/tuning_px4.html">
+            
+                    
+                    Tuning (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../SetupView/Camera.html">
+            
+                <a href="../SetupView/Camera.html">
+            
+                    
+                    카메라
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../SetupView/Joystick.html">
+            
+                <a href="../SetupView/Joystick.html">
+            
+                    
+                    조이스틱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../SetupView/Parameters.html">
+            
+                <a href="../SetupView/Parameters.html">
+            
+                    
+                    파라미터
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SettingsView/SettingsView.html">
+            
+                <a href="../SettingsView/SettingsView.html">
+            
+                    
+                    Application Settings
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../SettingsView/General.html">
+            
+                <a href="../SettingsView/General.html">
+            
+                    
+                    General
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../SettingsView/csv.html">
+            
+                <a href="../SettingsView/csv.html">
+            
+                    
+                    CSV Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../SettingsView/OfflineMaps.html">
+            
+                <a href="../SettingsView/OfflineMaps.html">
+            
+                    
+                    Offline Maps
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../SettingsView/MAVLink.html">
+            
+                <a href="../SettingsView/MAVLink.html">
+            
+                    
+                    MAVLink
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../SettingsView/console_logging.html">
+            
+                <a href="../SettingsView/console_logging.html">
+            
+                    
+                    Console Logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../SettingsView/VirtualJoystick.html">
+            
+                <a href="../SettingsView/VirtualJoystick.html">
+            
+                    
+                    Virtual Joystick (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../analyze_view/">
+            
+                <a href="../analyze_view/">
+            
+                    
+                    분석
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../analyze_view/log_download.html">
+            
+                <a href="../analyze_view/log_download.html">
+            
+                    
+                    로그 다운로드
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../analyze_view/geotag_images.html">
+            
+                <a href="../analyze_view/geotag_images.html">
+            
+                    
+                    지오태그 이미지 (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../analyze_view/mavlink_console.html">
+            
+                <a href="../analyze_view/mavlink_console.html">
+            
+                    
+                    MAVLink 콘솔 (PX4)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../analyze_view/mavlink_inspector.html">
+            
+                <a href="../analyze_view/mavlink_inspector.html">
+            
+                    
+                    MAVLink 탐색기
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../releases/">
+            
+                <a href="../releases/">
+            
+                    
+                    Releases
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../releases/release_notes.html">
+            
+                <a href="../releases/release_notes.html">
+            
+                    
+                    Release Notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" data-path="../releases/stable_v4.0_additional.html">
+            
+                <a href="../releases/stable_v4.0_additional.html">
+            
+                    
+                    v4.0 (Additional Notes)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" data-path="../releases/stable_v3.3_long.html">
+            
+                <a href="../releases/stable_v3.3_long.html">
+            
+                    
+                    v3.3 (Detailed)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.3" data-path="../releases/stable_v3.2_long.html">
+            
+                <a href="../releases/stable_v3.2_long.html">
+            
+                    
+                    v3.2 (Detailed)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../releases/daily_builds.html">
+            
+                <a href="../releases/daily_builds.html">
+            
+                    
+                    Daily Builds
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../releases/daily_build_new_features.html">
+            
+                <a href="../releases/daily_build_new_features.html">
+            
+                    
+                    Daily Build New Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../releases/privacy_policy.html">
+            
+                <a href="../releases/privacy_policy.html">
+            
+                    
+                    Privacy Policy
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../troubleshooting/">
+            
+                <a href="../troubleshooting/">
+            
+                    
+                    Troubleshooting
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../troubleshooting/qgc_setup.html">
+            
+                <a href="../troubleshooting/qgc_setup.html">
+            
+                    
+                    Setup Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../troubleshooting/qgc_usage.html">
+            
+                <a href="../troubleshooting/qgc_usage.html">
+            
+                    
+                    Usage Problems
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.2.1" data-path="../troubleshooting/vehicle_connection.html">
+            
+                <a href="../troubleshooting/vehicle_connection.html">
+            
+                    
+                    Connection problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.2" data-path="../troubleshooting/parameter_download.html">
+            
+                <a href="../troubleshooting/parameter_download.html">
+            
+                    
+                    Parameter Download failures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.3" data-path="../troubleshooting/plan_upload_download.html">
+            
+                <a href="../troubleshooting/plan_upload_download.html">
+            
+                    
+                    Plan Upload/Download failures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2.4" data-path="../troubleshooting/resume_mission.html">
+            
+                <a href="../troubleshooting/resume_mission.html">
+            
+                    
+                    Resume Mission failures
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Support/Support.html">
+            
+                <a href="../Support/Support.html">
+            
+                    
+                    Support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Flight Stack</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 Pro
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" >
+            
+                <a target="_blank" href="http://ardupilot.org/">
+            
+                    
+                    ArduPilot
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">드론코드 관련 링크</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://dev.qgroundcontrol.com/en/">
+            
+                    
+                    QGroundControl 개발자 안내서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://docs.px4.io/en/">
+            
+                    
+                    PX4 사용자 안내서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" >
+            
+                <a target="_blank" href="https://dev.px4.io/en/">
+            
+                    
+                    PX4 개발자 설명서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" >
+            
+                <a target="_blank" href="https://mavlink.io/en/">
+            
+                    
+                    MAVLink 안내서
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" >
+            
+                <a target="_blank" href="https://mavsdk.mavlink.io/">
+            
+                    
+                    MAVSDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" >
+            
+                <a target="_blank" href="https://camera-manager.dronecode.org/en/">
+            
+                    
+                    드론코드 카메라 관리
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            GitBook에 게시
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Structure Scan</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="structure-scan-plan-pattern"><a name="structure-scan-plan-pattern" class="plugin-anchor" href="#structure-scan-plan-pattern"><i class="fa fa-link" aria-hidden="true"></i></a>Structure Scan (Plan Pattern)</h1>
+<p>A <em>Structure Scan</em> allows you to create a grid flight pattern that captures images over <em>vertical surfaces</em> (e.g. walls) around a structure with an arbitrary polygonal (or circular) ground footprint. Structure Scans are typically used for the visual inspection or creating 3D models of structures.</p>
+<p><em>Structure Scans</em> may be inserted into a mission using the Plan view <strong>Pattern &gt; Structure Scan</strong> tool.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The new version of <em>Structure Scan</em> can&apos;t read older <em>Structure Scan</em> plans. They will need to be recreated.</p>
+</blockquote>
+<p><span></span></p>
+<blockquote class="clearfix alert alert-warning"><strong class="fa fa-2x fa-exclamation-triangle"></strong>
+<p> This feature is not yet supported by ArduPilot firmware. It is supported in PX4.</p>
+</blockquote>
+<h2 id="overview"><a name="overview" class="plugin-anchor" href="#overview"><i class="fa fa-link" aria-hidden="true"></i></a>Overview</h2>
+<p>The image below shows a screenshot of structure scan. The green polygon is used to mark out the ground footprint of the structure, while the white line around it indicates the vehicle flight path. The green numbered circle on the flight path is the scan entry/exit point (where the scan starts).</p>
+<p><img src="../../assets/plan/structure_scan_v2/StructureScan.jpg" alt="Structure Scan"></p>
+<p>The scan divides the structure evenly into layers; the vehicle flies all the way around the structure at a particular altitude and <em>scan distance</em> from the structure, then repeats the process at each layer until the whole surface has been scanned.</p>
+<p><img src="../../assets/plan/structure_scan_v2/layers.jpg" alt="Layer JPG"></p>
+<p>Users can set the <em>scan bottom altitude</em> to avoid obstacles at the bottom of the structure, and the <em>extrance/exit altitude</em> to avoid obstacles as the vehicle travels to/from the scan.</p>
+<h2 id="creating-a-scan"><a name="creating-a-scan" class="plugin-anchor" href="#creating-a-scan"><i class="fa fa-link" aria-hidden="true"></i></a>Creating a Scan</h2>
+<p>To create a scan:</p>
+<ol>
+<li><p>In the <strong>Plan View</strong> select <strong>Pattern tool &gt; Structure Scan</strong>.</p>
+<p><img src="../../assets/plan/structure_scan_v2/create_scan.jpg" alt="Create Scan JPG"></p>
+</li>
+<li><p>This will create a simple square structure scan on the map.</p>
+<p><img src="../../assets/plan/structure_scan_v2/initial_polygon_scan.jpg" alt="Initial Polygon"></p>
+<p>The region shown in green must be modified so that it surrounds the structure.</p>
+<ul>
+<li>Drag the opaque vertices on the map to the edge of the structure (example circled in mauve above). </li>
+<li>If the structure footprint is more than a simple square you can click the semi-transparent circles between the vertices to create a new vertix.</li>
+</ul>
+</li>
+<li><p>You can also change to a circular footprint by clicking on the central &quot;vertix&quot; (marked in red) and selecting <em>Circle</em> in the popup menu.</p>
+<p><img src="../../assets/plan/structure_scan_v2/circle_scan.jpg" alt="Circle Scan">.</p>
+<ul>
+<li>From the popup menu you can switch back to a polygon footprint and change the radius and/or position of the scan.</li>
+<li>Drag the central vertix to position the centre of the circle. </li>
+</ul>
+</li>
+<li><p>The rest of the configuration is handled using the <em>Structure Scan</em> editor on the right hand side of the view. First select whether you want to perform a manual scan, a scan using a particular camera, or a scan using a custom camera definition.</p>
+<blockquote class="clearfix alert alert-info"><strong class="fa fa-2x fa-edit"></strong>
+<p> The main difference between the modes is that predefined cameras are already set up to correctly calculate an effective layer height and trigger distance.</p>
+</blockquote>
+<p>Options for the different modes are shown below.</p>
+<p><img src="../../assets/plan/structure_scan_v2/editor_options.jpg" alt="Structure Scan editor"></p>
+</li>
+</ol>
+<p>The user can always configure the following settings:</p>
+<ul>
+<li><strong>Start scan from top/bottom:</strong> The direction in which layers are scanned.</li>
+<li><strong>Structure height:</strong> The height of the object being scanned.</li>
+<li><strong>Scan distance:</strong> Distance from the structure to the flight path.</li>
+<li><strong>Entrance/Exit Alt:</strong> Use this setting to avoid obstacles between the last/next waypoint and the structure to be scanned. <ul>
+<li>The vehicle will fly to the <em>Entrance/Exit</em> point at this altitude and then descend to the initial layer to start the scan. </li>
+<li>The vehicle will ascend to this altitude after completing the scan and then move to the next waypoint.</li>
+</ul>
+</li>
+<li><strong>Scan Bottom Alt:</strong> Use this setting to avoid obstacles around the base of the structure. This adjust the bottom of the structure to be above the ground, and hence the altitude of the first scan (the height of the lowest layer flight path is shown in the scan statistics as <em>Bottom Layer Alt</em>.</li>
+<li><strong>Rotate Entry Point:</strong> Move the start/finish point to the next vertix/position on the flight path.</li>
+</ul>
+<p>The remaining settings depend on the <em>camera mode</em>:</p>
+<ul>
+<li><p><em>Manual Mode</em> allows you to specify: </p>
+<ul>
+<li><strong>Layer height:</strong> The height of each layer.</li>
+<li><strong>Trigger Distance:</strong> The distance between each camera trigger. The camera is only triggered while flying the layer path. It does not trigger images while transitioning from one layer to the next.</li>
+<li><strong>Gimbal Pitch</strong> - Gimbal pitch you want to use for the scan.</li>
+</ul>
+</li>
+<li><p><em>Known/pre-defined cameras</em> automatically calculates layer heights and image triggering from required image overlap, and allows you to trade off scan distance and require image resolution. It also ensures that the camera is pointed directly at the surface when it is capturing images (i.e. at a right angle rather than some tangent). The settings are:</p>
+<ul>
+<li><strong>Camera Orientation:</strong> Portrait or Landscape</li>
+<li><em>Overlap</em>: <ul>
+<li><strong>Front Lap:</strong> Image overlap from top to bottom (increasing shrinks layer height and increases layer count).</li>
+<li><strong>Side Lap:</strong> Image overlap at sides (increasing takes more images in each lap/layer scan).</li>
+</ul>
+</li>
+<li><strong>Scan distance:</strong> Distance from the structure to the flight path.</li>
+<li><strong>Ground Res:</strong> Required image resolution/sample quality of surface.</li>
+</ul>
+</li>
+<li><p><em>Custom camera</em> selection allows you to enter your own camera characteristics, but otherwise behaves the same as a predefined camera.</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pattern_survey.html" class="navigation navigation-prev " aria-label="Previous page: Survey">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pattern_corridor_scan.html" class="navigation navigation-next " aria-label="Next page: Corridor Scan">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Structure Scan","level":"1.6.3.2","depth":3,"next":{"title":"Corridor Scan","level":"1.6.3.3","depth":3,"path":"PlanView/pattern_corridor_scan.md","ref":"PlanView/pattern_corridor_scan.md","articles":[]},"previous":{"title":"Survey","level":"1.6.3.1","depth":3,"path":"PlanView/pattern_survey.md","ref":"PlanView/pattern_survey.md","articles":[]},"dir":"ltr"},"config":{"plugins":["youtube","anchors","page-toc-button","collapsible-menu","custom-favicon","language-picker","theme-dronecode@git+https://github.com/dronecode/theme-dronecode.git","richquotes@git+https://github.com/Dronecode/gitbook-plugin-richquotes.git","versions-select@git+https://github.com/Dronecode/gitbook-plugin-versions-select.git","toolbar@git+https://github.com/hamishwillee/gitbook-plugin-toolbar.git","bulk-redirect@git+https://github.com/Dronecode/gitbook-plugin-bulk-redirect.git"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"theme-dronecode":{"logo":{"logo_large":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_full.png","logo_small":"gitbook-plugin-theme-dronecode/images/dronecode_top_bar_logo_small.png","url":"https://www.dronecode.org/"}},"collapsible-menu":{},"language-picker":{"grid-columns":3},"youtube":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"versions-select":{"type":"branches"},"language-redirect":{"baseurl":"https://docs.qgroundcontrol.com/en/"},"fontsettings":{"theme":"white","family":"sans","size":2},"richquotes":{"tip":{"alert":"success","picto":"fa-thumbs-o-up"}},"highlight":{},"favicon":"favicon.ico","page-toc-button":{},"bulk-redirect":{"basepath":"/","redirectsFile":"redirects.json"},"custom-favicon":{},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/mavlink/qgc-user-guide/master/book.json","options":[{"value":"https://docs.qgroundcontrol.com/master/en/","text":"master"}]},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/mavlink/qgc-user-guide/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/mavlink/qgc-user-guide"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/mavlink/qgc-user-guide/edit/master/{{filepath_lang}}"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"logo":"./assets/site/logo_qgc_rgb_horizontal.png","qgc_version":"master"},"title":"QGroundControl User Guide","language":"ko","gitbook":"*"},"file":{"path":"PlanView/pattern_structure_scan_v2.md","mtime":"2022-05-12T00:54:24.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-12T01:02:51.099Z"},"basePath":"..","book":{"language":"ko"}});
+        });
+    </script>
+</div>
+
+    
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-collapsible-menu/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-language-picker/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-select/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
