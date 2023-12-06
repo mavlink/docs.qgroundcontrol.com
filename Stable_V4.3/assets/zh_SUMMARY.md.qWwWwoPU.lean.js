@@ -1,0 +1,1 @@
+import{_ as e,o as i,c as l,R as a}from"./chunks/framework.2JVau0y1.js";const m=JSON.parse('{"title":"Sidebar","description":"","frontmatter":{},"headers":[],"relativePath":"zh/SUMMARY.md","filePath":"zh/SUMMARY.md"}'),t={name:"zh/SUMMARY.md"},r=a("",2),u=[r];function s(g,d,o,h,n,c){return i(),l("div",null,u)}const f=e(t,[["render",s]]);export{m as __pageData,f as default};
