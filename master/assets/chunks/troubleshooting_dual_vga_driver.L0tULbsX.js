@@ -1,1 +1,0 @@
-const s="/master/assets/windows_text_to_speech._FlAzCv2.png",t="/master/assets/waiting_for_connection.G8YZLbEV.jpg",_="/master/assets/troubleshooting_dual_vga_driver.0DNGunWN.jpg";export{s as _,t as a,_ as b};
