@@ -1,1 +1,0 @@
-const s="/assets/arducopter.BnL1yfb1.jpg",a="/assets/arducopter_class.DX4LB0S3.jpg",t="/assets/arducopter_type.D3-vTsU4.jpg",r="/assets/airframe_ardusub.CtvOByEg.jpg",_="/assets/airframe_ardusub_parameters.CC2N_J2F.jpg";export{s as _,a,t as b,r as c,_ as d};
