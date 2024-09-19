@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.Cok8BKe-.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"assets/setup/index.md","filePath":"assets/setup/index.md"}'),a={name:"assets/setup/index.md"};function n(r,o,c,d,i,p){return s(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};
