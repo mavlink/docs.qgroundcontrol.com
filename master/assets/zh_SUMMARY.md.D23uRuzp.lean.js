@@ -1,1 +1,0 @@
-import{_ as i,c as l,o as a,ag as t}from"./chunks/framework.BudlMBKT.js";const c=JSON.parse('{"title":"Sidebar","description":"","frontmatter":{},"headers":[],"relativePath":"zh/SUMMARY.md","filePath":"zh/SUMMARY.md"}'),r={name:"zh/SUMMARY.md"};function u(s,e,g,d,o,n){return a(),l("div",null,e[0]||(e[0]=[t("",2)]))}const m=i(r,[["render",u]]);export{c as __pageData,m as default};
