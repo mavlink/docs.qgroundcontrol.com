@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as s}from"./chunks/framework.DHJqe3d8.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"assets/settings/index.md","filePath":"assets/settings/index.md"}'),a={name:"assets/settings/index.md"};function n(r,i,o,c,d,p){return s(),t("div")}const f=e(a,[["render",n]]);export{m as __pageData,f as default};
