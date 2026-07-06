@@ -1,0 +1,1 @@
+import{_ as i,o as l,c as a,ag as r}from"./chunks/framework.B9unkguw.js";const o=JSON.parse('{"title":"侧边栏","description":"","frontmatter":{},"headers":[],"relativePath":"zh/SUMMARY.md","filePath":"zh/SUMMARY.md"}'),t={name:"zh/SUMMARY.md"};function u(g,e,s,h,d,c){return l(),a("div",null,e[0]||(e[0]=[r("",2)]))}const n=i(t,[["render",u]]);export{o as __pageData,n as default};
