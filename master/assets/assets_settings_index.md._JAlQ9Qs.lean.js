@@ -1,0 +1,1 @@
+import{_t as e,n as t,rt as n}from"./chunks/framework.DJ0NkIPM.js";var r=JSON.parse(`{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"assets/settings/index.md","filePath":"assets/settings/index.md"}`),i={name:`assets/settings/index.md`};function a(t,r,i,a,o,s){return e(),n(`div`)}var o=t(i,[[`render`,a]]);export{r as __pageData,o as default};
