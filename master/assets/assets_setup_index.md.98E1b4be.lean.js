@@ -1,0 +1,1 @@
+import{_t as e,n as t,rt as n}from"./chunks/framework.BmT8T0yb.js";var r=JSON.parse(`{"title":"","description":"","frontmatter":{"qt_version":"6.12.0"},"headers":[],"relativePath":"assets/setup/index.md","filePath":"assets/setup/index.md"}`),i={name:`assets/setup/index.md`};function a(t,r,i,a,o,s){return e(),n(`div`)}var o=t(i,[[`render`,a]]);export{r as __pageData,o as default};
